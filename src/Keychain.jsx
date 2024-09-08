@@ -58,7 +58,9 @@ function Keychain() {
         />
       </video>
       <div className='max-w-4xl mx-auto flex flex-col mb-24'>
-        <h1 id='Keychains' className='mb-12 text-3xl text-center items-center justify-center tracking-[1.05px] uppercase font-roboto font-bold'>
+        <h1
+          id='Keychains'
+          className='mb-12 text-3xl text-center items-center justify-center tracking-[1.05px] uppercase font-roboto font-bold'>
           Keychains
         </h1>
         <div className='grid grid-cols-2 w-full gap-x-2'>
