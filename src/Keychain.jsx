@@ -2,7 +2,7 @@ import Vegeta from './assets/Keychains/Vegeta.webp'
 import Luffy from './assets/Keychains/Luffy.webp'
 import Video from './assets/Keychains/Video.mp4'
 import Ussop from './assets/Keychains/Ussop.webp'
-import Zoro from './assets/Keychains/Zoro.webp'
+import Zoro from './assets/Keychains/zoro.webp'
 import Chopper from './assets/Keychains/Chopper.webp'
 
 const Characters = [
