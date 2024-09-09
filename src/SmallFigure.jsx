@@ -50,21 +50,21 @@ function SmallFigure() {
         className='text-xl md:text-3xl pt-6 text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
         Collectible Figures
       </h1>
-      <div className='flex flex-col max-w-sm md:max-w-4xl mx-auto pb-20 pt-8 md:pt-20'>
+      <div className='flex flex-col max-w-sm md:max-w-4xl mx-auto pb-20 mt-8 md:pt-20'>
         {Characters.map((character, index) => (
           <div
             key={index}
             className='flex flex-col md:flex-row md:gap-x-5 justify-center'>
-            <section className='flex justify-center w-full flex-grow pb-2 md:pb-8'>
-              <div className='flex md:h-[300px] w-full h-full flex-grow'>
+            <section className='md:flex justify-center w-full flex-grow pb-2 md:pb-8'>
+              <div className='flex md:flex-row md:h-[300px] w-full h-full md:flex-grow'>
                 <img
                   src={character.images[0]}
-                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-l-lg md:mt-0 mt-6'
+                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-l-lg md:mt-0 mt-6 block'
                   alt={character.alt}
                 />
                 <img
                   src={character.images[1]}
-                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-r-lg invisible md:visible'
+                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-r-lg hidden md:block'
                   alt={character.alt}
                 />
               </div>
@@ -74,7 +74,7 @@ function SmallFigure() {
                 <span className='md:italic'>{character.name}</span> - {character.desc}
               </h1>
               <span className='md:text-lg mt-1 font-robotoo tracking-[1px]'>
-                <b>Price:</b> {character.price}
+                <span>Price:</span> {character.price}
               </span>
               <span className='tracking-[1.05px] font-robotooo text-[#000] text-base'>
                 {character.anime}

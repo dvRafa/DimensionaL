@@ -85,20 +85,20 @@ function Box() {
           {Characters.map((character, index) => (
             <div
               key={index}
-              className='mb-10 w-full'>
-              <div className='grid w-full md:grid-cols-2 gap-x-1 md:gap-x-6 mb-4 md:justify-items-center items-center'>
+              className='mb-6 w-full'>
+              <div className='md:grid w-full md:grid-cols-2 gap-x-1 md:gap-x-6 mb-4 md:justify-items-center items-center'>
                 <img
                   key={character.index}
                   src={character.images[0]}
                   alt={character.alt}
-                  className='h-[400px] w-full rounded-lg hover:cursor-pointer'
+                  className='md:h-[400px] w-full rounded-lg hover:cursor-pointer'
                   loading='lazy'
                 />
                 <img
                   key={character.index}
                   src={character.images[1]}
                   alt={character.alt}
-                  className='h-[400px] w-full rounded-lg hover:cursor-pointer invisble md:visible'
+                  className='h-[400px] w-full rounded-lg hover:cursor-pointer md:flex hidden invisible md:visible'
                   loading='lazy'
                 />
               </div>

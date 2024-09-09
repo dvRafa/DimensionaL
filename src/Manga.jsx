@@ -56,24 +56,23 @@ const Characters = [
 
 function Manga() {
   return (
-    <div>
-      <div className='md:max-w-6xl max-w-sm mx-auto pb-28 pt-6'>
-        <h1 id='Manga' className='mb-8 text-xl md:text-3xl pt-6 text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
+      <div className='md:max-w-6xl max-w-sm mx-auto mb-28 mt-6'>
+        <h1 id='Manga' className='mb-8 text-xl md:text-3xl mt-6 text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
           Manga
         </h1>
         {Characters.map((character, index) => (
           <div
             key={index}
-            className='md:flex md:flex-row md:gap-x-[2px]'>
-            <div className='md:flex md:flex-col pb-8 invisible md:visible'>
+            className='grid md:flex md:flex-row md:gap-x-[2px]'>
+            <div className='md:flex md:flex-col pb-6 hidden'>
               <img
                 loading='lazy'
                 src={character.images[0]}
                 alt={character.alt}
-                className='h-[500px] w-[85px] shadow-md rounded-bl-md rounded-tl-md'
+                className='h-[500px] w-[85px] shadow-md rounded-bl-md rounded-tl-md invisible md:visible'
               />
             </div>
-            <div className='md:flex flex-col invisible md:visible'>
+            <div className='md:flex md:flex-col hidden'>
               <img
                 src={character.images[1]}
                 alt={character.alt}
@@ -95,7 +94,7 @@ function Manga() {
                 alt={character.alt}
               />
             </div>
-            <div className='flex flex-col md:pt-0 pt-2 md:pl-8 md:w-1/2 text-center md:text-left'>
+            <div className='flex flex-col md:pt-0 pt-2 md:pl-6 md:w-1/2 text-center md:text-left border-b mb-6 md:mb-0 md:border-b-0'>
               <h1 className='text-lg md:text-3xl font-roboto tracking-[1.05px]'>
                 {character.name}
               </h1>
@@ -110,14 +109,13 @@ function Manga() {
                   <span>Release Date in Japan:</span> {character.release}
                 </span>
               </div>
-              <span className='tracking-[0.2px] mt-4 md:mt-2 text-[#161f6e] font-robotooo line-clamp-3 md:line-clamp-none mb-6 md:mb-0 text-balance'>
+              <span className='tracking-[0.2px] mt-4 mb-6 md:mt-2 text-[#161f6e] font-robotooo line-clamp-3 md:line-clamp-none md:mb-0 text-balance md:border-b md:pb-6'>
                 {character.data}
               </span>
             </div>
           </div>
         ))}
       </div>
-    </div>
   )
 }
 
