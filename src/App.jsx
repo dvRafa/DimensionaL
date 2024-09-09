@@ -1,4 +1,3 @@
-import Figure from './Figure'
 import Manga from './Manga'
 import Keychain from './Keychain'
 import Box from './Box'
@@ -7,27 +6,25 @@ import Header from './Header'
 import SmallFigure from './SmallFigure'
 
 function App() {
- 
   return (
     <main>
-    <Header />
-    <div>
-      <Figure />
-    </div>
-    <div>
-      <SmallFigure/>
-    </div>
-    <div>
-      <Box />
-    </div>
-    <div>
-      <Manga />
-    </div>
-    <div>
-      <Keychain />
-    </div>
-    <Footer />
-  </main>
+      <div>
+        <Header />
+      </div>
+      <div>
+        <SmallFigure />
+      </div>
+      <div>
+        <Keychain />
+      </div>
+      <div>
+        <Box />
+      </div>
+      <div>
+        <Manga />
+      </div>
+      <Footer />
+    </main>
   )
 }
 

@@ -18,7 +18,7 @@ import NI from './assets/Manga/NI.webp'
 const Characters = [
   {
     images: [AOTS, AOTI, AOTF, AOTB],
-    name: 'Shingeki No Kyojin, Volume 16',
+    name: 'Shingeki No Kyojin - Attack On Titan, Volume 16',
     data: 'Captured by Rod Reiss, the rightful king, Krista and Eren finally have their memories back. What exactly happened to Eren, and what was the crime his father committed? Meanwhile, the Survey Corps desperately hunts for Eren, while at the same time seeking to legitimize their military coup. As the situation inside the walls...',
     page: '194',
     release: 'August 25, 2015',
@@ -45,7 +45,7 @@ const Characters = [
   },
   {
     images: [DSS, DSI, DSF, DSB],
-    name: 'Kimetsu No Yaiba: Gaiden Volume',
+    name: 'Kimetsu No Yaiba - Demon Slayer: Gaiden Volume',
     data: 'Kimetsu no Yaiba: Gaiden is a volume consisting of Giyu Tomiokas Story and Kyojuro Rengokus Story, as well as Kimetsu Between the Scenes.',
     page: '215',
     release: 'December 4, 2020',
@@ -56,16 +56,16 @@ const Characters = [
 
 function Manga() {
   return (
-    <div className='bg-[#eeeeee6a]'>
-      <div className='max-w-6xl mx-auto pb-28 pt-6'>
-        <h1 id='Manga' className='mb-12 text-center uppercase items-center justify-center text-3xl font-roboto tracking-[1.05px] font-bold'>
+    <div>
+      <div className='md:max-w-6xl max-w-sm mx-auto pb-28 pt-6'>
+        <h1 id='Manga' className='mb-8 text-xl md:text-3xl pt-6 text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
           Manga
         </h1>
         {Characters.map((character, index) => (
           <div
             key={index}
-            className='flex flex-row gap-x-[2px]'>
-            <div className='flex flex-col pb-8'>
+            className='md:flex md:flex-row md:gap-x-[2px]'>
+            <div className='md:flex md:flex-col pb-8 invisible md:visible'>
               <img
                 loading='lazy'
                 src={character.images[0]}
@@ -73,46 +73,46 @@ function Manga() {
                 className='h-[500px] w-[85px] shadow-md rounded-bl-md rounded-tl-md'
               />
             </div>
-            <div className='flex flex-col'>
+            <div className='md:flex flex-col invisible md:visible'>
               <img
                 src={character.images[1]}
                 alt={character.alt}
                 loading='lazy'
-                className='h-[500px] w-[450px] shadow-md'
+                className='h-[500px] w-[450px] shadow-md invisible md:visible'
               />
             </div>
-            <div className='flex flex-col'>
+            <div className='md:flex md:flex-col'>
               <img
                 src={character.images[2]}
                 loading='lazy'
                 alt={character.alt}
-                className='h-[250px] w-56 pb-[1px] shadow-md rounded-tr-md'
+                className='md:h-[250px] h-full w-full md:w-56 md:pb-[1px] shadow-md md:rounded-tr-md rounded-lg'
               />
               <img
                 src={character.images[3]}
                 loading='lazy'
-                className='h-[250px] w-56 shadow-md rounded-br-md'
+                className='h-[250px] w-56 shadow-md rounded-br-md invisible md:visible'
                 alt={character.alt}
               />
             </div>
-            <div className='flex flex-col pl-8 w-1/2'>
-              <h1 className='text-3xl font-roboto tracking-[1.05px]'>
+            <div className='flex flex-col md:pt-0 pt-2 md:pl-8 md:w-1/2 text-center md:text-left'>
+              <h1 className='text-lg md:text-3xl font-roboto tracking-[1.05px]'>
                 {character.name}
               </h1>
-              <span className='text-[18px] mt-2 font-roboto tracking-[1px] uppercase font-bold'>
-                {character.price}
+              <span className='md:text-[18px] mt-1 font-robotoo tracking-[1px]'>
+                <span>Price:</span> {character.price}
               </span>
-              <span className='text-sm tracking-[0.2px] mt-4 text-[#000] text-pretty'>
-                {character.data}
-              </span>
-              <div className='flex flex-col text-sm pb-7'>
-                <span className='mt-4 text-[#000] tracking-[1.05px] font-roboto text-sm'>
-                  <b>Pages:</b> {character.page}
+              <div className='flex flex-col'>
+                <span className='text-[#000] tracking-[1.05px] font-robotooo'>
+                  <span>Pages:</span> {character.page}
                 </span>
-                <span className='text-[#000] tracking-[1.05px] font-roboto text-sm'>
-                  <b>Release Date in Japan:</b> {character.release}
+                <span className='text-[#000] tracking-[1.05px] font-robotooo'>
+                  <span>Release Date in Japan:</span> {character.release}
                 </span>
               </div>
+              <span className='tracking-[0.2px] mt-4 md:mt-2 text-[#161f6e] font-robotooo line-clamp-3 md:line-clamp-none mb-6 md:mb-0 text-balance'>
+                {character.data}
+              </span>
             </div>
           </div>
         ))}

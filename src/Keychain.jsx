@@ -1,6 +1,6 @@
 import Vegeta from './assets/Keychains/Vegeta.webp'
 import Luffy from './assets/Keychains/Luffy.webp'
-import Video from './assets/Keychains/Video.mp4'
+import Video from './assets/Keychains/Video1.mp4'
 import Ussop from './assets/Keychains/Ussop.webp'
 import Zoro from './assets/Keychains/zoro.webp'
 import Chopper from './assets/Keychains/Chopper.webp'
@@ -47,7 +47,7 @@ function Keychain() {
   return (
     <section>
       <video
-        className='h-full w-full object-cover overflow-hidden mb-40'
+        className='h-screen md:h-full object-cover w-full overflow-hidden mb-12'
         muted
         autoPlay
         playsInline
@@ -57,16 +57,16 @@ function Keychain() {
           type='video/mp4'
         />
       </video>
-      <div className='max-w-4xl mx-auto flex flex-col mb-24'>
+      <div className='md:max-w-[820px] max-w-sm mx-auto flex flex-col mb-20'>
         <h1
           id='Keychains'
-          className='mb-12 text-3xl text-center items-center justify-center tracking-[1.05px] uppercase font-roboto font-bold'>
+          className='mb-8 md:mb-12 text-xl md:text-3xl text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
           Keychains
         </h1>
-        <div className='grid grid-cols-2 w-full gap-x-2'>
+        <div className='grid md:grid-cols-2 w-full md:gap-x-6'>
           {Characters.map((character, index) => (
             <div key={index}>
-              <div className='flex flex-col mb-8'>
+              <div className='flex flex-col mb-6'>
                 <div className='mb-2'>
                   {character.image.map((image, ImgIndex, alt) => (
                     <img
@@ -74,19 +74,19 @@ function Keychain() {
                       alt={alt}
                       src={image}
                       loading='lazy'
-                      className='rounded-xl h-full w-full'
+                      className='rounded-lg h-full w-full md:duration-300 md:ease-in md:hover:scale-110 md:hover:cursor-pointer'
                     />
                   ))}
                 </div>
-                <h1 className='italic text-3xl font-roboto tracking-[1.05px]'>
+                <h1 className='md:italic text-lg md:text-3xl font-roboto tracking-[1.05px]'>
                   {character.name}
                 </h1>
-                <h2 className='text-[18px] mt-1 font-roboto tracking-[1px] uppercase font-bold'>
-                  {character.price}
-                </h2>
-                <h3 className='text-sm tracking-[1.05px] font-roboto mt-2 text-[#000]'>
+                <span className='md:text-[18px] mt-1 font-robotoo tracking-[1px]'>
+                  <b>Price:</b> {character.price}
+                </span>
+                <span className='tracking-[1.05px] font-robotooo text-[#000]'>
                   {character.anime}
-                </h3>
+                </span>
               </div>
             </div>
           ))}

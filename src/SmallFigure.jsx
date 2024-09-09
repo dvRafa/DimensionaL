@@ -17,11 +17,19 @@ const Characters = [
     alt: 'Goku',
   },
   {
+    name: 'Bardock',
+    desc: 'Bandai Ichiban Kuji Mission 5 Super Saiyan 3 by Banpresto 8cm',
+    price: '$100',
+    anime: 'Dragon Ball Z',
+    images: [FBardock, BBardock],
+    alt: 'Bardock',
+  },
+  {
     name: 'Sakazuki "Akainu"',
     desc: 'One Piece x PEPSI NEX Figure Collection by Suntory 5cm',
     price: '$100',
     anime: 'One Piece',
-    images: [BAkainu, FAkainu],
+    images: [FAkainu, BAkainu],
     alt: 'Sakazuki "Akainu"',
   },
   {
@@ -32,48 +40,43 @@ const Characters = [
     images: [FBrook, BBrook],
     alt: 'Brook',
   },
-  {
-    name: 'Bardock',
-    desc: 'Bandai Ichiban Kuji Mission 5 Super Saiyan 3 by Banpresto 8cm',
-    price: '$100',
-    anime: 'Dragon Ball Z',
-    images: [BBardock, FBardock],
-    alt: 'Bardock',
-  },
 ]
 
 function SmallFigure() {
   return (
-    <div className='bg-[#eeeeee6a]'>
-      <div className='flex flex-col max-w-4xl mx-auto pb-10 mb-10 pt-6'>
+    <div>
+      <h1
+        id='Collectible-Figure'
+        className='text-xl md:text-3xl pt-6 text-center items-center justify-center tracking-[1.05px] uppercase font-roboto'>
+        Collectible Figures
+      </h1>
+      <div className='flex flex-col max-w-sm md:max-w-4xl mx-auto pb-20 pt-8 md:pt-20'>
         {Characters.map((character, index) => (
           <div
             key={index}
-            className='flex flex-row gap-x-5 pb-8 justify-center'>
-            <section className='flex justify-center w-full flex-grow'>
-              <div className='flex h-[300px] w-full flex-grow'>
+            className='flex flex-col md:flex-row md:gap-x-5 justify-center'>
+            <section className='flex justify-center w-full flex-grow pb-2 md:pb-8'>
+              <div className='flex md:h-[300px] w-full h-full flex-grow'>
                 <img
                   src={character.images[0]}
-                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[50px] rounded-l-lg'
-                  alt='Levi Ackerman'
-                  loading='lazy'
+                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-l-lg md:mt-0 mt-6'
+                  alt={character.alt}
                 />
                 <img
                   src={character.images[1]}
-                  alt='Levi Ackerman'
-                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[50px] rounded-r-lg'
-                  loading='lazy'
+                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-r-lg invisible md:visible'
+                  alt={character.alt}
                 />
               </div>
             </section>
-            <div className='flex flex-col w-[1050px]'>
-              <h1 className='text-3xl font-roboto tracking-[1.05px]'>
-                <i>{character.name}</i> - {character.desc}
+            <div className='flex flex-col md:w-[1050px] md:text-start text-center'>
+              <h1 className='text-lg md:text-3xl font-roboto tracking-[1.05px]'>
+                <span className='md:italic'>{character.name}</span> - {character.desc}
               </h1>
-              <span className='text-[18px] mt-2 font-roboto tracking-[1px] uppercase font-bold'>
-                {character.price}
+              <span className='md:text-lg mt-1 font-robotoo tracking-[1px]'>
+                <b>Price:</b> {character.price}
               </span>
-              <span className='text-sm tracking-[1.05px] font-roboto mt-4 text-[#000]'>
+              <span className='tracking-[1.05px] font-robotooo text-[#000] text-base'>
                 {character.anime}
               </span>
             </div>
