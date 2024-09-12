@@ -84,7 +84,6 @@ function Keychains() {
                 <span className='md:text-xl mt-2 font-robotoo text-sm'>
                 <span>Price:</span> {character.price}
               </span>
-                
               </div>
             </div>
           ))}
