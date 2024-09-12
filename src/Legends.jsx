@@ -16,7 +16,7 @@ import SanemiFront from './assets/Legends/SanemiFront.webp'
 import NezukoFront from './assets/Legends/NezukoFront.webp'
 import SenjuroFront from './assets/Legends/SenjuroFront.webp'
 
-const ImageSlider = () => {
+const Legends = () => {
   const Characters = [
     {
       name: 'Sanemi Shinazugawa - ',
@@ -114,12 +114,12 @@ const ImageSlider = () => {
           </div>
           {/* Text Overlay */}
           <div className='relative mt-2'>
-            <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-md text-teal-50 p-4 rounded-b-md'>
-              <h1 className='text-lg font-bold'>
+            <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-md text-stone-100 p-4 rounded-b-md'>
+              <h1 className='md:text-lg text-md font-roboto'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <span className='text-xl pt-2 font-robotoo'>
+              <span className='text-sm md:text-xl pt-2 font-robotoo'>
                 <span>Price:</span> {character.price}
               </span>
             </div>
@@ -130,13 +130,13 @@ const ImageSlider = () => {
   }
 
   return (
-    <section className='bg-gradient-to-r from-[#fcf4f4] to-[#f9ffef]'>
-      <div className='md:max-w-[935px] max-w-sm mx-auto pb-4'>
-        <h1 className='text-lg md:text-xl py-4 text-left tracking-[1.05px] font-bold'>
+    <section className='md:bg-gradient-to-r from-[#f4f4f4] to-[#fefffc]'>
+      <div className='md:max-w-[935px] max-w-[260px] mx-auto pb-4'>
+        <h1 className='text-md md:text-xl py-4 text-left tracking-[1.05px] font-bold'>
           Legends
         </h1>
         {/* Render each character with its own slider */}
-        <div className='grid grid-cols-2'>
+        <div className='grid md:grid-cols-2'>
           {Characters.map((character, index) => (
             <CharacterSlider
               key={index}
@@ -149,4 +149,4 @@ const ImageSlider = () => {
   )
 }
 
-export default ImageSlider
+export default Legends

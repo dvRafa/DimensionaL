@@ -43,7 +43,7 @@ const Characters = [
   },
 ]
 
-function Keychain() {
+function Keychains() {
   return (
     <section>
       <video
@@ -57,9 +57,9 @@ function Keychain() {
           type='video/mp4'
         />
       </video>
-      <div className='md:max-w-[935px] max-w-sm mx-auto flex flex-col'>
+      <div className='md:max-w-[935px] max-w-[260px] mx-auto flex flex-col'>
         <h1
-          className='text-lg md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
+          className='text-md md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
           Keychains
         </h1>
         <div className='grid md:grid-cols-2 w-full md:gap-x-6'>
@@ -81,7 +81,7 @@ function Keychain() {
                   <span className='md:italic'>{character.name}</span>
                   {character.desc}
                 </h1>
-                <span className='md:text-xl mt-2 font-robotoo'>
+                <span className='md:text-xl mt-2 font-robotoo text-sm'>
                 <span>Price:</span> {character.price}
               </span>
                 
@@ -94,4 +94,4 @@ function Keychain() {
   )
 }
 
-export default Keychain
+export default Keychains

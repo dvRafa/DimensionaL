@@ -46,42 +46,41 @@ const Characters = [
   },
 ]
 
-function Manga() {
+function Mangas() {
   return (
-    <div className='max-w-6xl mx-auto'>
-      <h1 className='text-lg md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
+    <div className='md:max-w-6xl max-w-[260px] mx-auto'>
+      <h1 className='text-md md:text-xl my-4 text-left justify-center tracking-[1.05px] font-robotoo'>
         Mangas
       </h1>
       {Characters.map((character, index, info) => (
         <div
           key={index}
-          className='mb-6 bg-gradient-to-r from-[#fbf9f9] to-[#fafffa] flex flex-row'>
+          className='mb-6 md:bg-gradient-to-r from-[#fbf9f9] to-[#fafffa] flex md:flex-row flex-col'>
           <div className='w-full'>
             <img
               loading='lazy'
               src={character.images}
               alt={character.alt}
-              className='h-[550px] w-full shadow-sm'
+              className='md:h-[550px] h-[250px] w-full shadow-sm'
             />
           </div>
-          <div className='flex flex-col md:pt-0 pt-2 md:px-10 text-center border-b mb-6 md:mb-0 md:border-b-0 justify-center w-2/5'>
+          <div className='flex flex-col md:pt-0 pt-2 md:px-10 text-center border-b mb-6 md:mb-0 md:border-b-0 justify-center md:w-2/5'>
             <h1 className='text-lg md:text-2xl font-roboto tracking-[1.05px'>
               {character.name}
             </h1>
-            <span className='md:text-xl my-2 font-robotoo'>
+            <span className='md:text-xl text-sm my-2 font-robotoo'>
               <span>Price:</span> {character.price}
             </span>
-            <span className='text-[#000] font-robotoo'>
+            <span className='font-robotoo md:text-base text-xs text-[#555]'>
               <span>Pages:</span> {character.page}
             </span>
-            <span className='text-[#000] font-robotoo'>
+            <span className='text-[#555] font-robotoo md:text-base text-xs'>
               <span>Release Date in Japan:</span> {character.release}
             </span>
-            <a
-              href={`https:www.wikipedia.com/${character.info}`}
-              className='mt-4 mb-6 md:mt-2 text-[rgb(18,54,82)] font-robotoo line-clamp-3 md:line-clamp-4 md:mb-0 text-balance hover:text-[#326cad] hover:cursor-pointer md:border-b-0 md:pb-0'>
+            <span
+              className='mt-4 mb-6 md:mt-2 font-robotooo line-clamp-3 md:line-clamp-4 md:mb-0 text-balance hover:cursor-pointer md:border-b-0 md:pb-0 text-[#555] md:text-base text-xs'>
               {character.data}
-            </a>
+            </span>
           </div>
         </div>
       ))}
@@ -89,4 +88,4 @@ function Manga() {
   )
 }
 
-export default Manga
+export default Mangas

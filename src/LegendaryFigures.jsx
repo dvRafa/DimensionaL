@@ -42,28 +42,28 @@ const Characters = [
   },
 ]
 
-function SmallFigure() {
+function LegendaryFigures() {
   return (
-    <div className='max-w-[935px] mx-auto'>
-      <h1 className='text-lg md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
+    <div className='max-w-[260px] md:max-w-[935px] mx-auto'>
+      <h1 className='text-md md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
         Legendary Figures
       </h1>
-      <div className='flex flex-col pb'>
+      <div className='flex flex-col'>
         {Characters.map((character, index) => (
           <div
             key={index}
             className='flex flex-col md:flex-row md:gap-x-4 justify-center'>
-            <div className='flex flex-col md:w-[1050px] md:text-start text-center'>
+            <div className='flex flex-col md:w-[1050px] w-[260px] mx-auto md:text-start text-center'>
               <h1 className='text-lg md:text-2xl font-roboto tracking-[1.05px]'>
                 <span className='md:italic'>{character.name}</span> -{' '}
                 {character.desc}
               </h1>
-              <span className='md:text-xl mt-4 font-robotoo'>
+              <span className='md:text-xl mt-4 font-robotoo text-sm'>
                 <span>Price:</span> {character.price}
               </span>
             </div>
             <section className='md:flex justify-center w-full flex-grow pb-2 md:pb-6'>
-              <div className='flex md:flex-row md:h-[300px] w-full h-full md:flex-grow'>
+              <div className='flex md:flex-row md:h-[300px] w-full md:flex-grow'>
                 <img
                   src={character.images[0]}
                   className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-l-md md:mt-0 mt-6 block'
@@ -83,4 +83,4 @@ function SmallFigure() {
   )
 }
 
-export default SmallFigure
+export default LegendaryFigures
