@@ -1,28 +1,18 @@
-import Manga from './Manga'
-import Keychain from './Keychain'
-import Box from './Box'
-import Footer from './Footer'
 import Header from './Header'
-import SmallFigure from './SmallFigure'
+import LegendaryFigures from './LegendaryFigures'
+import Legends from './Legends'
+import Keychains from './Keychains'
+import Mangas from './Mangas'
+import Footer from './Footer'
 
 function App() {
   return (
     <main>
-      <div>
-        <Header />
-      </div>
-      <div>
-        <SmallFigure />
-      </div>
-      <div>
-        <Keychain />
-      </div>
-      <div>
-        <Box />
-      </div>
-      <div>
-        <Manga />
-      </div>
+      <Header />
+      <LegendaryFigures />
+      <Legends/>
+      <Keychains />
+      <Mangas />
       <Footer />
     </main>
   )

@@ -2,25 +2,19 @@ import Bowing from '/Bowing.webp'
 
 function Footer() {
   return (
-    <footer className='flex flex-col bg-[#222]'>
-      <div className='flex flex-col text-[#f6f7f8] py-12'>
-        <span className='text-center items-center justify-center font-robotoo tracking-[1.05px]'>
-          Peace & Love
-        </span>
-        <span className='items-center justify-center text-center'>💓</span>
-        <span className='text-center items-center justify-center font-robotoo tracking-[1.05px]'>
-          Rafael Alvarez
-        </span>
-        <span className='text-center items-center justify-center font-robotoo tracking-[1.05px]'>
-          Noa Kobayashi
-        </span>
+    <footer className='flex flex-col bg-[#fcfeff] text-[#111]'>
+      <div className='flex flex-col pt-2 items-center justify-center'>
+        <h1 className='font-robotoo' >Noa</h1>
+        <h1 className='font-robotoo' >Rafa</h1>
+        <span>💌</span>
       </div>
-      <div className='border opacity-10 mb-3'/>
-      <div className='flex justify-center items-center pb-1'>
-        <h1 className='text-lg font-roboto text-[#f6f7f8] hover:cursor-pointer'>ありがとう ございます</h1>
+      <div className='flex justify-center hover:cursor-pointer items-center mb-1'>
+        <h1 className='text-lg font-kanji'>
+          ありがとう ございます
+        </h1>
         <img
           src={Bowing}
-          className='h-14 w-16 items-center cursor-pointer'
+          className='h-12 w-16 items-center'
           alt='Bowing man'
           loading='lazy'
         />
