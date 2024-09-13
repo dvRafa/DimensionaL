@@ -12,7 +12,6 @@ const Characters = [
     release: 'August 25, 2015',
     price: '$100',
     alt: 'Shingeki No Kyojin',
-    info: 'https://en.wikipedia.org/wiki/Shingeki_no_Kyojin',
   },
   {
     images: [OnePiece],
@@ -22,7 +21,6 @@ const Characters = [
     release: 'June 4, 2013',
     price: '$100',
     alt: 'One Piece',
-    info: 'https://en.wikipedia.org/wiki/https:/en.wikipedia.org/wiki/One_Piece',
   },
   {
     images: [Naruto],
@@ -32,7 +30,6 @@ const Characters = [
     release: 'December 28, 2012',
     price: '$100',
     alt: 'Naruto Shippuden',
-    info: 'https://en.wikipedia.org/wiki/List_of_Naruto:_Shippuden_episodes',
   },
   {
     images: [KimetsuNoYaiba],
@@ -42,48 +39,49 @@ const Characters = [
     release: 'December 4, 2020',
     price: '$100',
     alt: 'Kimetsu No Yaiba',
-    info: 'https://es.wikipedia.org/wiki/Kimetsu_no_Yaiba',
   },
 ]
 
 function Mangas() {
   return (
-    <div className='md:max-w-6xl max-w-[260px] mx-auto'>
-      <h1 className='text-md md:text-xl my-4 text-left justify-center tracking-[1.05px] font-robotoo'>
+    <div className='bg-[#fafafa]'>
+    <div className='md:max-w-[1000px] max-w-[260px] mx-auto'>
+      <h1 className='text-md md:text-xl py-4 text-left justify-center tracking-[1.05px] font-robotoo'>
         Mangas
       </h1>
-      {Characters.map((character, index, info) => (
+      {Characters.map((character, index) => (
         <div
           key={index}
-          className='mb-6 md:bg-gradient-to-r from-[#fbf9f9] to-[#fafffa] flex md:flex-row flex-col'>
+          className='pb-6 flex md:flex-row flex-col'>
           <div className='w-full'>
             <img
               loading='lazy'
               src={character.images}
               alt={character.alt}
-              className='md:h-[550px] h-[250px] w-full shadow-sm'
+              className='md:h-[500px] h-[250px] w-full shadow-sm'
             />
           </div>
-          <div className='flex flex-col md:pt-0 pt-2 md:px-10 text-center border-b mb-6 md:mb-0 md:border-b-0 justify-center md:w-2/5'>
-            <h1 className='text-lg md:text-2xl font-roboto tracking-[1.05px'>
+          <div className='flex flex-col md:pt-0 pt-2 md:pl-4 text-left border-b mb-6 md:mb-0 md:border-b-0 justify-center md:w-2/5'>
+            <h1 className='text-lg md:text-xl font-roboto tracking-[1.05px'>
               {character.name}
             </h1>
-            <span className='md:text-xl text-sm my-2 font-robotoo'>
+            <span className='md:text-lg text-sm my-2 font-robotoo'>
               <span>Price:</span> {character.price}
             </span>
-            <span className='font-robotoo md:text-base text-xs text-[#555]'>
+            <span className='font-robotoo md:text-base text-xs text-[#374151]'>
               <span>Pages:</span> {character.page}
             </span>
-            <span className='text-[#555] font-robotoo md:text-base text-xs'>
+            <span className='text-[#374151] font-robotoo md:text-sm text-xs'>
               <span>Release Date in Japan:</span> {character.release}
             </span>
             <span
-              className='mt-4 mb-6 md:mt-2 font-robotooo line-clamp-3 md:line-clamp-4 md:mb-0 text-balance hover:cursor-pointer md:border-b-0 md:pb-0 text-[#555] md:text-base text-xs'>
+              className='mt-4 mb-6 md:mt-2 font-robotooo line-clamp-3 md:line-clamp-4 md:mb-0 text-balance md:border-b-0 md:pb-0 text-[#374151] md:text-sm text-xs'>
               {character.data}
             </span>
           </div>
         </div>
       ))}
+    </div>
     </div>
   )
 }

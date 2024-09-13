@@ -11,55 +11,55 @@ const Characters = [
     price: '$100',
     image: [Vegeta],
     alt: 'Vegeta',
-    desc: 'Dragon Ball Z'
+    desc: 'Dragon Ball Z',
   },
   {
     name: 'Ussop - ',
     price: '$100',
     image: [Ussop],
     alt: 'Ussop',
-    desc: 'One Piece'
+    desc: 'One Piece',
   },
   {
     name: 'Monkey D. Luffy -',
     price: '$100',
     image: [Luffy],
     alt: 'Monkey D. Luffy',
-    desc: 'One Piece'
+    desc: 'One Piece',
   },
   {
     name: 'Roronoa Zoro - ',
     price: '$100',
     image: [Zoro],
     alt: 'Roronoa Zoro',
-    desc: 'One Piece'
+    desc: 'One Piece',
   },
   {
     name: 'Tony Chopper "Samurai" -',
     price: '$100',
     image: [Chopper],
     alt: 'Tony Chopper "Samurai"',
-    desc: 'One Piece'
+    desc: 'One Piece',
   },
 ]
 
 function Keychains() {
   return (
-    <section>
+    <section className='bg-[#fafafa]'>
       <video
         className='h-screen md:h-full object-cover w-full overflow-hidden'
         muted
         autoPlay
         playsInline
-        loop>
+        loop
+        >
         <source
           src={Video}
           type='video/mp4'
         />
       </video>
-      <div className='md:max-w-[935px] max-w-[260px] mx-auto flex flex-col'>
-        <h1
-          className='text-md md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
+      <div className='md:max-w-[780px] max-w-[260px] mx-auto flex flex-col'>
+        <h1 className='text-md md:text-xl my-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
           Keychains
         </h1>
         <div className='grid md:grid-cols-2 w-full md:gap-x-6'>
@@ -82,8 +82,8 @@ function Keychains() {
                   {character.desc}
                 </h1>
                 <span className='md:text-xl mt-2 font-robotoo text-sm'>
-                <span>Price:</span> {character.price}
-              </span>
+                  <span>Price:</span> {character.price}
+                </span>
               </div>
             </div>
           ))}

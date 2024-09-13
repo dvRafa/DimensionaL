@@ -38,6 +38,7 @@ const Legends = () => {
       price: '$100',
       images: [Levi0, Levi1],
       alt: 'Levi Ackerman',
+      id: 'Levi-Ackerman'
     },
     {
       name: 'Monkey D. Luffy - ',
@@ -45,6 +46,7 @@ const Legends = () => {
       price: '$100',
       images: [Luffy0, Luffy1],
       alt: 'Monkey D. Luffy',
+      id: 'Monkey-D-Luffy'
     },
     {
       name: 'Monkey D. Luffy - ',
@@ -80,20 +82,21 @@ const Legends = () => {
     }
 
     return (
-      <div>
+      <div className='p-4'>
         <div className='relative w-full max-w-md mx-auto mb-4'>
           {/* Image Container */}
           <div className='relative'>
             <img
+              id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full h-[550px] object-contain rounded-md'
+              className='w-full h-[500px] object-contain rounded-md'
               loading='lazy'
             />
             {/* Navigation Arrows */}
             <button
               onClick={handlePrevImage}
-              className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border border-zinc-300 bg-opacity-50 p-3 rounded-full'>
+              className='absolute left-4 top-1/2 transform -translate-y-1/2 border border-zinc-300 bg-opacity-50 p-3 rounded-full'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 width='24'
@@ -114,7 +117,7 @@ const Legends = () => {
           </div>
           {/* Text Overlay */}
           <div className='relative mt-2'>
-            <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-md text-stone-100 p-4 rounded-b-md'>
+            <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-lg text-stone-100 p-4 rounded-b-md'>
               <h1 className='md:text-lg text-md font-roboto'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
@@ -130,8 +133,8 @@ const Legends = () => {
   }
 
   return (
-    <section className='md:bg-gradient-to-r from-[#f4f4f4] to-[#fefffc]'>
-      <div className='md:max-w-[935px] max-w-[260px] mx-auto pb-4'>
+    <section className='bg-[#fafafa]'>
+      <div className='md:max-w-[780px] max-w-[260px] mx-auto pb-4'>
         <h1 className='text-md md:text-xl py-4 text-left tracking-[1.05px] font-bold'>
           Legends
         </h1>
