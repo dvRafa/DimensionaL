@@ -51,8 +51,7 @@ function Keychains() {
         muted
         autoPlay
         playsInline
-        loop
-        >
+        loop>
         <source
           src={Video}
           type='video/mp4'

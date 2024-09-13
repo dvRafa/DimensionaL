@@ -2,7 +2,7 @@ import Bowing from '/Bowing.webp'
 
 function Header() {
   return (
-    <header className='flex flex-col justify-center items-center'>
+    <header className='flex flex-col justify-center items-center bg-[#fafafa]'>
       <div className='flex w-screen flex-row justify-between hover:cursor-pointer py-2 md:fixed top-0 md:z-50 px-10'>
         <div className='md:absolute md:inset-0 md:backdrop-blur-lg'></div>
         <div className='md:relative flex w-screen flex-row items-center'>
