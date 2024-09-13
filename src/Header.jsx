@@ -11,14 +11,14 @@ function Header() {
           </h1>
           <img
             src={Bowing}
-            className='w-16 h-12 md:-z-60'
+            className='w-16 h-12 md:-z-60 drop-shadow-lg'
             alt='Bowing man'
           />
         </div>
         <div></div>
       </div>
-      <div className='bg-[#ffffff] w-[350px] md:w-[780px] md:h-[230px] text-lg md:px-2 md:mb-10 md:mt-20 my-8 px-4 md:rounded-md md:shadow-md hover:scale-105 duration-300 ease-in'>
-        <h1 className='md:text-xl text-lg font-robotoo tracking-[1.05px]'>
+      <div className='bg-[#ffffff] w-[350px] md:w-[780px] md:h-[230px] text-lg md:px-2 md:mb-10 md:mt-20 my-8 px-4 md:rounded-md md:shadow-lg hover:scale-105 duration-300 ease-in border'>
+        <h1 className='md:text-xl text-lg font-robotoo tracking-[1.05px] pt-2'>
           Authentic Products from{' '}
           <a
             href='https://www.japan.go.jp/'

@@ -82,15 +82,15 @@ const Legends = () => {
     }
 
     return (
-      <div className='p-4'>
-        <div className='relative w-full max-w-md mx-auto mb-4'>
+      <div className='p-3'>
+        <div className='relative w-full max-w-md mx-auto pt-2 mb-4 border shadow-lg'>
           {/* Image Container */}
           <div className='relative'>
             <img
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full h-[500px] object-contain rounded-md'
+              className='w-full h-[450px] object-contain rounded-md'
               loading='lazy'
             />
             {/* Navigation Arrows */}
@@ -117,13 +117,13 @@ const Legends = () => {
           </div>
           {/* Text Overlay */}
           <div className='relative mt-2'>
-            <div className='absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 backdrop-blur-lg text-stone-100 p-4 rounded-b-md'>
-              <h1 className='md:text-lg text-md font-roboto'>
+            <div className='bottom-0 left-0 right-0 bg-transparent p-4 rounded-b-md'>
+              <h1 className='md:text-lg text-md font-roboto mb-2'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <span className='text-sm md:text-xl pt-2 font-robotoo'>
-                <span>Price:</span> {character.price}
+              <span className='text-sm md:text-xl font-extrabold'>
+                {character.price}
               </span>
             </div>
           </div>
@@ -135,8 +135,8 @@ const Legends = () => {
   return (
     <section className='bg-[#fafafa]'>
       <div className='md:max-w-[780px] max-w-[260px] mx-auto pb-4'>
-        <h1 className='text-md md:text-xl py-4 text-left tracking-[1.05px] font-bold'>
-          Legends
+        <h1 className='text-md md:text-xl pb-4 pt-14 text-left tracking-[1.05px] font-robotoo'>
+          Legendary Figures
         </h1>
         {/* Render each character with its own slider */}
         <div className='grid md:grid-cols-2'>

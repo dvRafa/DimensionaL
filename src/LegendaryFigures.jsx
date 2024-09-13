@@ -47,7 +47,7 @@ function LegendaryFigures() {
     <div className='bg-[#fafafa]'>
     <div className='max-w-[260px] md:max-w-[768px] mx-auto'>
       <h1 className='text-md md:text-xl py-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
-        Legendary Figures
+        Collectible Figures
       </h1>
       <div className='flex flex-col'>
         {Characters.map((character, index) => (
@@ -59,15 +59,15 @@ function LegendaryFigures() {
                 <span className='md:italic'>{character.name}</span> -{' '}
                 {character.desc}
               </h1>
-              <span className='md:text-xl mt-4 font-robotoo text-sm'>
-                <span>Price:</span> {character.price}
+              <span className='md:text-xl mt-4 font-extrabold text-sm'>
+                <span className='font-robotoo'>Price:</span> {character.price}
               </span>
             </div>
-            <section className='md:flex justify-center w-full flex-grow pb-2 md:pb-6'>
+            <section className='md:flex justify-center w-full flex-grow pb-2 md:pb-20'>
               <div className='flex md:flex-row md:h-[300px] w-full md:flex-grow'>
                 <img
                   src={character.images[0]}
-                  className='w-[0px] flex-grow duration-300 ease-in hover:cursor-pointer hover:w-[30px] md:rounded-l-md md:mt-0 mt-6 block'
+                  className='w-[0px] flex-grow duration-300 ease-in hover:w-[30px] md:rounded-l-md md:mt-0 mt-6 block'
                   alt={character.alt}
                   loading='eager'
                 />

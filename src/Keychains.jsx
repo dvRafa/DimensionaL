@@ -47,7 +47,7 @@ function Keychains() {
   return (
     <section className='bg-[#fafafa]'>
       <video
-        className='h-screen md:h-full object-cover w-full overflow-hidden'
+        className='h-screen md:h-full object-cover w-full overflow-hidden pt-14'
         muted
         autoPlay
         playsInline
@@ -73,7 +73,7 @@ function Keychains() {
                       alt={alt}
                       src={image}
                       loading='lazy'
-                      className='rounded-lg h-full w-full md:duration-300 md:ease-in md:hover:scale-110 md:hover:cursor-pointer'
+                      className='rounded-lg h-full w-full md:duration-300 md:ease-in md:hover:scale-110'
                     />
                   ))}
                 </div>
@@ -81,8 +81,8 @@ function Keychains() {
                   <span className='md:italic'>{character.name}</span>
                   {character.desc}
                 </h1>
-                <span className='md:text-xl mt-2 font-robotoo text-sm'>
-                  <span>Price:</span> {character.price}
+                <span className='md:text-xl mt-2 font-extrabold text-sm'>
+                  <span className='font-roboto'>Price:</span> {character.price}
                 </span>
               </div>
             </div>

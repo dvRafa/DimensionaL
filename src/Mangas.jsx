@@ -46,7 +46,7 @@ function Mangas() {
   return (
     <div className='bg-[#fafafa]'>
     <div className='md:max-w-[1000px] max-w-[260px] mx-auto'>
-      <h1 className='text-md md:text-xl py-4 text-left justify-center tracking-[1.05px] font-robotoo'>
+      <h1 className='text-md md:text-xl pb-4 pt-14 text-left justify-center tracking-[1.05px] font-robotoo'>
         Mangas
       </h1>
       {Characters.map((character, index) => (
@@ -58,15 +58,15 @@ function Mangas() {
               loading='lazy'
               src={character.images}
               alt={character.alt}
-              className='md:h-[500px] h-[250px] w-full shadow-sm'
+              className='md:h-[500px] h-[250px] w-full'
             />
           </div>
           <div className='flex flex-col md:pt-0 pt-2 md:pl-4 text-left border-b mb-6 md:mb-0 md:border-b-0 justify-center md:w-2/5'>
             <h1 className='text-lg md:text-xl font-roboto tracking-[1.05px'>
               {character.name}
             </h1>
-            <span className='md:text-lg text-sm my-2 font-robotoo'>
-              <span>Price:</span> {character.price}
+            <span className='md:text-lg text-sm my-2 font-extrabold'>
+              <span className='font-roboto'>Price:</span> {character.price}
             </span>
             <span className='font-robotoo md:text-base text-xs text-[#374151]'>
               <span>Pages:</span> {character.page}
