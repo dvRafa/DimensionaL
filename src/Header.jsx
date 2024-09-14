@@ -17,7 +17,7 @@ function Header() {
         </div>
         <div></div>
       </div>
-      <div className='bg-[#ffffff] w-[350px] md:w-[780px] md:h-[230px] text-lg md:px-2 md:mb-10 md:mt-20 my-8 px-4 md:rounded-md md:shadow-lg hover:scale-105 duration-300 ease-in border'>
+      <div className='bg-[#ffffff] w-[350px] md:w-[780px] md:h-[230px] text-lg md:px-2 md:mb-10 md:mt-20 my-4 px-4 md:rounded-md md:shadow-lg hover:scale-105 duration-300 ease-in border'>
         <h1 className='md:text-xl text-lg font-robotoo tracking-[1.05px] pt-2'>
           Authentic Products from{' '}
           <a
@@ -50,7 +50,7 @@ function Header() {
           figures come without a box. Each figure is shipped with only the
           figure itself and a base for display.
         </p>
-        <div className='flex flex-row items-center pt-4'>
+        <div className='flex flex-row items-center py-3'>
           <a
             href='https://instagram.com/thenotoriousrafa'
             target='_blank'

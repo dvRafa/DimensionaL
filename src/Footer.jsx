@@ -3,10 +3,10 @@ import Bowing from '/Bowing.webp'
 function Footer() {
   return (
     <footer className='flex flex-col bg-[#fafafa] text-[#121212] pt-16'>
-      <div className='border-[1px] w-screen md:w-[1000px] mx-auto border-neutral-500 opacity-30 shadow-lg' />
+      <div className='border w-[260px] md:w-[1000px] mx-auto shadow-lg' />
       <div className='flex flex-col items-center justify-center'>
         <h1 className='text-sm md:text-base font-roboto pt-4'>
-          Rafa & Noa
+          Rafa & Noa{' '}
           <span>💌</span>
         </h1>
       </div>

@@ -63,11 +63,11 @@ function CollectibleFigures() {
                   <span className='font-robotoo'>Price:</span> {character.price}
                 </span>
               </div>
-              <section className='md:flex justify-center w-full flex-grow pb-2 md:pb-20'>
+              <section className='md:flex justify-center w-full flex-grow pb-10 md:pb-20'>
                 <div className='flex md:flex-row md:h-[300px] w-full md:flex-grow'>
                   <img
                     src={character.images[0]}
-                    className='w-[0px] flex-grow duration-300 ease-in hover:w-[30px] md:rounded-l-md md:mt-0 mt-6 block'
+                    className='w-[0px] flex-grow duration-300 ease-in hover:w-[30px] md:rounded-l-md mt-0 block'
                     alt={character.alt}
                     loading='eager'
                   />

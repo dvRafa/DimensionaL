@@ -36,7 +36,7 @@ const LegendaryFigures = () => {
       name: 'Levi Ackerman - ',
       title: 'Shingeki No Kyojin Final Season by Banpresto 18cm',
       price: '$100',
-      images: [Levi0, Levi1],
+      images: [Levi1, Levi0],
       alt: 'Levi Ackerman',
       id: 'Levi-Ackerman',
     },
@@ -133,7 +133,7 @@ const LegendaryFigures = () => {
   }
 
   return (
-    <section className='bg-[#fafafa]'>
+    <section className='bg-white'>
       <div className='md:max-w-[780px] max-w-[260px] mx-auto pb-4'>
         <h1 className='text-md md:text-xl pb-4 pt-14 text-left tracking-[1.05px] font-robotoo'>
           Legendary Figures
