@@ -19,21 +19,21 @@ import SenjuroFront from './assets/Legends/SenjuroFront.webp'
 const LegendaryFigures = () => {
   const Characters = [
     {
-      name: 'Sanemi Shinazugawa - ',
+      name: 'Sanemi Shinazugawa ',
       title: 'Kimetsu No Yaiba Vol. 14 by Banpresto 18cm',
       price: '$100',
       images: [SanemiFront, Sanemi, SanemiBack],
       alt: 'Sanemi Shinazugawa',
     },
     {
-      name: 'Senjuro Rengoku - ',
+      name: 'Senjuro Rengoku ',
       title: 'Kimetsu No Yaiba Vol. 26 by Banpresto 18cm',
       price: '$100',
       images: [SenjuroFront, Senjuro, SenjuroBack],
       alt: 'Senjuro Rengoku',
     },
     {
-      name: 'Levi Ackerman - ',
+      name: 'Levi Ackerman ',
       title: 'Shingeki No Kyojin Final Season by Banpresto 18cm',
       price: '$100',
       images: [Levi1, Levi0],
@@ -41,7 +41,7 @@ const LegendaryFigures = () => {
       id: 'Levi-Ackerman',
     },
     {
-      name: 'Monkey D. Luffy - ',
+      name: 'Monkey D. Luffy ',
       title: 'One Piece Bandai Ichiban Kuji by Banpresto 16cm',
       price: '$100',
       images: [Luffy0, Luffy1],
@@ -49,7 +49,7 @@ const LegendaryFigures = () => {
       id: 'Monkey-D-Luffy',
     },
     {
-      name: 'Monkey D. Luffy - ',
+      name: 'Monkey D. Luffy ',
       title:
         'One Piece Film Red DFX The Grandline Men Vol. 1 by Banpresto 16cm',
       price: '$100',
@@ -57,7 +57,7 @@ const LegendaryFigures = () => {
       alt: 'Monkey D. Luffy',
     },
     {
-      name: 'Nezuko Kamado - ',
+      name: 'Nezuko Kamado ',
       title: 'Kimetsu No Yaiba World Collectible Figure by Banpresto 8cm',
       price: '$100',
       images: [NezukoFront, Nezuko, NezukoBack],
@@ -82,7 +82,7 @@ const LegendaryFigures = () => {
     }
 
     return (
-      <div className='p-3'>
+      <div className='p-2'>
         <div className='relative w-full max-w-md mx-auto pt-2 mb-4 border shadow-lg'>
           {/* Image Container */}
           <div className='relative'>
@@ -90,7 +90,7 @@ const LegendaryFigures = () => {
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full h-[450px] object-contain rounded-md'
+              className='w-full h-[450px] object-contain'
               loading='lazy'
             />
             {/* Navigation Arrows */}
@@ -117,12 +117,12 @@ const LegendaryFigures = () => {
           </div>
           {/* Text Overlay */}
           <div className='relative mt-2'>
-            <div className='bottom-0 left-0 right-0 bg-transparent p-4 rounded-b-md'>
-              <h1 className='md:text-lg text-md font-roboto mb-2'>
+            <div className='bottom-0 left-0 right-0 bg-transparent p-4'>
+              <h1 className='md:text-lg text-md mb-2'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <span className='text-sm md:text-xl font-extrabold'>
+              <span className='text-sm md:text-xl font-robotoo'>
                 {character.price}
               </span>
             </div>
@@ -133,9 +133,9 @@ const LegendaryFigures = () => {
   }
 
   return (
-    <section className='bg-white'>
-      <div className='md:max-w-[780px] max-w-[260px] mx-auto pb-4'>
-        <h1 className='text-md md:text-xl pb-4 pt-14 text-left tracking-[1.05px] font-robotoo'>
+    <section className='bg-[#fafafa]'>
+      <div className='md:max-w-[830px] max-w-[260px] mx-auto pb-4'>
+        <h1 className='text-md md:text-xl pb-4 pt-14 text-left tracking-[1.05px] font-robotoo px-2'>
           Legendary Figures
         </h1>
         {/* Render each character with its own slider */}
