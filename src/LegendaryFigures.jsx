@@ -21,21 +21,21 @@ const LegendaryFigures = () => {
     {
       name: 'Sanemi Shinazugawa ',
       title: 'Kimetsu No Yaiba Vol. 14 by Banpresto 18cm',
-      price: '$100',
+      price: '$35',
       images: [SanemiFront, Sanemi, SanemiBack],
       alt: 'Sanemi Shinazugawa',
     },
     {
       name: 'Senjuro Rengoku ',
       title: 'Kimetsu No Yaiba Vol. 26 by Banpresto 18cm',
-      price: '$100',
+      price: '$35',
       images: [SenjuroFront, Senjuro, SenjuroBack],
       alt: 'Senjuro Rengoku',
     },
     {
       name: 'Levi Ackerman ',
       title: 'Shingeki No Kyojin Final Season by Banpresto 18cm',
-      price: '$100',
+      price: '$80',
       images: [Levi1, Levi0],
       alt: 'Levi Ackerman',
       id: 'Levi-Ackerman',
@@ -43,7 +43,7 @@ const LegendaryFigures = () => {
     {
       name: 'Monkey D. Luffy ',
       title: 'One Piece Bandai Ichiban Kuji by Banpresto 16cm',
-      price: '$100',
+      price: '$80',
       images: [Luffy0, Luffy1],
       alt: 'Monkey D. Luffy',
       id: 'Monkey-D-Luffy',
@@ -52,14 +52,14 @@ const LegendaryFigures = () => {
       name: 'Monkey D. Luffy ',
       title:
         'One Piece Film Red DFX The Grandline Men Vol. 1 by Banpresto 16cm',
-      price: '$100',
+      price: '$90',
       images: [LuffyBack, LuffyFront, Luffy],
       alt: 'Monkey D. Luffy',
     },
     {
       name: 'Nezuko Kamado ',
       title: 'Kimetsu No Yaiba World Collectible Figure by Banpresto 8cm',
-      price: '$100',
+      price: '$35',
       images: [NezukoFront, Nezuko, NezukoBack],
       alt: 'Nezuko Kamado',
     },
@@ -82,49 +82,49 @@ const LegendaryFigures = () => {
     }
 
     return (
-      <div className='p-2'>
-        <div className='relative w-full max-w-md mx-auto pt-2 mb-4 border shadow-lg'>
+      <div>
+        <div className='relative mx-auto px-2 shadow-lg rounded-b'>
           {/* Image Container */}
           <div className='relative'>
             <img
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full h-[450px] object-contain'
+              className='w-full md:h-[410px] h-[300px] object-scale-down'
               loading='lazy'
             />
             {/* Navigation Arrows */}
             <button
               onClick={handlePrevImage}
-              className='absolute left-4 top-1/2 transform -translate-y-1/2 border border-zinc-300 bg-opacity-50 p-3 rounded-full'>
+              className='absolute left-4 top-1/2 transform -translate-y-1/2'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'>
+                width='22'
+                height='22'>
                 <path d='M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z' />
               </svg>
             </button>
             <button
               onClick={handleNextImage}
-              className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-white border border-zinc-300 bg-opacity-50 p-3 rounded-full'>
+              className='absolute right-4 top-1/2 transform -translate-y-1/2'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                width='24'
-                height='24'>
+                width='22'
+                height='22'>
                 <path d='M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z' />
               </svg>
             </button>
           </div>
-          {/* Text Overlay */}
-          <div className='relative mt-2'>
-            <div className='bottom-0 left-0 right-0 bg-transparent p-4'>
-              <h1 className='md:text-lg text-md mb-2'>
+          {/* Text */}
+          <div className='relative'>
+            <div className='bottom-0 left-0 right-0 bg-transparent py-2'>
+              <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <span className='text-sm md:text-xl font-robotoo'>
+              <h4 className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
                 {character.price}
-              </span>
+              </h4>
             </div>
           </div>
         </div>
@@ -134,12 +134,11 @@ const LegendaryFigures = () => {
 
   return (
     <section className='bg-[#fafafa]'>
-      <div className='md:max-w-[830px] max-w-[260px] mx-auto pb-4'>
-        <h1 className='text-md md:text-xl pb-4 pt-14 text-left tracking-[1.05px] font-robotoo px-2'>
-          Legendary Figures
-        </h1>
-        {/* Render each character with its own slider */}
-        <div className='grid md:grid-cols-2'>
+      <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
+        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] font-normal md:leading-[47px]'>
+          Legends Only
+        </h2>
+        <div className='grid md:grid-cols-3 md:gap-8 gap-y-10 md:pt-[65px] pt-[50px]'>
           {Characters.map((character, index) => (
             <CharacterSlider
               key={index}

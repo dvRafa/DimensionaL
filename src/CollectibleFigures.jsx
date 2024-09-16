@@ -11,7 +11,7 @@ const Characters = [
   {
     name: 'Goku',
     desc: 'Dragon Ball Z Collection World Figure Vol. 1 by Banpresto 8cm',
-    price: '$100',
+    price: '$20',
     anime: 'Dragon Ball Super',
     images: [FGoku, BGoku],
     alt: 'Goku',
@@ -19,7 +19,7 @@ const Characters = [
   {
     name: 'Bardock',
     desc: 'Bandai Ichiban Kuji Mission 5 Super Saiyan 3 by Banpresto 8cm',
-    price: '$100',
+    price: '$15',
     anime: 'Dragon Ball Z',
     images: [FBardock, BBardock],
     alt: 'Bardock',
@@ -27,7 +27,7 @@ const Characters = [
   {
     name: 'Sakazuki "Akainu"',
     desc: 'One Piece x PEPSI NEX Figure Collection by Suntory 5cm',
-    price: '$100',
+    price: '$20',
     anime: 'One Piece',
     images: [FAkainu, BAkainu],
     alt: 'Sakazuki "Akainu"',
@@ -35,7 +35,7 @@ const Characters = [
   {
     name: 'Brook',
     desc: 'One Piece x PEPSI NEX Figure Collection by Suntory 5cm',
-    price: '$100',
+    price: '$20',
     anime: 'One Piece',
     images: [FBrook, BBrook],
     alt: 'Brook',
@@ -44,39 +44,40 @@ const Characters = [
 
 function CollectibleFigures() {
   return (
-    <div className='bg-[#fafafa]'>
-      <div className='max-w-[260px] md:max-w-[1300px] mx-auto'>
-        <h1 className='text-md md:text-xl py-4 text-left items-center justify-center tracking-[1.05px] font-robotoo'>
+    <div className='bg-[#fafafa] border-b pb-4 md:border-b-0 md:pb-0'>
+      <div className='max-w-[350px] md:max-w-[1300px] mx-auto pt-[50px] md:pt-[65px] md:border-b md:pb-4'>
+        <h1 className='text-[19px] leading-[19px] tracking-[0.5px] font-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>Retro</h1>
+        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] font-normal md:leading-[47px]'>
           Collectible Figures
-        </h1>
-        <div className='grid md:grid-cols-3 md:gap-8'>
+        </h2>
+        <div className='grid md:grid-cols-4 md:gap-8 gap-y-[17px] pt-[50px] md:pt-[65px]'>
           {Characters.map((character, index) => (
             <div
               key={index}
-              className='flex flex-col md:flex-col-reverse justify-center'>
-              <div className='flex flex-col md:text-start text-center'>
-                <h1 className='text-lg md:text-2xl tracking-[1.05px]'>
-                  <span className='md:italic'>{character.name}</span> {' '}
+              className='flex flex-col-reverse items-center justify-center'>
+              <div className='flex flex-col text-start pt-2'>
+                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
+                  <span className='italic'>{character.name}</span> {' '}
                   {character.desc}
                 </h1>
-                <span className='md:text-xl mt-2 font-robotoo text-lg'>
+                <h4 className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
                   {character.price}
-                </span>
+                </h4>
               </div>
-              <section className='md:flex justify-center w-full flex-grow pb-10 pt-2 md:p-6 md:bg-[#e0e0fb4e]'>
-                <div className='flex md:flex-row md:h-[300px] w-full md:flex-grow'>
+              <section className='bg-[#e0e0fb4e] p-6 w-full'>
+                <div>
                   <img
                     src={character.images[0]}
-                    className='w-[0px] flex-grow duration-300 ease-in hover:w-[30px] mt-0 block'
+                    className='duration-300 ease-in hover:scale-105 md:h-[350px] md:w-[257px] w-full h-[350px] object-cover brightness-105'
                     alt={character.alt}
                     loading='eager'
                   />
-                  <img
+                  {/* <img
                     src={character.images[1]}
                     className='w-[0px] flex-grow duration-300 ease-in hover:w-[30px] hidden md:block'
                     alt={character.alt}
                     loading='eager'
-                  />
+                  /> */}
                 </div>
               </section>
             </div>
