@@ -57,8 +57,11 @@ function Keychains() {
           type='video/mp4'
         />
       </video>
-      <div className='md:max-w-[1300px] max-w-[350px] mx-auto flex flex-col md:pt-[65px] pt-[50px] md:border-b md:pb-4'>
-        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] font-normal md:leading-[47px]'>
+      <div className='md:max-w-[1300px] max-w-[350px] mx-auto flex flex-col md:pt-[65px] pt-[50px] md:border-b md:pb-4 gothic-a1-regular'>
+        <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
+          popular
+        </h1>
+        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Keychains
         </h2>
         <div className='grid grid-cols-2 md:grid-cols-4 w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px]'>
@@ -76,7 +79,7 @@ function Keychains() {
                     />
                   ))}
                 </div>
-                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
+                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] md:pt-2'>
                   <span className='italic'>{character.name}</span>
                   {character.desc}
                 </h1>

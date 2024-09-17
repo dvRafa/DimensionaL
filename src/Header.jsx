@@ -8,15 +8,15 @@ function Header() {
       <header className='flex flex-col justify-center items-center'>
         <div className='border-b w-full'>
           <div className='flex w-full flex-row py-4 max-w-[1300px] mx-auto'>
-            <div className='flex w-screen flex-row items-center'>
-              <h3 className='text-[16px] leading-[16px] md:text-[18px] md:leading-[18px] -tracking-[2px]'>
+            <div className='flex w-screen flex-col items-center'>
+              <h3 className='text-[16px] leading-[16px] w-fit mx-auto md:text-[30px] md:leading-[30px] tracking-[2px] yuji-syuku-regular drop-shadow-xl'>
                 こんにちは
               </h3>
-              <img
+              {/* <img
                 src={Bowing}
                 className='md:w-16 md:h-12 w-10 h-10 drop-shadow object-cover'
                 alt='Bowing man'
-              />
+              /> */}
             </div>
           </div>
         </div>

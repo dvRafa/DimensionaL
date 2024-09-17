@@ -28,7 +28,7 @@ const Characters = [
     data: 'With the help of Kakashi and Guy, Naruto seems to have found a way around Tobis invincible abilities. But why do Tobis techniques seem to mimic Kakashis so closely? And when Tobis mask is finally torn off, will the revelation shock the ninja world?!',
     page: '192',
     release: 'December 28, 2012',
-    price: '$60',
+    price: '$50',
     alt: 'Naruto Shippuden',
   },
   {
@@ -37,19 +37,19 @@ const Characters = [
     data: 'Kimetsu no Yaiba: Gaiden is a volume consisting of Giyu Tomiokas Story and Kyojuro Rengokus Story, as well as Kimetsu Between the Scenes.',
     page: '215',
     release: 'December 4, 2020',
-    price: '$80',
+    price: '$45',
     alt: 'Kimetsu No Yaiba',
-  },
+  }
 ]
 
 function Mangas() {
   return (
-    <div className='bg-[#fafafa]'>
+    <div className='bg-[#fafafa] gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
-        <h1 className='text-[15px] leading-[15px] tracking-[0.5px] font-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
-          Masterpieces
+        <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
+          masterpiece
         </h1>
-        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] font-normal md:leading-[47px]'>
+        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Mangas
         </h2>
         <div className='grid md:grid-cols-2 md:gap-8 gap-y-6 md:gap-y-0 md:pt-[65px] pt-[50px]'>

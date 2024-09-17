@@ -9,13 +9,15 @@ function Footer() {
         </h3>
       </div>
       <div className='flex flex-col justify-center items-center'>
-        <h3 className='md:text-lg text-[16px] leading-[16px] -tracking-[2px]'>ありがとう ございます</h3>
-        <img
+        <h3 className='md:text-[30px] w-fit mx-auto md:leading-[30px] text-[16px] leading-[16px] tracking-[2px] yuji-syuku-regular'>
+          ありがとう ございます
+        </h3>
+        {/* <img
           src={Bowing}
           className='md:w-16 md:h-12 w-10 h-10 items-center drop-shadow object-cover'
           alt='Bowing man'
           loading='lazy'
-        />
+        /> */}
       </div>
     </footer>
   )

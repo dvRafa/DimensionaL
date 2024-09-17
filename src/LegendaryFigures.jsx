@@ -133,9 +133,12 @@ const LegendaryFigures = () => {
   }
 
   return (
-    <section className='bg-[#fafafa]'>
+    <section className='bg-[#fafafa] gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
-        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] font-normal md:leading-[47px]'>
+        <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
+          rare
+        </h1>
+        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Legends Only
         </h2>
         <div className='grid md:grid-cols-3 md:gap-8 gap-y-10 md:pt-[65px] pt-[50px]'>
