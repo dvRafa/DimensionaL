@@ -1,7 +1,3 @@
-import Bowing from '/Bowing.webp'
-import IGLogo from '/IGLogo.svg'
-import WALogo from '/WALogo.svg'
-
 function Header() {
   return (
     <div className='bg-[#fafafa]'>
@@ -12,11 +8,6 @@ function Header() {
               <h3 className='text-[16px] leading-[16px] w-fit mx-auto md:text-[30px] md:leading-[30px] tracking-[2px] yuji-syuku-regular drop-shadow-xl'>
                 こんにちは
               </h3>
-              {/* <img
-                src={Bowing}
-                className='md:w-16 md:h-12 w-10 h-10 drop-shadow object-cover'
-                alt='Bowing man'
-              /> */}
             </div>
           </div>
         </div>

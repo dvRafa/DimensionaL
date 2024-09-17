@@ -69,17 +69,17 @@ function Mangas() {
                 <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
                   {character.name}
                 </h1>
-                <h4 className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
+                <span className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
                   {character.price}
-                </h4>
+                </span>
                 <div className='flex divide-x'>
                   <div className='pr-2'>
-                    <h5 className='md:text-base text-sm mt-2 md:-tracking-[1px] -tracking-[0.5px]'>
+                    <p className='md:text-base text-sm mt-2 md:-tracking-[1px] -tracking-[0.5px]'>
                       <span>Pages:</span> {character.page}
-                    </h5>
-                    <h5 className='md:text-base text-sm md:-tracking-[1px] -tracking-[0.5px]'>
+                    </p>
+                    <p className='md:text-base text-sm md:-tracking-[1px] -tracking-[0.5px]'>
                       <span>Release Date in Japan:</span> {character.release}
-                    </h5>
+                    </p>
                   </div>
                   <span className='line-clamp-4 md:text-base text-sm md:-tracking-[1px] -tracking-[0.5px] w-1/2 pl-2'>
                     {character.data}

@@ -62,9 +62,9 @@ function CollectibleFigures() {
                   <span className='italic'>{character.name}</span>{' '}
                   {character.desc}
                 </h1>
-                <h4 className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
+                <span className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
                   {character.price}
-                </h4>
+                </span>
               </div>
               <section className='bg-[#e0e0fb4e] p-6 w-full'>
                 <div>

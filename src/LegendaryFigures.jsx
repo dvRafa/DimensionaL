@@ -95,6 +95,7 @@ const LegendaryFigures = () => {
             />
             {/* Navigation Arrows */}
             <button
+              aria-label='Previous Image'
               onClick={handlePrevImage}
               className='absolute left-4 top-1/2 transform -translate-y-1/2'>
               <svg
@@ -105,6 +106,7 @@ const LegendaryFigures = () => {
               </svg>
             </button>
             <button
+              aria-label='Next Image'
               onClick={handleNextImage}
               className='absolute right-4 top-1/2 transform -translate-y-1/2'>
               <svg
@@ -122,16 +124,15 @@ const LegendaryFigures = () => {
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <h4 className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
+              <span className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
                 {character.price}
-              </h4>
+              </span>
             </div>
           </div>
         </div>
       </div>
     )
   }
-
   return (
     <section className='bg-[#fafafa] gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>

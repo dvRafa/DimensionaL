@@ -83,9 +83,9 @@ function Keychains() {
                   <span className='italic'>{character.name}</span>
                   {character.desc}
                 </h1>
-                <h4 className='text-[19px] md:mt-2 -tracking-[0.5px]'>
+                <span className='text-[19px] md:mt-2 -tracking-[0.5px]'>
                   {character.price}
-                </h4>
+                </span>
               </div>
             </div>
           ))}
