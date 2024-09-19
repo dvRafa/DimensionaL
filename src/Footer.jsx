@@ -6,15 +6,15 @@ function Footer() {
         <div className='flex flex-row gap-x-12 justify-center'>
           <ul>
             <li className='text-[10px] leading-[10px] tracking-[0.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:-tracking-[1px] hover:text-blue-800 duration-200 ease-in-out'>
-              <a href='/Anime-Goods/About'>About</a>
+              <a href='/Anime-Goods/About'>About - soon</a>
             </li>
             <li className='text-[10px] leading-[10px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out tracking-[0.5px] gothic-a1-light md:-tracking-[1px] md:pt-1 pt-2'>
               <a href='/Anime-Goods/Contact-Us'>
-              Contact Us
+              Contact Us - soon
               </a>
             </li>
             <li className='text-[10px] leading-[10px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out tracking-[0.5px] gothic-a1-light md:-tracking-[1px] md:pt-1 pt-2'>
-              <a href='/Anime-Goods/Terms-Conditions'>Terms + Conditions</a>
+              <a href='/Anime-Goods/Terms-Conditions'>Terms + Conditions - soon</a>
             </li>
           </ul>
           <ul>
