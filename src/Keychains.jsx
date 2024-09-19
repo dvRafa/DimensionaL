@@ -7,39 +7,44 @@ import Chopper from './assets/Keychains/Chopper.webp'
 
 const Characters = [
   {
-    name: 'Vegeta ',
+    name: 'Vegeta',
     price: '$15',
     image: [Vegeta],
     alt: 'Vegeta',
     desc: 'Dragon Ball Z',
+    design: '3D Model',
   },
   {
-    name: 'Ussop ',
+    name: 'Ussop',
     price: '$15',
     image: [Ussop],
     alt: 'Ussop',
     desc: 'One Piece',
+    design: '3D View',
   },
   {
-    name: 'Monkey D. Luffy ',
+    name: 'Monkey D. Luffy',
     price: '$15',
     image: [Luffy],
     alt: 'Monkey D. Luffy',
     desc: 'One Piece',
+    design: '3D View',
   },
   {
-    name: 'Roronoa Zoro ',
+    name: 'Roronoa Zoro',
     price: '$15',
     image: [Zoro],
     alt: 'Roronoa Zoro',
     desc: 'One Piece',
+    design: '3D View',
   },
   {
-    name: 'Tony Chopper "Samurai" ',
+    name: 'Tony Chopper "Samurai"',
     price: '$15',
     image: [Chopper],
     alt: 'Tony Chopper "Samurai"',
     desc: 'One Piece',
+    design: '3D View',
   },
 ]
 
@@ -59,15 +64,15 @@ function Keychains() {
       </video>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto flex flex-col md:pt-[65px] pt-[50px] md:border-b md:pb-4 gothic-a1-regular'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
-          popular
+          popular.
         </h1>
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Keychains
         </h2>
-        <div className='grid grid-cols-2 md:grid-cols-4 w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px]'>
+        <div className='grid grid-cols-2 md:grid-cols-3 w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px]'>
           {Characters.map((character, index) => (
             <div key={index}>
-              <div className='flex flex-col'>
+              <div>
                 <div>
                   {character.image.map((image, ImgIndex, alt) => (
                     <img
@@ -75,17 +80,23 @@ function Keychains() {
                       alt={alt}
                       src={image}
                       loading='lazy'
-                      className='rounded md:h-[301px] h-[180px] w-full duration-300 ease-in hover:scale-105 object-cover'
+                      className='rounded w-full h-full duration-300 ease-in hover:scale-105 object-cover md:h-[auto]'
+                      style={{ height: window.innerWidth > 768 ? `${Math.random() * 200 + 360}px` : 'auto', width: '100%'}}
                     />
                   ))}
                 </div>
-                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] md:pt-2'>
-                  <span className='italic'>{character.name}</span>
+              </div>
+              <div className='flex flex-col md:pt-4 pt-2'>
+                <div className='flex md:gap-x-8 gap-x-4'>
+                  <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px]'>
+                    FROM {character.price}
+                  </span>
+                  <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px]'>{character.design}</span>
+                </div>
+                <h1 className='md:text-[19px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[19px] pt-2 md:pt-1'>
+                  <span className='italic pr-2'>{character.name}</span>
                   {character.desc}
                 </h1>
-                <span className='text-[19px] md:mt-2 -tracking-[0.5px]'>
-                  {character.price}
-                </span>
               </div>
             </div>
           ))}

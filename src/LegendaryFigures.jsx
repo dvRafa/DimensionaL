@@ -83,7 +83,7 @@ const LegendaryFigures = () => {
 
     return (
       <div>
-        <div className='relative mx-auto px-2 shadow-lg rounded-b'>
+        <div className='relative mx-auto px-2 shadow-lg rounded-b border'>
           {/* Image Container */}
           <div className='relative'>
             <img
@@ -120,13 +120,13 @@ const LegendaryFigures = () => {
           {/* Text */}
           <div className='relative'>
             <div className='bottom-0 left-0 right-0 bg-transparent py-2'>
-              <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
+              <h2 className='text-[16px] pt-2 -tracking-[0.5px] leading-[16px]'>
+                FROM {character.price}
+              </h2>
+              <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] pt-2 md:pt-1'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
-              <span className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
-                {character.price}
-              </span>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const LegendaryFigures = () => {
     <section className='bg-[#fafafa] gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
-          rare
+          rare.
         </h1>
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Legends Only

@@ -4,10 +4,11 @@ function Header() {
       <header className='flex flex-col justify-center items-center'>
         <div className='border-b w-full'>
           <div className='flex w-full flex-row py-4 max-w-[1300px] mx-auto'>
-            <div className='flex w-screen flex-col items-center'>
-              <h3 className='text-[16px] leading-[16px] w-fit mx-auto md:text-[30px] md:leading-[30px] tracking-[2px] yuji-syuku-regular drop-shadow-xl'>
+            <div className='flex w-screen items-center justify-between px-[25px] md:px-0'>
+              <h1 className='text-[16px] leading-[16px] md:text-[30px] md:leading-[30px] tracking-[2px] yuji-syuku-regular drop-shadow-xl'>
                 こんにちは
-              </h3>
+              </h1>
+              <a href="https://instagram.com/thenotoriousrafa" rel="noopener noreferrer" target="_blank" className="lowercase text-[10px] leading-[10px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] hover:text-blue-800 duration-200 ease-in-out">instagram</a>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Characters = [
     release: 'December 4, 2020',
     price: '$45',
     alt: 'Kimetsu No Yaiba',
-  }
+  },
 ]
 
 function Mangas() {
@@ -47,7 +47,7 @@ function Mangas() {
     <div className='bg-[#fafafa] gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
-          masterpiece
+          masterpiece.
         </h1>
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Mangas
@@ -65,26 +65,25 @@ function Mangas() {
                   className='md:h-[500px] h-[250px] w-full duration-300 ease-in hover:scale-105 brightness-105'
                 />
               </div>
-              <div className='flex flex-col pt-2 text-left justify-center'>
-                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px]'>
+              <div className='flex flex-col text-left justify-center px-6'>
+                <div className='flex flex-row justify-between'>
+                  <span className='md:text-[16px] md:mb-2 -tracking-[0.5px] md:leading-[16px] text-[14px] leading-[14px]'>
+                    FROM {character.price}
+                  </span>
+                  <p className='md:text-[16px] md:leading-[16px] text-[14px] leading-[14px] md:-tracking-[1px] -tracking-[0.5px]'>
+                    <span>Pages:</span> {character.page}
+                  </p>
+                  <p className='md:text-[16px] md:leading-[16px] text-[14px] leading-[14px] md:-tracking-[1px] -tracking-[0.5px]'>
+                    <span>Release Date in Japan:</span> {character.release}
+                  </p>
+                </div>
+                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] py-2'>
                   {character.name}
                 </h1>
-                <span className='text-[19px] md:mt-2 -tracking-[0.5px] leading-[19px]'>
-                  {character.price}
-                </span>
-                <div className='flex divide-x'>
-                  <div className='pr-2'>
-                    <p className='md:text-base text-sm mt-2 md:-tracking-[1px] -tracking-[0.5px]'>
-                      <span>Pages:</span> {character.page}
-                    </p>
-                    <p className='md:text-base text-sm md:-tracking-[1px] -tracking-[0.5px]'>
-                      <span>Release Date in Japan:</span> {character.release}
-                    </p>
-                  </div>
-                  <span className='line-clamp-4 md:text-base text-sm md:-tracking-[1px] -tracking-[0.5px] w-1/2 pl-2'>
-                    {character.data}
-                  </span>
-                </div>
+                {/* <span
+                  className='line-clamp-4 md:text-[16px] text-[14px] md:-tracking-[1px] -tracking-[0.5px]'>
+                  {character.data}
+                </span> */}
               </div>
             </div>
           ))}
