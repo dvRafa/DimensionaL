@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <div className='bg-[#fafafa]'>
+    <div className=''>
       <header className='flex flex-col justify-center items-center'>
         <div className='border-b w-full'>
           <div className='flex w-full flex-row py-4 max-w-[1300px] mx-auto'>

@@ -90,7 +90,7 @@ const LegendaryFigures = () => {
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full md:h-[410px] h-[300px] object-scale-down'
+              className='w-full md:h-[410px] h-[300px] object-scale-down hover:cursor-pointer'
               loading='lazy'
             />
             {/* Navigation Arrows */}
@@ -120,7 +120,7 @@ const LegendaryFigures = () => {
           {/* Text */}
           <div className='relative'>
             <div className='bottom-0 left-0 right-0 bg-transparent py-2'>
-              <h2 className='text-[16px] pt-2 -tracking-[0.5px] leading-[16px]'>
+              <h2 className='text-[16px] pt-2 -tracking-[0.5px] leading-[16px] font-semibold'>
                 FROM {character.price}
               </h2>
               <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] pt-2 md:pt-1'>

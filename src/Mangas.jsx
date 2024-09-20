@@ -62,7 +62,7 @@ function Mangas() {
                   loading='lazy'
                   src={character.images}
                   alt={character.alt}
-                  className='md:h-[500px] h-[250px] w-full duration-300 ease-in hover:scale-105 brightness-105'
+                  className='md:h-[500px] h-[250px] w-full duration-300 ease-in hover:scale-105 brightness-105 hover:cursor-pointer'
                 />
               </div>
               <div className='flex flex-col text-left justify-center px-6'>

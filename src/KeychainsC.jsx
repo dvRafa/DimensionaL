@@ -1,49 +1,30 @@
-import Vegeta from './assets/Keychains/Vegeta.webp'
+import Chopper from './assets/Keychains/Chopper.webp'
 import Luffy from './assets/Keychains/Luffy.webp'
-import Video from './assets/Keychains/Video.mp4'
-import Ussop from './assets/Keychains/Ussop.webp'
 
 const Characters = [
   {
-    name: 'Vegeta',
+    name: 'Tony Chopper "Samurai"',
     price: '$15',
-    image: [Vegeta],
-    alt: 'Vegeta',
-    desc: 'Dragon Ball Z',
-    design: '3D Model',
-  },
-  {
-    name: 'Ussop',
-    price: '$15',
-    image: [Ussop],
-    alt: 'Ussop',
+    image: [Chopper],
+    alt: 'Tony Chopper "Samurai"',
     desc: 'One Piece',
     design: '3D View',
-  }
+  },
+  {
+    name: 'Monkey D. Luffy',
+    price: '$15',
+    image: [Luffy],
+    alt: 'Monkey D. Luffy',
+    desc: 'One Piece',
+    design: '3D View',
+  },
 ]
 
-function Keychains() {
+function KeychainsD() {
   return (
-    <section className='pb-4 md:pb-0'>
-      <video
-        className='h-screen md:h-full object-cover w-full overflow-hidden pt-[100px] md:pt-[130px]'
-        muted
-        autoPlay
-        playsInline
-        loop>
-        <source
-          src={Video}
-          type='video/mp4'
-        />
-      </video>
-      <div className='md:max-w-[1000px] max-w-[320px] mx-auto flex flex-col md:pt-[65px] pt-[50px] md:pb-4 gothic-a1-regular'>
-        <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
-          popular.
-        </h1>
-        <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
-          Keychains
-        </h2>
-        <div className='flex flex-row w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px] items-center justify-center'>
+    <div className='pb-0 md:pb-[60px]'>
+      <div className='md:max-w-[1000px] mx-auto max-w-[320px]'>
+        <div className='flex flex-row items-center justify-center w-full md:gap-8 gap-4 pt-4'>
           {Characters.map((character, index) => (
             <div key={index}>
               <div>
@@ -65,7 +46,9 @@ function Keychains() {
                   <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px] font-semibold'>
                     FROM {character.price}
                   </span>
-                  <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px]'>{character.design}</span>
+                  <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px]'>
+                    {character.design}
+                  </span>
                 </div>
                 <h1 className='md:text-[19px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[19px] pt-2 md:pt-1'>
                   <span className='italic pr-2'>{character.name}</span>
@@ -76,8 +59,8 @@ function Keychains() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
-export default Keychains
+export default KeychainsD
