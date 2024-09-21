@@ -94,7 +94,7 @@ const LegendaryFigures = () => {
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='md:w-[300px] w-full md:h-[500px] h-[500px] object-scale-down md:object-none mx-auto hover:cursor-pointer'
+              className='md:w-[300px] w-full md:h-[500px] h-[500px] object-scale-down  mx-auto hover:cursor-pointer'
               loading='lazy'
             />
             <button

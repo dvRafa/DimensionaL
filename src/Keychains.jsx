@@ -43,7 +43,7 @@ function Keychains() {
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Keychains
         </h2>
-        <div className='grid md:grid-cols-2 grid-cols-1 w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px] items-center justify-center'>
+        <div className='flex md:flex-row flex-col w-full md:gap-8 gap-4 md:pt-[65px] pt-[50px] items-center justify-center'>
           {Characters.map((character, index) => (
             <div key={index}>
               <div>

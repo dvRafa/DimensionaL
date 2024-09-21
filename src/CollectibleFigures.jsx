@@ -48,7 +48,7 @@ const Characters = [
     anime: 'One Piece',
     images: [FAkainu, BAkainu],
     alt: 'Sakazuki "Akainu"',
-    height: 416,
+    height: 470,
   },
 ]
 
@@ -62,7 +62,7 @@ function CollectibleFigures() {
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Collectible Figures
         </h2>
-        <div className='grid md:grid-cols-4 pt-[50px] md:pt-[65px] gap-x-[24px]'>
+        <div className='grid md:grid-cols-4 pt-[50px] md:pt-[65px] gap-x-[24px] gap-y-[32px] md:gap-y-0'>
           {Characters.map((character, index) => {
             const [isHovered, setIsHovered] = useState(false)
             return (
