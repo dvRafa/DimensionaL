@@ -11,36 +11,44 @@ import BGoku from './assets/Figures/BGoku.webp'
 
 const Characters = [
   {
-    name: 'Goku',
-    desc: 'Dragon Ball Z Collection World Figure Vol. 1 by Banpresto 8cm',
-    price: '$20',
-    anime: 'Dragon Ball Super',
-    images: [FGoku, BGoku],
-    alt: 'Goku',
-  },
-  {
     name: 'Bardock',
-    desc: 'Bandai Ichiban Kuji Mission 5 Super Saiyan 3 by Banpresto 8cm',
+    desc: 'Dragon Ball Bandai Ichiban Kuji Mission 5 Super Saiyan 3 by Banpresto',
+    size: '8cm',
     price: '$15',
     anime: 'Dragon Ball Z',
     images: [FBardock, BBardock],
     alt: 'Bardock',
+    height: 514,
   },
   {
-    name: 'Sakazuki "Akainu"',
-    desc: 'One Piece x PEPSI NEX Figure Collection by Suntory 5cm',
-    price: '$15',
-    anime: 'One Piece',
-    images: [FAkainu, BAkainu],
-    alt: 'Sakazuki "Akainu"',
+    name: 'Son Goku',
+    desc: 'Dragon Ball Z Collection World Figure Vol. 1 by Banpresto',
+    size: '8cm',
+    price: '$20',
+    anime: 'Dragon Ball Super',
+    images: [FGoku, BGoku],
+    alt: 'Goku',
+    height: 565,
   },
   {
-    name: 'Brook',
-    desc: 'One Piece x PEPSI NEX Figure Collection by Suntory 5cm',
+    name: 'Brook "Soul King"',
+    desc: 'One Piece x PEPSI NEX Figure Collection by Suntory',
+    size: '5cm',
     price: '$15',
     anime: 'One Piece',
     images: [FBrook, BBrook],
     alt: 'Brook',
+    height: 604,
+  },
+  {
+    name: 'Sakazuki "Akainu"',
+    desc: 'One Piece x PEPSI NEX Figure Collection by Suntory',
+    size: '5cm',
+    price: '$15',
+    anime: 'One Piece',
+    images: [FAkainu, BAkainu],
+    alt: 'Sakazuki "Akainu"',
+    height: 416,
   },
 ]
 
@@ -54,38 +62,44 @@ function CollectibleFigures() {
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Collectible Figures
         </h2>
-        <div className='grid md:grid-cols-4 md:gap-8 gap-y-[17px] pt-[50px] md:pt-[65px]'>
-          {Characters.map((character, index) => { 
-            const [isHovered, setIsHovered] = useState(false);
-          return (
-           
-            <div
-              key={index}
-              className='flex flex-col-reverse items-center justify-center hover:cursor-pointer'
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}>
-              <div className='flex flex-col text-start px-6'>
-                <span className='uppercase text-[16px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-semibold pt-2'>
-                  FROM {character.price}
-                </span>
-                <h1 className='md:text-[18px] text-[16px] leading-[22.4px] md:tracking-[0.3px] tracking-[0.32px] md:leading-[26px] pt-2 md:pt-1'>
-                  <span className='italic'>{character.name}</span>{' '}
-                  {character.desc}
-                </h1>
-              </div>
-              <section className='bg-[#e0e0fb4e] p-6 w-full'>
+        <div className='grid md:grid-cols-4 pt-[50px] md:pt-[65px] gap-x-[24px]'>
+          {Characters.map((character, index) => {
+            const [isHovered, setIsHovered] = useState(false)
+            return (
+              <div
+                key={index}
+                className='flex flex-col-reverse justify-end'>
+                <div className='flex flex-col text-start'>
+                  <div className='flex flex-row gap-x-8'>
+                    <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>
+                      FROM {character.price}
+                    </p>
+                    <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>
+                    {character.size}
+                  </p>
+                  </div>
+                  <p className='pt-2 capitalize text-[20px] tracking-[0.4px] leading-[18px] gothic-a1-regular font-normal'>
+                    {character.name}
+                  </p>
+                  <p className='md:text-[14px] text-[16px] leading-[22.4px] md:tracking-[0.28px] tracking-[0.32px] md:leading-[21px] pt-2 md:pt-1'>
+                    {character.desc}
+                  </p>
+                  
+                </div>
                 <div>
                   <img
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                     src={isHovered ? character.images[1] : character.images[0]}
-                    className='md:h-[350px] md:w-[257px] w-full h-[350px] object-cover brightness-105'
+                    className='brightness-105 hover:cursor-pointer w-full object-cover'
                     alt={character.alt}
                     loading='eager'
+                    style={{ height: character.height }}
                   />
                 </div>
-              </section>
-            </div>
-          )
-        })}
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

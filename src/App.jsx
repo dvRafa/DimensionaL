@@ -2,7 +2,6 @@ import Header from './Header'
 import CollectibleFigures from './CollectibleFigures'
 import LegendaryFigures from './LegendaryFigures'
 import Keychains from './Keychains'
-import KeychainsB from './KeychainsB'
 import KeychainsC from './KeychainsC'
 import MangaA from './MangaA'
 import MangaB from './MangaB'
@@ -16,7 +15,6 @@ function App() {
       <Header />
       <CollectibleFigures />
       <Keychains />
-      <KeychainsB />
       <KeychainsC />
       <LegendaryFigures />
       <MangaA />
