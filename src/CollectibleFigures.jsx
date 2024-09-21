@@ -47,7 +47,7 @@ const Characters = [
 function CollectibleFigures() {
   return (
     <div className='border-b pb-4 md:border-b-0 md:pb-0 gothic-a1-regular'>
-      <div className='max-w-[350px] md:max-w-[1300px] mx-auto pt-[50px] md:pt-[65px] md:border-b md:pb-4'>
+      <div className='max-w-[350px] md:max-w-[1300px] mx-auto pt-[50px] md:pt-[65px] md:pb-4'>
         <h1 className='text-[19px] leading-[19px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
           retro.
         </h1>
@@ -65,10 +65,10 @@ function CollectibleFigures() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}>
               <div className='flex flex-col text-start px-6'>
-                <span className='text-[16px] -tracking-[0.5px] leading-[16px] pt-2 font-semibold'>
+                <span className='uppercase text-[16px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-semibold pt-2'>
                   FROM {character.price}
                 </span>
-                <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] pt-2 md:pt-1'>
+                <h1 className='md:text-[18px] text-[16px] leading-[22.4px] md:tracking-[0.3px] tracking-[0.32px] md:leading-[26px] pt-2 md:pt-1'>
                   <span className='italic'>{character.name}</span>{' '}
                   {character.desc}
                 </h1>

@@ -25,7 +25,7 @@ const Characters = [
 function Keychains() {
   return (
     <section className='pb-4 md:pb-0'>
-      <video
+      {/* <video
         className='h-screen md:h-full object-cover w-full overflow-hidden pt-[100px] md:pt-[130px]'
         muted
         autoPlay
@@ -35,7 +35,7 @@ function Keychains() {
           src={Video}
           type='video/mp4'
         />
-      </video>
+      </video> */}
       <div className='md:max-w-[1000px] max-w-[320px] mx-auto flex flex-col md:pt-[65px] pt-[50px] md:pb-4 gothic-a1-regular'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
           popular.
@@ -62,12 +62,12 @@ function Keychains() {
               </div>
               <div className='flex flex-col md:pt-4 pt-2'>
                 <div className='flex md:gap-x-8 gap-x-4'>
-                  <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px] font-semibold'>
+                  <span className='uppercase md:text-[16px] text-[12px] md:tracking-[1.32px] tracking-[1px] md:leading-[16px] gothic-a1-regular font-semibold'>
                     FROM {character.price}
                   </span>
                   <span className='md:text-[16px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[16px]'>{character.design}</span>
                 </div>
-                <h1 className='md:text-[19px] text-[14px] leading-[14px] -tracking-[0.5px] md:leading-[19px] pt-2 md:pt-1'>
+                <h1 className='md:text-[18px] text-[16px] leading-[22.4px] md:tracking-[0.3px] tracking-[0.32px] md:leading-[26px] pt-1'>
                   <span className='italic pr-2'>{character.name}</span>
                   {character.desc}
                 </h1>

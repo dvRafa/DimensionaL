@@ -19,11 +19,12 @@ import SenjuroFront from './assets/Legends/SenjuroFront.webp'
 const LegendaryFigures = () => {
   const Characters = [
     {
-      name: 'Sanemi Shinazugawa ',
-      title: 'Kimetsu No Yaiba Vol. 14 by Banpresto 18cm',
-      price: '$35',
-      images: [SanemiFront, Sanemi, SanemiBack],
-      alt: 'Sanemi Shinazugawa',
+      name: 'Levi Ackerman ',
+      title: 'Shingeki No Kyojin Final Season by Banpresto 18cm',
+      price: '$80',
+      images: [Levi1, Levi0],
+      alt: 'Levi Ackerman',
+      id: 'Levi-Ackerman',
     },
     {
       name: 'Senjuro Rengoku ',
@@ -33,12 +34,11 @@ const LegendaryFigures = () => {
       alt: 'Senjuro Rengoku',
     },
     {
-      name: 'Levi Ackerman ',
-      title: 'Shingeki No Kyojin Final Season by Banpresto 18cm',
-      price: '$80',
-      images: [Levi1, Levi0],
-      alt: 'Levi Ackerman',
-      id: 'Levi-Ackerman',
+      name: 'Sanemi Shinazugawa ',
+      title: 'Kimetsu No Yaiba Vol. 14 by Banpresto 18cm',
+      price: '$35',
+      images: [SanemiFront, Sanemi, SanemiBack],
+      alt: 'Sanemi Shinazugawa',
     },
     {
       name: 'Monkey D. Luffy ',
@@ -51,7 +51,7 @@ const LegendaryFigures = () => {
     {
       name: 'Monkey D. Luffy ',
       title:
-        'One Piece Film Red DFX The Grandline Men Vol. 1 by Banpresto 16cm',
+      'One Piece Film Red DFX The Grandline Men Vol. 1 by Banpresto 16cm',
       price: '$90',
       images: [LuffyBack, LuffyFront, Luffy],
       alt: 'Monkey D. Luffy',
@@ -83,17 +83,16 @@ const LegendaryFigures = () => {
 
     return (
       <div>
-        <div className='relative mx-auto px-2 shadow-lg rounded-b border'>
+        <div className='relative mx-auto px-2 shadow rounded-b border'>
           {/* Image Container */}
           <div className='relative'>
             <img
               id={character.id}
               src={character.images[currentImageIndex]}
               alt={character.alt}
-              className='w-full md:h-[410px] h-[300px] object-scale-down hover:cursor-pointer'
+              className='w-full h-full hover:cursor-pointer'
               loading='lazy'
             />
-            {/* Navigation Arrows */}
             <button
               aria-label='Previous Image'
               onClick={handlePrevImage}
@@ -117,13 +116,12 @@ const LegendaryFigures = () => {
               </svg>
             </button>
           </div>
-          {/* Text */}
           <div className='relative'>
             <div className='bottom-0 left-0 right-0 bg-transparent py-2'>
-              <h2 className='text-[16px] pt-2 -tracking-[0.5px] leading-[16px] font-semibold'>
+              <h2 className='uppercase text-[16px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-semibold pt-2'>
                 FROM {character.price}
               </h2>
-              <h1 className='text-[19px] -tracking-[0.5px] leading-[19px] pt-2 md:pt-1'>
+              <h1 className='md:text-[18px] text-[16px] leading-[22.4px] md:tracking-[0.3px] tracking-[0.32px] md:leading-[26px] pt-2 md:pt-1'>
                 <span className='italic'>{character.name}</span>
                 {character.title}
               </h1>
@@ -134,20 +132,23 @@ const LegendaryFigures = () => {
     )
   }
   return (
-    <section className='bg-[#fafafa] gothic-a1-regular'>
-      <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
+    <section className='gothic-a1-regular'>
+      <div className='md:max-w-[1100px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px] pb-4'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
           rare.
         </h1>
         <h2 className='text-[32px] leading-[32px] -tracking-[1px] md:text-[47px] text-center items-center justify-center md:-tracking-[2px] md:leading-[47px]'>
           Legends Only
         </h2>
-        <div className='grid md:grid-cols-3 md:gap-8 gap-y-10 md:pt-[65px] pt-[50px]'>
+        <div className='md:columns-3 columns-1 md:gap-4 md:space-y-4 space-y-10 md:pt-[65px] pt-[50px]'>
           {Characters.map((character, index) => (
+            <div className='break-inside-avoid'>
             <CharacterSlider
+            
               key={index}
               character={character}
             />
+          </div>
           ))}
         </div>
       </div>

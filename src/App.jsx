@@ -15,10 +15,10 @@ function App() {
     <main>
       <Header />
       <CollectibleFigures />
-      <LegendaryFigures />
       <Keychains />
       <KeychainsB />
       <KeychainsC />
+      <LegendaryFigures />
       <MangaA />
       <MangaB />
       <MangaC />

@@ -44,7 +44,7 @@ const Characters = [
 
 function Mangas() {
   return (
-    <div className='bg-[#fafafa] gothic-a1-regular'>
+    <div className='gothic-a1-regular'>
       <div className='md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[65px] pt-[50px]'>
         <h1 className='text-[15px] leading-[15px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
           masterpiece.

@@ -15,7 +15,7 @@ const Characters = [
 function MangaB() {
   return (
     <div>
-      <div className='md:max-w-[1180px] max-w-[320px] mx-auto pt-[80px]'>
+      <div className='md:max-w-[1180px] max-w-[320px] mx-auto pt-[65px]'>
         {Characters.map((character, index) => (
           <div
             key={index}

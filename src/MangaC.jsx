@@ -14,10 +14,10 @@ const Characters = [
 
 function MangaC() {
   return (
-    <div className='flex justify-end md:max-w-[1180px] max-w-[320px] mx-auto md:ml-auto md:pr-[25px] pt-[80px]'>
+    <div className='flex justify-start md:max-w-[1180px] max-w-[320px] mx-auto md:mr-auto md:pl-[25px] pt-[65px]'>
       <div className='grid grid-cols-1'>
         {Characters.map((character, index) => (
-          <div className='flex md:flex-row flex-col gap-x-[25px]'
+          <div className='flex md:flex-row-reverse flex-col gap-x-[25px]'
           key={index}
           >
             <div

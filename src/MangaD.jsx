@@ -1,21 +1,21 @@
-import OnePiece from './assets/Mangas/OnePiece.jpg'
+import KimetsuNoYaiba from './assets/Mangas/KimetsuNoYaiba.jpg'
 
 const Characters = [
   {
-    images: [OnePiece],
-    name: 'One Piece: Doflamingo Appears, Volume 70 - Chapters 691-700',
-    data: 'With the escape of the institute in front of it, Caesar makes a strange transformation. Will Luffy shatter his ambitions!? The sectakehai and Doframingo, which are threaded behind the scenes, also move, and things will fall sharply...!! “A marine adventure romance around one secret treasure”!!',
-    page: '216',
-    release: 'June 4, 2013',
+    images: [KimetsuNoYaiba],
+    name: 'Kimetsu No Yaiba - Demon Slayer: Gaiden Volume',
+    data: 'Kimetsu no Yaiba: Gaiden is a volume consisting of Giyu Tomiokas Story and Kyojuro Rengokus Story, as well as Kimetsu Between the Scenes.',
+    page: '215',
+    release: 'December 4, 2020',
     price: '$45',
-    alt: 'One Piece',
+    alt: 'Kimetsu No Yaiba',
   },
 ]
 
 function MangaB() {
   return (
     <div>
-      <div className='md:max-w-[1180px] max-w-[320px] mx-auto py-[80px]'>
+      <div className='md:max-w-[1180px] max-w-[320px] mx-auto py-[65px]'>
         {Characters.map((character, index) => (
           <div
             key={index}
