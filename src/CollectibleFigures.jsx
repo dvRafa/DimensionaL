@@ -54,7 +54,7 @@ const Characters = [
 
 function CollectibleFigures() {
   return (
-    <div className='border-b pb-4 md:border-b-0 md:pb-0 gothic-a1-regular'>
+    <div className='pb-4 md:pb-0 gothic-a1-regular'>
       <div className='max-w-[350px] md:max-w-[1300px] mx-auto pt-[50px] md:pt-[65px] md:pb-4'>
         <h1 className='text-[19px] leading-[19px] tracking-[0.5px] gothic-a1-light md:text-[25px] md:leading-[25px] md:-tracking-[1px] w-fit mx-auto'>
           retro.

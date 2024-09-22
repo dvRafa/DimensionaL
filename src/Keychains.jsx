@@ -24,7 +24,7 @@ const Characters = [
 
 function Keychains() {
   return (
-    <section className='pb-4 md:pb-0'>
+    <section>
       {/* <video
         className='h-screen md:h-full object-cover w-full overflow-hidden pt-[100px] md:pt-[130px]'
         muted
@@ -68,11 +68,11 @@ function Keychains() {
                   <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>
                     {character.design}
                   </p>
-                  <p className='md:text-[14px] text-[16px] leading-[22.4px] md:tracking-[0.28px] tracking-[0.32px] md:leading-[21px] pt-2 md:pt-1'>
+                  <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>
                     {character.desc}
                   </p>
                 </div>
-                  <p className='pt-2 capitalize text-[20px] tracking-[0.4px] leading-[18px] gothic-a1-regular font-normal'>{character.name}</p>
+                  <p className='md:pt-2 capitalize text-[20px] tracking-[0.4px] leading-[18px] gothic-a1-regular font-normal'>{character.name}</p>
               </div>
             </div>
           ))}

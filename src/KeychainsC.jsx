@@ -56,7 +56,7 @@ function KeychainsD() {
                   <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>{character.desc}</p>
                   <p className='pt-2 uppercase text-[14px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal'>{character.design}</p>
                 </div>
-                <p className='pt-2 capitalize text-[20px] tracking-[0.4px] leading-[18px] gothic-a1-regular font-normal'>{character.name}</p>
+                <p className='md:pt-2 pt-1 capitalize text-[20px] tracking-[0.4px] leading-[18px] gothic-a1-regular font-normal'>{character.name}</p>
               </div>
             </div>
           ))}
