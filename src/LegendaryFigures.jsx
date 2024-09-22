@@ -155,7 +155,7 @@ const LegendaryFigures = () => {
             </button>
           </div>
           <div className='flex flex-col items-center justify-center text-center'>
-            <h1 className='tracking-normal text-[20px] leading-[26.4px] gothic-a1-light md:tracking-[0px] pt-2 font-semibold'>
+            <h1 className='tracking-normal text-[20px] leading-[26.4px] gothic-a1-regular md:tracking-[0px] pt-2 font-normal'>
               {character.name}
               {character.title}
             </h1>

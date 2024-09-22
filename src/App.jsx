@@ -7,7 +7,7 @@ import MangaA from './MangaA'
 import MangaB from './MangaB'
 import MangaC from './MangaC'
 import MangaD from './MangaD'
-import Footer from './Footer'
+import SubFooter from './SubFooter'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <MangaB />
       <MangaC />
       <MangaD />
-      <Footer />
+      <SubFooter />
     </main>
   )
 }
