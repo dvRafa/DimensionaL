@@ -1,57 +1,74 @@
+import { Link } from 'react-router-dom'
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className='flex flex-col md:pt-[65px] pt-[50px] w-full gap-y-2'>
-      <div className='flex md:flex-row flex-col border-t justify-end w-full px-[25px] gap-x-[150px] md:pt-[45px] pt-[25px] md:pb-[45px] pb-[25px] gap-y-10'>
-        <div className='flex flex-row gap-x-12 justify-center'>
-          <ul>
-            <li className='text-[12px] leading-[12px] tracking-[0.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:-tracking-[1px] hover:text-blue-800 duration-200 ease-in-out'>
-              <a href='/Anime-Goods/About'>About - soon</a>
-            </li>
-            <li className='text-[12px] leading-[12px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out tracking-[0.5px] gothic-a1-light md:-tracking-[1px] md:pt-1 pt-2'>
-              <a href='/Anime-Goods/Contact-Us'>
-              Contact Us - soon
-              </a>
-            </li>
-            <li className='text-[12px] leading-[12px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out tracking-[0.5px] gothic-a1-light md:-tracking-[1px] md:pt-1 pt-2'>
-              <a href='/Anime-Goods/Terms-Conditions'>Terms + Conditions - soon</a>
-            </li>
-          </ul>
-          <ul>
-            <li className='lowercase text-[12px] leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] hover:text-blue-800 duration-200 ease-in-out'>
-              <a
-                href='https://instagram.com/thenotoriousrafa'
-                rel='noopener noreferrer'
-                target='_blank'>
-                instagram
-              </a>
-            </li>
-            <li className='lowercase text-[12px] leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] hover:text-blue-800 duration-200 ease-in-out md:pt-1 pt-2'>
-              <a href='mailto:rafaeldejesus694@outlook.com'>
-                email
-              </a>
-            </li>
-          </ul>
-        </div>
+    <footer className='pt-[65px]'>
+      <div className='border-t h-[2px] borders-background md:max-w-[1300px] max-w-[350px] mx-auto'></div>
+      <div className='flex md:flex-row flex-col gap-x-[30px] w-full md:max-w-[1300px] max-w-[350px] mx-auto md:pt-[45px] pt-[25px] md:pb-[75px] pb-[45px] justify-between'>
         <div>
-          <p className='gothic-a1-light text-[14px] leading-[14px] tracking-[0.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:-tracking-[1px] text-center md:text-left'>
-            Everything start with a Small Dream🌟.
+          <p className='text-[32px] gothic-a1-light leading-[38.4px] md:mb-0 mb-[16px] capitalize tracking-normal md:text-[26px] md:leading-[32.4px]'>
+            Everything start with a Small Dream.⭐
           </p>
         </div>
-      </div>
-      <div className='flex flex-row justify-between items-center px-[25px] md:pt-[25px] pb-[25px] pt-[2px]'>
-        {/* <span className='md:text-[30px] md:leading-[30px] text-[16px] leading-[16px] tracking-[2px] yuji-syuku-regular drop-shadow-xl'>
-          ありがとう ございます
-        </span> */}
-        <span className='text-[12px] leading-[12px] tracking-[0.5px] font-bold md:-tracking-[1px] md:text-[16px] md:leading-[16px]'>
-          Rafa <span className='font-normal'>Noa</span>
-        </span>
-        <span className='text-[12px] leading-[12px] tracking-[0.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:-tracking-[1px]'>
-          Current Location: Panama-PTY
-        </span>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-[25px] md:gap-y-[50px]'>
+          <div className='flex flex-col'>
+            <ul>
+              <li className='social-medias'>
+                <a
+                  href='https://instagram.com/thenotoriousrafa'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  aria-label='Instagram Account'>
+                  instagram
+                </a>
+              </li>
+              <li className='social-medias md:pt-1 pt-2'>
+                <a
+                  href='mailto:rafaeldejesus694@outlook.com'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  aria-label='Email Account'>
+                  email
+                </a>
+              </li>
+              <li className='md:pt-1 pt-2 social-medias'>
+                <a
+                  href='https://wa.me/50764245895'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  aria-label='Whatsapp Number'>
+                  whatsapp
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className='flex flex-col'>
+            <ul>
+              <li className='text-[12px] tracking-[1.32px] leading-[12px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out md:-tracking-[1px] md:pt-1 pt-2'>
+                <Link to='/Anime-Goods/Data/About'>About</Link>
+              </li>
+              <li className='text-[12px] tracking-[1.32px] leading-[12px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out md:-tracking-[1px] md:pt-1 pt-2'>
+                <Link to='/Anime-Goods/Data/Terms-Conditions'>
+                  Terms + Conditions
+                </Link>
+              </li>
+              <li className='text-[12px] tracking-[1.32px] leading-[12px] gothic-a1-light md:text-[16px] md:leading-[16px] hover:text-blue-800 duration-200 ease-in-out md:-tracking-[1px] md:pt-1 pt-2'>
+                <Link to='/Anime-Goods/Data/Contact'>Contact Us</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className='text-[12px] leading-[14.5px] tracking-[1px] gothic-a1-light md:text-[16px] md:leading-[16px] md:-tracking-[1px]'>
+              Current Location: Panama - PTY
+            </p>
+          </div>
+          <div>
+            <p className='text-[12px] leading-[14.5px] tracking-[1px] font-bold md:-tracking-[1px] md:text-[16px] md:leading-[16px]'>
+              Rafa <span className='gothic-a1-light'>Noa</span>
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   )
 }
-
-export default Footer
