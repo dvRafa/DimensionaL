@@ -22,33 +22,81 @@
 }
 
 .borders-background {
-  background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+  background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),linear-gradient(127deg, rgba(0, 47, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
   transition: width, 35s;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 @layer components {
   .items-details {
     @apply pt-2 uppercase text-[11.5px] tracking-[1.32px] leading-[13.5px] gothic-a1-regular font-normal
   }
+.items-details-small-figures {
+    @apply uppercase text-[12px] tracking-[1.32px] leading-[13.5px] gothic-a1-regular font-normal
+  }
+
+  .items-details-keychains {
+    @apply uppercase text-[13px] tracking-[1.32px] leading-[13px] gothic-a1-regular font-normal text-center mt-[6px]
+  }
 
   .sub-title {
     @apply text-[19px] leading-[19px] tracking-[0.5px] gothic-a1-light md:text-[19px] md:leading-[19px] md:-tracking-[1px] text-stone-700/70 gothic-a1-regular text-left
+  }
+  .sub-title-small-figures {
+    @apply text-[19px] leading-[19px] tracking-[0.5px] gothic-a1-light md:text-[12px] md:leading-[14px] md:-tracking-[1px] text-stone-700/70 gothic-a1-regular text-left uppercase
   }
 
   .title {
     @apply text-[32px] md:text-[40px] leading-[32px] -tracking-[1px] md:tracking-normal md:leading-[30.4px] gothic-a1-regular pt-2
   }
+  .title-small-figures {
+    @apply text-[32px] md:text-[30px] leading-[30px] -tracking-[1px] md:tracking-normal md:leading-[30.4px] gothic-a1-regular pt-[2px]
+  }
 
   .figure-name {
-    @apply pt-2 capitalize text-[16px] tracking-[0.2px] leading-[14px] gothic-a1-regular font-normal
+    @apply mt-2 capitalize text-[16px] tracking-[0.2px] leading-[14px] gothic-a1-regular font-normal text-center
+  }
+  .figure-name-small-figures {
+    @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
+  }
+  .figure-name-keychains {
+    @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
   }
 
   .logo {
-    @apply md:text-[16px] text-[11px] leading-[11px] md:leading-[16px] md:tracking-[2px] yuji-syuku-regular drop-shadow-xl
+    @apply md:text-[16px] text-[11px] leading-[11px] md:leading-[16px] md:tracking-[2px] yuji-syuku-regular flex items-center gap-x-1
   }
 
   .social-medias {
     @apply lowercase text-[12px] leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] hover:text-blue-800 duration-200 ease-in-out
+  }
+
+  .custom-item-details {
+    @apply mt-[10px] uppercase text-[12px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal border-b pb-1
+  }
+
+  .custom-title {
+    @apply text-[64px] tracking-normal leading-[76.8px] mt-4 gothic-a1-regular
+  }
+  .custom-title-manga {
+    @apply text-[36px] tracking-normal leading-[46.8px] mt-4 gothic-a1-regular
+  }
+
+  .custom-description {
+    @apply mb-[2px] uppercase text-[11px] tracking-[1.32px] leading-[14px] gothic-a1-regular font-normal text-stone-700/50
+  }
+
+  .custom-anime {
+    @apply text-[20px] tracking-normal leading-[28.8px] gothic-a1-light
   }
 }
 

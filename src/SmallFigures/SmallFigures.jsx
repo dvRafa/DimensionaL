@@ -8,6 +8,8 @@ import FBrook from '../assets/SmallFiguresImg/FBrook.webp'
 import BBrook from '../assets/SmallFiguresImg/BBrook.webp'
 import FGoku from '../assets/SmallFiguresImg/FGoku.webp'
 import BGoku from '../assets/SmallFiguresImg/BGoku.webp'
+import Nezuko from '../assets/CollectiblesImg/Nezuko.webp'
+import Luffy0 from '../assets/CollectiblesImg/Luffy0.webp'
 
 const Characters = [
   {
@@ -18,8 +20,8 @@ const Characters = [
     anime: 'Dragon Ball Z',
     images: [FBardock, BBardock],
     alt: 'Bardock',
-    height: 425,
     id: 'Bardock_1',
+    design: 'Acrylic',
   },
   {
     name: 'Son Goku',
@@ -29,7 +31,6 @@ const Characters = [
     anime: 'Dragon Ball Super',
     images: [FGoku, BGoku],
     alt: 'Goku',
-    height: 500,
     id: 'SonGoku_2',
   },
   {
@@ -40,7 +41,6 @@ const Characters = [
     anime: 'One Piece',
     images: [FBrook, BBrook],
     alt: 'Brook',
-    height: 524,
     id: 'Brook_3',
   },
   {
@@ -51,48 +51,61 @@ const Characters = [
     anime: 'One Piece',
     images: [FAkainu, BAkainu],
     alt: 'Sakazuki "Akainu"',
-    height: 400,
     id: 'Akainu_',
+  },
+  {
+    name: 'Nezuko Kamado ',
+    title: 'Kimetsu No Yaiba World Collectible Figure by Banpresto',
+    anime: 'Kimetsu No Yaiba',
+    price: '$35',
+    size: '8cm',
+    images: [Nezuko],
+    alt: 'Nezuko Kamado',
+    id: 'Nezuko Kamado',
+  },
+  {
+    name: 'Monkey D. Luffy ',
+    anime: 'One Piece',
+    title: 'One Piece Bandai Ichiban Kuji by Banpresto',
+    price: '$80',
+    images: [Luffy0],
+    size: '16cm',
+    alt: 'Monkey D. Luffy',
+    id: 'Monkey D. Luffy Movie',
   },
 ]
 
 export default function SmallFigures() {
   return (
-    <div className='pb-4 md:pb-0 pt-[35px] gothic-a1-regular'>
-      <div className='max-w-[360px] md:max-w-[1180px] mx-auto md:pb-[130px] pb-[10px]'>
-        <h1 className='sub-title pt-[35px]'>retro.</h1>
-        <h2 className='title'>Collectible Figures</h2>
-        <div className='grid md:grid-cols-4 pt-[50px] md:pt-[35px] gap-y-[32px] md:gap-y-0 gap-x-6 px-8'>
-          {Characters.map((character, index) => {
-            return (
-              <Link key={index} to={`/Anime-Goods/SmallFigure/${character.id}`}>
-                <div
-                  className='flex flex-col-reverse justify-end'>
-                  <div className='flex flex-col'>
-                    <div className='flex flex-row gap-x-8 pt-[6px]'>
-                      <p className='items-details'>from {character.price}</p>
-                      <p className='items-details'>{character.size}</p>
-                    </div>
-                    <div className='flex flex-row gap-x-2'>
-                      <p className='figure-name'>{character.name}</p>
-                      <p className='pt-2 capitalize text-[16px] tracking-[0.2px] leading-[14px] gothic-a1-regular font-normal text-stone-700/70'>
-                        {character.anime}
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <img
-                      src={character.images[0]}
-                      className='hover:cursor-pointer w-full md:w-full object-cover transform transition-transform duration-300 hover:scale-105'
-                      alt={character.alt}
-                      style={{ height: character.height }}
-                    />
-                  </div>
+    <div className='flex flex-col max-w-[320px] md:max-w-[1300px] mx-auto pt-10'>
+      <h1 className='capitalize md:text-[48px] text-[2rem] md:leading-[72px] leading-[2.5rem]'>
+        shop top collectibles
+      </h1>
+      <div className='flex pt-[25px] gap-x-2 overflow-x-scroll scroll-container md:overflow-x-hidden'>
+        {Characters.map((character, index) => {
+          return (
+            <Link
+              key={index}
+              to={`/Anime-Goods/SmallFigure/${character.id}`}>
+              <div className='flex flex-col-reverse items-center'>
+                <div className='flex flex-col'>
+                  <p className='figure-name-keychains'>{character.name}</p>
+                  <p className='mt-[6px] capitalize text-[13px] tracking-[0.2px] leading-[13px] gothic-a1-regular text-stone-700/70 text-center'>
+                    {character.anime}
+                  </p>
+                  <p className='items-details-keychains'>{character.price}</p>
                 </div>
-              </Link>
-            )
-          })}
-        </div>
+                <div className='w-72 h-[430px] md:w-auto md:h-auto overflow-hidden max-w-xs'>
+                  <img
+                    src={character.images[0]}
+                    className='w-full h-full md:h-[296px] md:w-[211px] object-cover hover:cursor-pointer rounded-xl'
+                    alt={character.alt}
+                  />
+                </div>
+              </div>
+            </Link>
+          )
+        })}
       </div>
     </div>
   )
