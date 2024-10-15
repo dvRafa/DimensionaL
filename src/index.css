@@ -21,6 +21,24 @@
 
 }
 
+.poppins {
+  font-family: "Poppins";
+  font-weight: 800;
+  font-style: "extrabold";
+}
+
+.montserrat {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+}
+
 .borders-background {
   background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),linear-gradient(127deg, rgba(0, 47, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
   transition: width, 35s;
@@ -36,16 +54,21 @@
   display: none; /* Safari and Chrome */
 }
 
+@font-face {
+  font-family: 'Yakin';
+  src: url(./Fonts/Yakin.ttf);
+}
+
 @layer components {
   .items-details {
     @apply pt-2 uppercase text-[11.5px] tracking-[1.32px] leading-[13.5px] gothic-a1-regular font-normal
   }
-.items-details-small-figures {
+  .items-details-small-figures {
     @apply uppercase text-[12px] tracking-[1.32px] leading-[13.5px] gothic-a1-regular font-normal
   }
 
   .items-details-keychains {
-    @apply uppercase text-[13px] tracking-[1.32px] leading-[13px] gothic-a1-regular font-normal text-center mt-[6px]
+    @apply uppercase text-[24px] tracking-[1.32px] leading-[32px] text-left mt-[6px] font-semibold
   }
 
   .sub-title {
@@ -69,7 +92,7 @@
     @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
   }
   .figure-name-keychains {
-    @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
+    @apply mt-4 capitalize text-[16px] tracking-[0.2px] leading-[24px] text-left inter
   }
 
   .logo {

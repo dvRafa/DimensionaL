@@ -1,4 +1,4 @@
-import OnePiece from '../assets/MangasImg/OnePiece.jpg'
+import OnePiece from '../assets/MangasImg/OnePiece.webp'
 
 import { Link } from 'react-router-dom'
 
@@ -18,9 +18,9 @@ const Characters = {
 export default function MangaB() {
   return (
     <section className='bg-[#f1f1f1]'>
-      <div className='md:max-w-[1200px] max-w-[320px] mx-auto md:pl-[25px] pt-10 pb-20 mb-20'>
+      <div className='md:max-w-[1200px] max-w-[320px] mx-auto md:pl-[25px] pt-10 pb-20'>
         <div className='flex flex-col'>
-          <div className='flex flex-col md:flex-row bg-white p-4 border shadow rounded md:gap-x-[25px] w-fit'>
+          <div className='flex flex-col md:flex-row md:gap-x-[25px] w-fit border shadow rounded p-4 bg-white'>
             <div className='flex flex-col mb-4 md:mb-0'>
               <h1 className='md:text-[40px] text-[32px] gothic-a1-light tracking-normal md:leading-[48px] leading-[38.4px] md:mb-[12px] mb-[16px] md:w-[420px]'>
                 {Characters.name}
@@ -46,9 +46,9 @@ export default function MangaB() {
             </div>
           </div>
           <div className='flex items-center justify-end'>
-            <Link to={`/Anime-Goods/Manga/B/${Characters.id}`}>
+            <Link to={`/Anime-Goods/Manga/${Characters.id}`}>
               <img
-                className='md:h-[500px] md:w-[600px] mt-[32px] hover:cursor-pointer'
+                className='md:h-[500px] md:w-[600px] mt-1 hover:cursor-pointer border shadow rounded p-4 bg-white'
                 src={Characters.images}
                 alt={Characters.alt}
               />

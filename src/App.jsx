@@ -1,14 +1,15 @@
 import Header from './Header'
 import Keychains from './Keychains/Keychains'
 import KeychainsDetails from './Keychains/KeychainDetails'
+import KeychainsOptions from './Keychains/KeychainsOptions'
 import Collectibles from './Collectibles/Collectibles'
 import CollectiblesDetails from './Collectibles/CollectiblesDetails'
+import CollectiblesOptions from './Collectibles/CollectiblesOptions'
 import SmallFigures from './SmallFigures/SmallFigures'
 import SmallFiguresDetails from './SmallFigures/SmallFiguresDetails'
 import MangaA from './Mangas/MangaA'
-import MangaB from './Mangas/MangaB'
-import MangasDetailsA from './Mangas/MangasDetailsA'
-import MangasDetailsB from './Mangas/MangasDetailsB'
+import MangasDetails from './Mangas/MangasDetails'
+import MangasOptions from './Mangas/MangasOptions'
 import About from './Data/About'
 import Terms from './Data/Terns'
 import Contact from './Data/Conatct'
@@ -23,6 +24,7 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom'
+import SmallFiguresOptions from './SmallFigures/SmallFiguresOptions'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -36,13 +38,12 @@ function ScrollToTop() {
 
 function Main() {
   return (
-    <>
+    <div>
       <Keychains />
       <Collectibles />
       <SmallFigures />
       <MangaA />
-      <MangaB />
-    </>
+    </div>
   )
 }
 
@@ -70,21 +71,36 @@ function App() {
             element={<KeychainsDetails />}
           />
           <Route
-            path='/Anime-Goods/Manga/A/:id'
-            element={<MangasDetailsA />}
+            path='/Anime-Goods/Manga/:id'
+            element={<MangasDetails />}
           />
           <Route
-            path='/Anime-Goods/Manga/B/:id'
-            element={<MangasDetailsB />}
-          /><Route
             path='/Anime-Goods/Data/About'
             element={<About />}
-          /><Route
+          />
+          <Route
             path='/Anime-Goods/Data/Terms-Conditions'
             element={<Terms />}
-          /><Route
+          />
+          <Route
             path='/Anime-Goods/Data/Contact'
             element={<Contact />}
+          />
+          <Route
+            path='/Anime-Goods/Collectibles/Figures'
+            element={<CollectiblesOptions />}
+          />
+          <Route
+            path='/Anime-Goods/Mangas/Options'
+            element={<MangasOptions />}
+          />
+          <Route
+            path='/Anime-Goods/SmallFigures/Options'
+            element={<SmallFiguresOptions />}
+          />
+          <Route
+            path='/Anime-Goods/Keychains/Options'
+            element={<KeychainsOptions />}
           />
           <Route
             path='/Anime-Goods/*'

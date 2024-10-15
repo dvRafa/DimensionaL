@@ -1,65 +1,30 @@
-import Chopper from '../assets/KeychainsImg/Chopper.webp'
-import Zoro from '../assets/KeychainsImg/zoro.webp'
-import Luffy from '../assets/KeychainsImg/Luffy.webp'
-import Vegeta from '../assets/KeychainsImg/Vegeta.webp'
-import Ussop from '../assets/KeychainsImg/Ussop.webp'
-
 import { useParams, Link } from 'react-router-dom'
-
-const Characters = [
-  {
-    name: 'Tony Chopper',
-    price: '$15',
-    images: [Chopper],
-    alt: 'Tony Chopper "Samurai"',
-    data: 'One Piece',
-    design: '3D View',
-    id: 'chopper-popular',
-  },
-  {
-    name: 'Monkey D. Luffy',
-    price: '$15',
-    images: [Luffy],
-    alt: 'Monkey D. Luffy',
-    data: 'One Piece',
-    design: '3D View',
-    id: 'luffy-popular',
-  },
-  {
-    name: 'Roronoa Zoro',
-    price: '$15',
-    images: [Zoro],
-    alt: 'Roronoa Zoro',
-    data: 'One Piece',
-    design: '3D View',
-    id: 'zoro-popular',
-  },
-  {
-    name: 'Vegeta',
-    price: '$15',
-    images: [Vegeta],
-    alt: 'Vegeta',
-    data: 'Dragon Ball Z',
-    design: '3D Model',
-    id: 'vegeta-popular',
-  },
-  {
-    name: 'Ussop',
-    price: '$15',
-    images: [Ussop],
-    alt: 'Ussop',
-    data: 'One Piece',
-    design: '3D View',
-    id: 'ussop-popular',
-  },
-]
+import Breadcrumb from '../Breadcrumb'
+import { useState } from 'react'
+import KeychainArray from './KeychainArray'
 
 export default function KeychainsDetails() {
   const { id } = useParams()
-  const character = Characters.find((character) => character.id === id)
+
+  const sharedArray = KeychainArray()
+  const character = sharedArray.find((character) => character.id === id)
+
+  const [mainImageIndex, setMainImageIndex] = useState(0)
+
+  const handleThumbnailClick = (index) => {
+    setMainImageIndex(index)
+  }
+
+  // Define the breadcrumb path
+  const breadcrumbPath = [
+    { name: 'Home', link: '/Anime-Goods/' },
+    { name: character.type, link: '/Anime-Goods/Keychains/Options' },
+    { name: character.name, link: '#' }, // Current item, no link
+  ]
 
   return (
     <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
+      <Breadcrumb path={breadcrumbPath} />
       <div className='flex md:flex-row flex-col-reverse md:justify-between'>
         <div className='md:w-[400px] bg-[#f1f1f1] border rounded shadow p-4'>
           <div className='w-fit'>
@@ -76,7 +41,6 @@ export default function KeychainsDetails() {
                   strokeLinecap='round'
                   strokeLinejoin='round'></g>
                 <g id='SVGRepo_iconCarrier'>
-                  {' '}
                   <path
                     d='M5 1H4L0 5L4 9H5V6H11C12.6569 6 14 7.34315 14 9C14 10.6569 12.6569 12 11 12H4V14H11C13.7614 14 16 11.7614 16 9C16 6.23858 13.7614 4 11 4H5V1Z'
                     fill='#00000'></path>
@@ -84,24 +48,16 @@ export default function KeychainsDetails() {
               </svg>
             </Link>
           </div>
-          <h1 className='custom-title'>
-            {character.name}
-          </h1>
+          <h1 className='custom-title'>{character.name}</h1>
           <div className='flex flex-row md:gap-x-8 gap-x-4'>
-            <p className='custom-item-details'>
-              rare
-            </p>
+            <p className='custom-item-details'>rare</p>
             <p className='custom-item-details'>{character.price} USD</p>
             <p className='custom-item-details'>in-stock</p>
             <p className='custom-item-details'>{character.design}</p>
           </div>
           <div className='flex flex-col mt-[24px]'>
-            <h1 className='custom-description'>
-              Description
-            </h1>
-            <p className='custom-anime'>
-              {character.data}
-            </p>
+            <h1 className='custom-description'>Description</h1>
+            <p className='custom-anime'>{character.anime}</p>
           </div>
           <div className='flex flex-row mt-16'>
             <a
@@ -117,8 +73,7 @@ export default function KeychainsDetails() {
               href='https://instagram.com/thenotoriousrafa'
               rel='noopener nonrefereer'
               target='_blank'
-              aria-label='Instagram account'
-              > 
+              aria-label='Instagram account'>
               instagram
             </a>
           </div>
@@ -129,6 +84,19 @@ export default function KeychainsDetails() {
             src={character.images[0]}
             className='md:w-[550px] w-full md:h-[664px] h-[400px] object-cover mb-6 md:mb-0'
           />
+          <div className='flex items-center justify-center mt-4 space-x-2'>
+            {character.images.map((image, index) => (
+              <img
+                key={index}
+                alt={`${character.alt} thumbnail ${index + 1}`}
+                src={image}
+                className={`w-24 h-24 object-cover cursor-pointer hover:opacity-75 ${
+                  mainImageIndex === index ? 'border-2 border-blue-800/90' : ''
+                }`} // Highlight the selected thumbnail
+                onClick={() => handleThumbnailClick(index)} // Update main image on click
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

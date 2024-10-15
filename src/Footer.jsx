@@ -2,66 +2,81 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <>
-      <div className='border-t h-[2px] borders-background w-full'></div>
-      <div className='flex md:max-w-[1200px] max-w-[320px] mx-auto py-[35px] justify-between'>
-        <div className='flex flex-col justify-center'>
-          <p className='text-[32px] leading-[38.4px] md:mb-0 mb-[16px] md:text-[56px] md:leading-[67.77px] font-light'>
-            A Small Dream!
-          </p>
-          <p className='text-[12px] tracking-[1.32px] leading-[12px] md:text-[14px] md:leading-[32px] md:tracking-normal font-light'>
-            Current Location: Panama - PTY
-          </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-[25px] md:gap-y-[50px]'>
+    <div>
+      <div className='border-t shadow-sm'></div>
+      {/* <div className='border-t h-[2px] borders-background w-full'></div> */}
+      <div className='flex md:max-w-[980px] max-w-[320px] mx-auto py-[60px] justify-between'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-x-[30px] gap-y-[25px] md:gap-y-[50px] items-start'>
           <div className='flex flex-col'>
-            <ul>
-              <li className='text-[12px] tracking-normal leading-[20px] md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out font-light'>
+            <p className='mb-2 uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold text-stone-700/95'>
+              contact
+            </p>
+            <ul className='inter'>
+              <li className='text-[12px] tracking-[05.px] leading-[20px] md:text-[15px] md:leading-[30px]'>
                 <a
+                  className='hover:text-[#386601] ease-in-out duration-300 transition-colors'
                   href='https://instagram.com/thenotoriousrafa'
                   rel='noopener noreferrer'
                   target='_blank'
                   aria-label='Instagram Account'>
-                  instagram
+                  Instagram
                 </a>
               </li>
-              <li className='text-[12px] leading-[20px] md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out tracking-normal font-light'>
+              <li className='text-[12px] tracking-[0.5px] leading-[20px] md:text-[15px] md:leading-[30px]'>
                 <a
-                  href='mailto:rafaeldejesus694@outlook.com'
-                  rel='noopener noreferrer'
-                  target='_blank'
-                  aria-label='Email Account'>
-                  email
-                </a>
-              </li>
-              <li className='text-[12px] tracking-normal leading-[20px] md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out font-light'>
-                <a
+                  className='hover:text-[#386601] ease-in-out duration-300 transition-colors'
                   href='https://wa.me/50764245895'
                   rel='noopener noreferrer'
                   target='_blank'
                   aria-label='Whatsapp Number'>
-                  whatsapp
+                  Whatsapp
+                </a>
+              </li>
+              <li className='text-[12px] tracking-[0.5px] leading-[20px] md:text-[15px] md:leading-[30px]'>
+                <a
+                  className='hover:text-[#386601] ease-in-out duration-300 transition-colors'
+                  href='mailto:rafaeldejesus694@outlook.com'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  aria-label='Email Account'>
+                  Email
                 </a>
               </li>
             </ul>
           </div>
           <div className='flex flex-col'>
-            <ul>
-              <li className='text-[12px] leading-[20px] font-light md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out tracking-normal'>
-                <Link to='/Anime-Goods/Data/About'>About</Link>
+            <p className='mb-2 uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold text-stone-700/95'>
+              Wapping
+            </p>
+            <ul className='inter'>
+              <li>
+                <Link className='text-[12px] leading-[20px] md:text-[15px] md:leading-[30px] tracking-[0.5px] hover:text-[#386601] ease-in-out duration-300 transition-colors cursor-not-allowed'>
+                  About
+                </Link>
               </li>
-              <li className='text-[12px] leading-[20px] font-light md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out tracking-normal'>
-                <Link to='/Anime-Goods/Data/Terms-Conditions'>
+              <li>
+                <Link className='text-[12px] leading-[20px] md:text-[15px] md:leading-[30px] tracking-[0.5px] hover:text-[#386601] ease-in-out duration-300 transition-colors cursor-not-allowed'>
                   Terms + Conditions
                 </Link>
               </li>
-              <li className='text-[12px] leading-[20px] md:text-[14px] md:leading-[22px] hover:text-blue-800 duration-200 ease-in-out tracking-normal font-light'>
-                <Link to='/Anime-Goods/Data/Contact'>Contact Us</Link>
+              <li>
+                <Link className='text-[12px] leading-[20px] md:text-[15px] md:leading-[30px] tracking-[0.5px] hover:text-[#386601] ease-in-out duration-300 transition-colors cursor-not-allowed'>
+                  Contact Us <br />
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </>
+      <div className='flex justify-between items-center'>
+        <p className='text-[12px] tracking-[1.32px] md:text-[12.5px] md:tracking-normal font-bold'>
+          <span className='font-normal inter'>Located in</span> Panama, Panama
+          City
+        </p>
+        <p className='text-[12.5px] inter'>
+          Created by <span className='font-yakin'>Wapping</span>
+        </p>
+      </div>
+    </div>
   )
 }
