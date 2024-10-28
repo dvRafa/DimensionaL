@@ -25,6 +25,7 @@ import {
   useLocation,
 } from 'react-router-dom'
 import SmallFiguresOptions from './SmallFigures/SmallFiguresOptions'
+import HomePage from './HomePage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -38,12 +39,13 @@ function ScrollToTop() {
 
 function Main() {
   return (
-    <div>
-      <Keychains />
+    <>
+      {/* <HomePage/> */}
       <Collectibles />
+      <Keychains />
       <SmallFigures />
       <MangaA />
-    </div>
+    </>
   )
 }
 

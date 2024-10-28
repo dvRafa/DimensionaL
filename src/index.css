@@ -44,6 +44,24 @@
   transition: width, 35s;
 }
 
+.hover-scale-101:hover {
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01) scaleY(1.01);
+}
+
+.manga-images {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  transition: 1s ease;
+  border: 2px solid black;
+
+}
+
+.manga-images:hover {
+  cursor: pointer;
+  filter: contrast(120%);
+}
+
 .scroll-container {
   overflow-x: auto;
   -ms-overflow-style: none; /* IE and Edge */
@@ -68,7 +86,7 @@
   }
 
   .items-details-keychains {
-    @apply uppercase text-[24px] tracking-[1.32px] leading-[32px] text-left mt-[6px] font-semibold
+    @apply uppercase text-[14px] -tracking-[0.2] leading-[18px] text-left mt-[25px]
   }
 
   .sub-title {
@@ -92,7 +110,7 @@
     @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
   }
   .figure-name-keychains {
-    @apply mt-4 capitalize text-[16px] tracking-[0.2px] leading-[24px] text-left inter
+    @apply mt-[8px] capitalize text-[16px] tracking-[0.2px] leading-[24px] text-left font-semibold
   }
 
   .logo {

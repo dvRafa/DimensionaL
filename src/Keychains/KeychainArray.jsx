@@ -1,7 +1,7 @@
 //Custom-Hook to share an array
 import { useState } from 'react'
 
-import Chopper from '../assets/KeychainsImg/Chopper.webp'
+import Chopper from '../assets/KeychainsImg/Chopper.jpg'
 import Zoro from '../assets/KeychainsImg/zoro.webp'
 import Vegeta from '../assets/KeychainsImg/Vegeta.webp'
 import Luffy from '../assets/KeychainsImg/Luffy.webp'
@@ -10,9 +10,10 @@ import Ussop from '../assets/KeychainsImg/Ussop.webp'
 export default function KeychainArray() {
   const [Characters] = useState([
     {
+      bio:'Straw Hat Pirates',
       name: 'Tony Tony Chopper',
-      nickname:'"Samurai"',
-      price: '$15',
+      nickname:'One Piece Tony Tony Chopper "Samurai"',
+      price: '$15.00',
       type: 'Keychain',
       images: [Chopper],
       alt: 'Tony Chopper "Samurai"',
@@ -22,9 +23,10 @@ export default function KeychainArray() {
       id: 'chopper-popular',
     },
     {
+      bio:'Straw Hat Pirates',
       name: 'Roronoa Zoro',
-      nickname: 'The Pirate Hunter',
-      price: '$15',
+      nickname: 'One Piece Roronoa Zoro The Pirate Hunter',
+      price: '$15.00',
       type: 'Keychain',
       images: [Zoro],
       anime: 'One Piece',
@@ -34,8 +36,10 @@ export default function KeychainArray() {
       id: 'zoro-popular',
     },
     {
+      bio:'Prince',
+      nickname:'Dragon Ball Z Vegeta The Prince Keychain',
       name: 'Vegeta',
-      price: '$15',
+      price: '$15.00',
       type: 'Keychain',
       images: [Vegeta],
       alt: 'Vegeta',
@@ -45,22 +49,26 @@ export default function KeychainArray() {
       id: 'vegeta-popular',
     },
     {
+      bio:'Straw Hat Pirates Captain',
+      nickname:'One Piece Monkey D Luffy Future King of the Pirates',
       name: 'Monkey D. Luffy',
-      price: '$15',
+      price: '$15.00',
       type: 'Keychain',
       images: [Luffy],
       alt: 'Monkey D. Luffy',
-      anime: 'One Piece',
+      data: 'One Piece',
       design: '3D View',
       id: 'luffy-popular',
     },
     {
+      bio:'Straw Hat Pirates',
+      nickname:'One Piece Ussop White Beard',
       name: 'Ussop',
-      price: '$15',
+      price: '$15.00',
       type: 'Keychain',
       images: [Ussop],
       alt: 'Ussop',
-      anime: 'One Piece',
+      data: 'One Piece',
       design: '3D View',
       id: 'ussop-popular',
     },
