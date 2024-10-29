@@ -1,7 +1,3 @@
-import OnePiece from '../assets/OnePieceLogo1.png'
-import AttackOnTitan from '../assets/AttackOnTitanLogo1.png'
-import Naruto from '../assets/NarutoLogo1.png'
-import KimetsuNoYaiba from '../assets/KimetsuNoYaiba.webp'
 import NarutoFront from '../assets/MangasImg/11.jpeg'
 import OnePieceFront from '../assets/MangasImg/OnePieceFront.png'
 import AOT from '../assets/MangasImg/1111.png'
@@ -12,7 +8,6 @@ import { Link } from 'react-router-dom'
 const Characters = [
   {
     mangaImg: AOT,
-    images: [AttackOnTitan],
     name: 'Shingeki No Kyojin - Attack On Titan, Volume 16',
     data: 'Captured by Rod Reiss, the rightful king, Krista and Eren finally have their memories back. What exactly happened to Eren, and what was the crime his father...',
     page: '194',
@@ -28,7 +23,6 @@ const Characters = [
   },
   {
     mangaImg: OnePieceFront,
-    images: [OnePiece],
     name: 'One Piece: Doflamingo Appears, Volume 70 - Chapters 691-700',
     data: 'With the escape of the institute in front of it, Caesar makes a strange transformation. Will Luffy shatter his ambitions!?',
     author: 'Eiichiro Oda',
@@ -44,7 +38,6 @@ const Characters = [
   },
   {
     mangaImg: NarutoFront,
-    images: [Naruto],
     name: 'Naruto Shippuden: Dream World, Volume 63 - Chapters 598-607',
     data: 'With the help of Kakashi and Guy, Naruto seems to have found a way around Tobis invincible abilities.',
     page: '192',
@@ -57,7 +50,6 @@ const Characters = [
   },
   {
     mangaImg: Kimetsu,
-    images: [KimetsuNoYaiba],
     name: 'Kimetsu No Yaiba - Demon Slayer: Gaiden Volume',
     data: 'Kimetsu no Yaiba: Gaiden is a volume consisting of Giyu Tomiokas Story and Kyojuro Rengokus Story.',
     page: '215',
@@ -72,24 +64,26 @@ const Characters = [
 
 export default function MangaA() {
   return (
-    <section>
-      <div className='flex pl-32 flex-col md:justify-end mx-auto md:ml-auto md:pr-[25px] pt-10 pb-[80px]'>
+    <div className='px-2'>
+      <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
           Ultimate Collectibles.{' '}
           <span className='text-[#6e6e73]'>
             Manga from the Best Animes Ever!
           </span>
         </h1>
-        <div className='flex relative w-[1000px] h-[500px] pt-[25px]'>
+      </div>
+      <div className='flex md:pl-32 flex-col md:justify-end mx-auto md:ml-auto md:pr-[25px] pt-10 pb-[80px] overflow-x-auto scrollbar-hide scroll-smooth scroll-container'>
+        <div className='flex relative md:gap-x-[20px] gap-x-2 w-[1200px]'>
           {Characters.map((character, index) => (
             <Link
               key={index}
-              className='flex h-full w-full'
+              className='flex'
               to={`/Anime-Goods/Manga/${character.id}`}>
               <img
                 alt={character.alt}
                 src={character.mangaImg}
-                className='manga-images mr-2'
+                className='w-auto h-[500px] md:h-[600px]'
               />
               <p className='absolute uppercase font-bold bg-black text-white py-[2px] px-2'>
                 {character.type}
@@ -105,6 +99,6 @@ export default function MangaA() {
           </Link>
         </div> */}
       </div>
-    </section>
+    </div>
   )
 }

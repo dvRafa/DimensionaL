@@ -3,7 +3,7 @@
 
 export default function Footer() {
   return (
-    <div className='w-fit mx-auto mb-6'>
+    <div className='w-fit mx-auto pb-6'>
       {/* <div className='border-t h-[2px] borders-background w-full'></div> */}
       {/* <div className='border-t shadow-sm'></div>
       <div className='flex md:max-w-[980px] max-w-[320px] mx-auto py-[60px] justify-between'>

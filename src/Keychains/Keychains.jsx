@@ -20,8 +20,8 @@ export default function Keychains() {
   }
 
   return (
-    <section className='flex flex-col pt-10'>
-      <div className='pl-32'>
+    <section className='flex flex-col pt-10 px-2'>
+      <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
           Japan Originals. <span className='text-[#6e6e73]'>Keychains.</span>
         </h1>
@@ -29,7 +29,7 @@ export default function Keychains() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='pl-32 pt-[25px] pb-[80px] flex gap-x-[20px] overflow-x-scroll scroll-container md:overflow-x-hidden'>
+          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-scroll scroll-container md:overflow-x-hidden'>
           {sharedArray.map((character, index) => (
             <Link
               key={index}

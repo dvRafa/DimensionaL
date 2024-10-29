@@ -38,22 +38,23 @@ const Shops = [
 export default function Header() {
   return (
     <div>
-      <h1 className='bg-slate-900 italic text-white text-sm items-center justify-center flex py-3 inter'>
+      <h1 className='bg-slate-900 text-white text-xs items-center justify-center flex py-3 inter'>
         All products are sourced directly from Japan & Mangas are written in
         Japanese
       </h1>
-      <header className='flex flex-col max-w-[320px] md:max-w-[1200px] mx-auto'>
+      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto'>
         <div className='flex items-center justify-between'>
-          <div className='flex flex-row items-center justify-center gap-x-7 py-4'>
+          <div className='flex flex-row items-center justify-center py-2'>
+            <img src='./sketchup.svg' width={30} height={30} alt='DimensionaL Logo' />
             <Link to='/Anime-Goods/'>
-              <h1 className='text-2xl montserrat line-through'>DimensionaL</h1>
+              <h1 className='text-xl montserrat line-through'>imensionaL</h1>
             </Link>
-            <div className='relative group'>
-              <button
+            {/* <div className='relative group'> */}
+              {/* <button
                 disabled
                 className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold text-stone-700/95 line-through'>
                 Shop <br />{' '}
-              </button>
+              </button> */}
               {/* <div className='absolute group-hover:block bg-[#f1f1f1] mt-6 w-[800px] h-[30rem] z-10'>
                 {Shops.map((shop, index) => (
                   <Link
@@ -64,13 +65,13 @@ export default function Header() {
                   </Link>
                 ))}
               </div> */}
-            </div>
-            <div className='relative group'>
-              <button
+            {/* </div> */}
+            {/* <div className='relative group'> */}
+              {/* <button
                 disabled
                 className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold line-through text-stone-700/95'>
                 Discover <br />
-              </button>
+              </button> */}
               {/* <div className='absolute left-0 hidden group-hover:block bg-white border border-gray-300 z-10'>
                 {Discovers.map((discover, index) => (
                   <Link
@@ -81,7 +82,7 @@ export default function Header() {
                   </Link>
                 ))}
               </div> */}
-            </div>
+            {/* </div> */}
           </div>
           <div className='flex gap-x-8 h-12'>
             <div className='flex gap-x-6 items-center'>
@@ -108,23 +109,23 @@ export default function Header() {
               <svg
                 className='mr-2'
                 xmlns='http://www.w3.org/2000/svg'
-                width='40'
-                height='25'>
+                width='30'
+                height='15'>
                 <rect
                   fill='#fff'
-                  width='40'
-                  height='25'
+                  width='30'
+                  height='15'
                 />
                 <circle
                   fill='#bc002d'
-                  cx='20'
-                  cy='12.5'
-                  r='7'
+                  cx='15'
+                  cy='7.5'
+                  r='5'
                 />
               </svg>
               <img
                 alt='Panama - PTY flag'
-                className='w-[40px] h-[25px]'
+                className='w-[30px] h-[20px]'
                 src={Panama}
               />
             </div>

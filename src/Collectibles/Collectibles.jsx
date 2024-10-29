@@ -19,8 +19,8 @@ export default function Collectibles() {
   }
 
   return (
-    <div className='flex flex-col pt-10'>
-      <div className='pl-32'>
+    <div className='flex flex-col pt-10 md:px-0 px-2'>
+      <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
           Detailed Collectible Figures.{' '}
           <span className='text-[#6e6e73]'>
@@ -32,26 +32,27 @@ export default function Collectibles() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='flex space-x-4 overflow-x-auto scrollbar-hide scroll-smooth pt-[25px] scroll-container pb-[80px] pl-32'>
+          className='flex md:gap-x-[20px] gap-x-2 overflow-x-auto scrollbar-hide scroll-smooth pt-[25px] scroll-container pb-[80px] md:pl-32'>
           {sharedArray.map((character, index) => (
-            <Link to={`/Anime-Goods/Collectible/${character.id}`}
+            <Link
+              to={`/Anime-Goods/Collectible/${character.id}`}
               key={index}
-              className='flex-shrink-0 p-2 w-[315px] bg-white rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
+              className='flex-shrink-0 flex flex-col justify-between p-2 w-[315px] bg-white rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
               <div className='flex justify-center'>
                 <img
-                  className='md:w-auto md:h-[400px] w-[350px] h-[400px] object-cover'
+                  className='md:w-auto md:h-[400px] object-cover'
                   src={character.images[0]}
                   alt={character.alt}
                 />
               </div>
-              <div>
-                <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
-                  {character.anime}
-                </p>
-                <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
-                  {character.name}
-                </h1>
-              </div>
+                <div>
+                  <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
+                    {character.anime}
+                  </p>
+                  <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
+                    {character.name}
+                  </h1>
+                </div>
             </Link>
           ))}
         </div>
