@@ -34,7 +34,7 @@ export default function SmallFigures() {
           {newSharedArray.map((character, index) => (
             <Link
               key={index}
-              to={`/Anime-Goods/SmallFigure/${character.id}`}>
+              to={`/DimensionaL/SmallFigure/${character.id}`}>
               <div className='rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500 p-7 w-[315px] bg-white'>
                 <div className='pt-[40px] px-[10px] mx-auto overflow-hidden flex justify-center'>
                   <img

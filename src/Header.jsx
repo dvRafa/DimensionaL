@@ -46,7 +46,7 @@ export default function Header() {
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center justify-center py-2'>
             <img src='./sketchup.svg' width={30} height={30} alt='DimensionaL Logo' />
-            <Link to='/Anime-Goods/'>
+            <Link to='/DimensionaL/'>
               <h1 className='text-xl montserrat line-through'>imensionaL</h1>
             </Link>
             {/* <div className='relative group'> */}

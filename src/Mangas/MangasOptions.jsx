@@ -96,7 +96,7 @@ export default function MangasOptions() {
             <div
               className='flex flex-col'
               key={index}>
-              <Link to={`/Anime-Goods/Manga/${character.id}`}>
+              <Link to={`/DimensionaL/Manga/${character.id}`}>
                 <div className='flex flex-col bg-[#f1f1f1] items-center justify-center'>
                   <img
                     src={character.images}

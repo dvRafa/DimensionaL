@@ -79,7 +79,7 @@ export default function MangaA() {
             <Link
               key={index}
               className='flex'
-              to={`/Anime-Goods/Manga/${character.id}`}>
+              to={`/DimensionaL/Manga/${character.id}`}>
               <img
                 alt={character.alt}
                 src={character.mangaImg}
@@ -92,7 +92,7 @@ export default function MangaA() {
           ))}
         </div>
         {/* <div className='w-fit mx-auto'>
-          <Link to='/Anime-Goods/Collectibles/Figures'>
+          <Link to='/DimensionaL/Collectibles/Figures'>
             <button className='mt-[32px] text-[16px] px-8 py-6 border border-stone-700/50 tracking-normal capitalize leading-[16px] inter duration-300 ease-linear transition hover:bg-blue-800/90 hover:text-white cursor-pointer md:mb-0 mb-4'>
               shop collectibles
             </button>

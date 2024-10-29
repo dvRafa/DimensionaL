@@ -33,7 +33,7 @@ export default function Keychains() {
           {sharedArray.map((character, index) => (
             <Link
               key={index}
-              to={`/Anime-Goods/Keychain/${character.id}`}>
+              to={`/DimensionaL/Keychain/${character.id}`}>
               <div className='rounded-2xl w-[315px] flex-nowrap bg-white shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
                 {character.images.map((image, ImgIndex) => (
                   <div

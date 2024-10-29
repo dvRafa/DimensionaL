@@ -35,7 +35,7 @@ export default function Collectibles() {
           className='flex md:gap-x-[20px] gap-x-2 overflow-x-auto scrollbar-hide scroll-smooth pt-[25px] scroll-container pb-[80px] md:pl-32'>
           {sharedArray.map((character, index) => (
             <Link
-              to={`/Anime-Goods/Collectible/${character.id}`}
+              to={`/DimensionaL/Collectible/${character.id}`}
               key={index}
               className='flex-shrink-0 flex flex-col justify-between p-2 w-[315px] bg-white rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
               <div className='flex justify-center'>

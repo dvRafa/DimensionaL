@@ -91,8 +91,8 @@ export default function MangasDetails() {
   }
 
   const breadcrumbPath = [
-    { name: 'Home', link: '/Anime-Goods' },
-    { name: character.type, link: '/Anime-Goods/Mangas/Options' },
+    { name: 'Home', link: '/DimensionaL' },
+    { name: character.type, link: '/DimensionaL/Mangas/Options' },
     { name: character.name, link: '#' },
   ]
 

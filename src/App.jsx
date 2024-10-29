@@ -57,55 +57,55 @@ function App() {
         <Header />
         <Routes>
           <Route
-            path='/Anime-Goods/'
+            path='/DimensionaL/'
             element={<Main />}
           />
           <Route
-            path='/Anime-Goods/Collectible/:id'
+            path='/DimensionaL/Collectible/:id'
             element={<CollectiblesDetails />}
           />
           <Route
-            path='/Anime-Goods/SmallFigure/:id'
+            path='/DimensionaL/SmallFigure/:id'
             element={<SmallFiguresDetails />}
           />
           <Route
-            path='/Anime-Goods/Keychain/:id'
+            path='/DimensionaL/Keychain/:id'
             element={<KeychainsDetails />}
           />
           <Route
-            path='/Anime-Goods/Manga/:id'
+            path='/DimensionaL/Manga/:id'
             element={<MangasDetails />}
           />
           <Route
-            path='/Anime-Goods/Data/About'
+            path='/DimensionaL/Data/About'
             element={<About />}
           />
           <Route
-            path='/Anime-Goods/Data/Terms-Conditions'
+            path='/DimensionaL/Data/Terms-Conditions'
             element={<Terms />}
           />
           <Route
-            path='/Anime-Goods/Data/Contact'
+            path='/DimensionaL/Data/Contact'
             element={<Contact />}
           />
           <Route
-            path='/Anime-Goods/Collectibles/Figures'
+            path='/DimensionaL/Collectibles/Figures'
             element={<CollectiblesOptions />}
           />
           <Route
-            path='/Anime-Goods/Mangas/Options'
+            path='/DimensionaL/Mangas/Options'
             element={<MangasOptions />}
           />
           <Route
-            path='/Anime-Goods/SmallFigures/Options'
+            path='/DimensionaL/SmallFigures/Options'
             element={<SmallFiguresOptions />}
           />
           <Route
-            path='/Anime-Goods/Keychains/Options'
+            path='/DimensionaL/Keychains/Options'
             element={<KeychainsOptions />}
           />
           <Route
-            path='/Anime-Goods/*'
+            path='/DimensionaL/*'
             element={<ErrorPage />}
           />
         </Routes>

@@ -16,8 +16,8 @@ export default function CollectiblesDetails() {
 
   // Define the breadcrumb path
   const breadcrumbPath = [
-    { name: 'Home', link: '/Anime-Goods/' },
-    { name: character.type, link: '/Anime-Goods/Collectibles/Figures' },
+    { name: 'Home', link: '/DimensionaL/' },
+    { name: character.type, link: '/DimensionaL/Collectibles/Figures' },
     { name: character.name, link: '#' }, // Current item, no link
   ]
 
@@ -27,7 +27,7 @@ export default function CollectiblesDetails() {
       <div className='flex md:flex-row flex-col-reverse md:justify-between'>
         <div className='md:w-[400px] bg-[#f1f1f1] border rounded shadow p-4'>
           <div className='w-fit'>
-            <Link to='/Anime-Goods/'>
+            <Link to='/DimensionaL/'>
               <svg
                 className='h-6 w-6 hover:cursor-pointer hover:opacity-50 duration-200 ease-in-out transition-opacity md:visible hidden'
                 viewBox='0 0 16 16'
