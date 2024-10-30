@@ -1,37 +1,38 @@
 import { Link } from 'react-router-dom'
 
 import Panama from './assets/Panama.png'
+import scketchup from '/sketchup.svg'
 
 const Discovers = [
   {
     name: 'Naruto Shippuden',
-    link: `/Anime-Goods/Collectibles/NarutoShippuden`,
+    link: `/DimensionaL/Collectibles/NarutoShippuden`,
   },
   {
     name: 'Shingeki No Kyojin',
-    link: `/Anime-Goods/Collectibles/ShingekiNoKyojin`,
+    link: `/DimensionaL/Collectibles/ShingekiNoKyojin`,
   },
   {
     name: 'Kimetsu No Yaiba',
-    link: `/Anime-Goods/Collectibles/KimetsuNoYaiba`,
+    link: `/DimensionaL/Collectibles/KimetsuNoYaiba`,
   },
   {
     name: 'One Piece',
-    link: `/Anime-Goods/Collectibles/OnePiece`,
+    link: `/DimensionaL/Collectibles/OnePiece`,
   },
 ]
 const Shops = [
   {
     name: 'Mangas',
-    link: `/Anime-Goods/Mangas/Options`,
+    link: `/DimensionaL/Mangas/Options`,
   },
   {
     name: 'Collectibles Figures',
-    link: `/Anime-Goods/Collectibles/Figures`,
+    link: `/DimensionaL/Collectibles/Figures`,
   },
   {
     name: 'Keychains',
-    link: `/Anime-Goods/Keychains/Options`,
+    link: `/DimensionaL/Keychains/Options`,
   },
 ]
 
@@ -42,10 +43,10 @@ export default function Header() {
         All products are sourced directly from Japan & Mangas are written in
         Japanese
       </h1>
-      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto'>
+      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-2 md:px-0 md:py-2'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center justify-center py-2'>
-            <img src='./sketchup.svg' width={30} height={30} alt='DimensionaL Logo' />
+            <img src={scketchup} width={30} height={30} alt='DimensionaL Logo' />
             <Link to='/DimensionaL/'>
               <h1 className='text-xl montserrat line-through'>imensionaL</h1>
             </Link>

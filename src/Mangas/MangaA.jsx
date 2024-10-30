@@ -1,7 +1,7 @@
-import NarutoFront from '../assets/MangasImg/11.jpeg'
+import NarutoFront from '../assets/MangasImg/11.webp'
 import OnePieceFront from '../assets/MangasImg/OnePieceFront.png'
-import AOT from '../assets/MangasImg/1111.png'
-import Kimetsu from '../assets/MangasImg/1.png'
+import AOT from '../assets/MangasImg/1111.webp'
+import Kimetsu from '../assets/MangasImg/1.webp'
 
 import { Link } from 'react-router-dom'
 

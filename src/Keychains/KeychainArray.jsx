@@ -1,7 +1,7 @@
 //Custom-Hook to share an array
 import { useState } from 'react'
 
-import Chopper from '../assets/KeychainsImg/Chopper.jpg'
+import Chopper from '../assets/KeychainsImg/MrChopper.webp'
 import Zoro from '../assets/KeychainsImg/zoro.webp'
 import Vegeta from '../assets/KeychainsImg/Vegeta.webp'
 import Luffy from '../assets/KeychainsImg/Luffy.webp'

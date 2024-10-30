@@ -6,18 +6,18 @@ import OnePiece from '../assets/MangasImg/OnePiece.webp'
 import KimetsuNoYaiba from '../assets/MangasImg/KimetsuNoYaiba.webp'
 import Naruto from '../assets/MangasImg/Naruto.webp'
 import Breadcrumb from '../Breadcrumb'
-import Kimetsu from '../assets/MangasImg/1.jpeg'
-import KimetsuBack from '../assets/MangasImg/2.jpeg'
-import KimetsuPages from '../assets/MangasImg/3.jpeg'
-import NarutoFront from '../assets/MangasImg/11.jpeg'
-import NarutoBack from '../assets/MangasImg/22.jpeg'
-import NarutoPages from '../assets/MangasImg/33.jpeg'
-import OPFront from '../assets/MangasImg/111.jpeg'
-import OPBack from '../assets/MangasImg/222.jpeg'
-import OPPages from '../assets/MangasImg/333.jpeg'
-import ShingekiFront from '../assets/MangasImg/1111.jpeg'
-import ShingekiBack from '../assets/MangasImg/2222.jpeg'
-import ShingekiPages from '../assets/MangasImg/3333.jpeg'
+import Kimetsu from '../assets/MangasImg/1.webp'
+import KimetsuBack from '../assets/MangasImg/2.webp'
+import KimetsuPages from '../assets/MangasImg/3.webp'
+import NarutoFront from '../assets/MangasImg/11.webp'
+import NarutoBack from '../assets/MangasImg/22.webp'
+import NarutoPages from '../assets/MangasImg/33.webp'
+import OPFront from '../assets/MangasImg/111.webp'
+import OPBack from '../assets/MangasImg/222.webp'
+import OPPages from '../assets/MangasImg/333.webp'
+import ShingekiFront from '../assets/MangasImg/1111.webp'
+import ShingekiBack from '../assets/MangasImg/2222.webp'
+import ShingekiPages from '../assets/MangasImg/3333.webp'
 
 const Characters = [
   {
@@ -91,16 +91,15 @@ export default function MangasDetails() {
   }
 
   const breadcrumbPath = [
-    { name: 'Home', link: '/DimensionaL' },
-    { name: character.type, link: '/DimensionaL/Mangas/Options' },
-    { name: character.name, link: '#' },
+    { name: 'Store', link: '/DimensionaL' },
+    { name: 'Mangas', link: '#' },
   ]
 
   return (
     <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
-        <Breadcrumb path={breadcrumbPath} />
-      <div className='flex md:flex-row flex-col-reverse justify-between'>
-        <div className='md:w-[400px] w-full bg-[#f1f1f1] border rounded shadow p-4'>
+      <Breadcrumb path={breadcrumbPath} />
+      <div className='flex md:flex-row flex-col'>
+        <div className='md:w-[400px] w-ful p-4'>
           <h1 className='custom-title-manga'>{character.name}</h1>
           <div className='flex flex-row md:gap-x-8 gap-x-4'>
             <p className='custom-item-details'>rare</p>
@@ -111,9 +110,9 @@ export default function MangasDetails() {
             <h1 className='custom-description'>Description</h1>
             <p className='custom-anime'>{character.data}</p>
           </div>
-          <div className='flex flex-row mt-16'>
+          <div className='flex flex-col mt-16 gap-y-4'>
             <a
-              className='text-[16px] border py-6 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light duration-200 ease-in-out hover:bg-blue-800/90 transition-colors hover:text-white'
+              className='text-[16px] text-center rounded-full border py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] duration-200 ease-in-out hover:bg-black/90 transition-colors bg-black text-white'
               href='https://wa.me/50764245895'
               rel='noopener noreferrer'
               target='_blank'
@@ -121,20 +120,19 @@ export default function MangasDetails() {
               whatsapp
             </a>
             <a
-              className='text-[16px] border-y border-r py-6 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light duration-200 ease-in-out hover:bg-blue-800/90 transition-colors hover:text-white'
+              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] duration-200 ease-in-out hover:bg-blue-800/90 transition-colors hover:text-white'
               href='https://instagram.com/thenotoriousrafa'
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='Instagram account'>
+              rel='noopener nonrefereer'
+              target='_blank'>
               instagram
             </a>
           </div>
         </div>
-        <div>
+        <div className='mx-auto flex flex-col'>
           <img
             alt={character.alt}
             src={character.images[mainImageIndex]} // Accessing the first image in the array
-            className='md:w-[550px] md:h-[664px] h-[300px] mb-6 md:mb-0'
+            className='w-auto md:h-[570px] h-[300px] mb-6 md:mb-0'
           />
           <div className='flex items-center justify-center mt-4 space-x-2'>
             {character.images.map((image, index) => (
@@ -151,7 +149,7 @@ export default function MangasDetails() {
           </div>
         </div>
       </div>
-      <div className='flex flex-row mt-10 gap-x-14'>
+      <div className='md:flex flex-col mt-10 gap-x-14'>
         <div>
           <h3 className='leading-[60px] text-[40px] font-bold'>
             Volume <br /> Info
