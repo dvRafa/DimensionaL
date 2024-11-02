@@ -24,7 +24,7 @@ export default function KeychainsDetails() {
   return (
     <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
       <Breadcrumb path={breadcrumbPath} />
-      <div className='md:flex flex-col'>
+      <div className='flex md:flex-row flex-col'>
         <div className='md:w-[600px] p-4'>
           <h1 className='custom-title'>{character.name}</h1>
           <div className='flex flex-row md:gap-x-8 gap-x-4'>

@@ -32,7 +32,7 @@ export default function Collectibles() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='flex md:gap-x-[20px] gap-x-2 overflow-x-auto scrollbar-hide scroll-smooth pt-[25px] scroll-container pb-[80px] md:pl-32'>
+          className='flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth pt-[25px] scroll-container pb-[80px] md:pl-32'>
           {sharedArray.map((character, index) => (
             <Link
               to={`/DimensionaL/Collectible/${character.id}`}
@@ -45,14 +45,14 @@ export default function Collectibles() {
                   alt={character.alt}
                 />
               </div>
-                <div>
-                  <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
-                    {character.anime}
-                  </p>
-                  <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
-                    {character.name}
-                  </h1>
-                </div>
+              <div>
+                <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
+                  {character.anime}
+                </p>
+                <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
+                  {character.name}
+                </h1>
+              </div>
             </Link>
           ))}
         </div>

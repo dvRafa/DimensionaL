@@ -30,7 +30,7 @@ export default function SmallFigures() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-scroll scroll-container md:overflow-x-hidden'>
+          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth scroll-container'>
           {newSharedArray.map((character, index) => (
             <Link
               key={index}

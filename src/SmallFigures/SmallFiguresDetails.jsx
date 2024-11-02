@@ -23,7 +23,7 @@ export default function SmallFiguresDetails() {
   return (
     <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
       <Breadcrumb path={breadcrumbPath} />
-      <div className='md:flex flex-col flex'>
+      <div className='flex flex-col md:flex-row'>
         <div className='md:w-[400px] w-full p-4'>
           <h1 className='custom-title'>{character.name}</h1>
           <div className='flex flex-row md:gap-x-8 gap-x-4'>

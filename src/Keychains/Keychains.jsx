@@ -1,12 +1,30 @@
 import { Link } from 'react-router-dom'
 import KeychainArray from './KeychainArray'
-import { useRef, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 export default function Keychains() {
   const [showLeftButton, setShowLeftButton] = useState(false) // Controls the visibility of the left button
 
   const scrollContainerRef = useRef(null)
   const sharedArray = KeychainArray()
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show')
+        } else {
+          entry.target.classList.remove('show')
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll('.hiddenElement')
+    hiddenElements.forEach((el) => observer.observe(el))
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect()
+  }, [sharedArray])
 
   // Scroll to the right
   const handleScrollRight = () => {
@@ -22,14 +40,15 @@ export default function Keychains() {
   return (
     <section className='flex flex-col pt-10 px-2'>
       <div className='md:pl-32'>
-        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
+        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'
+        >
           Japan Originals. <span className='text-[#6e6e73]'>Keychains.</span>
         </h1>
       </div>
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-scroll scroll-container md:overflow-x-hidden'>
+          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth scroll-container'>
           {sharedArray.map((character, index) => (
             <Link
               key={index}

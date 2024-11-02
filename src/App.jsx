@@ -10,9 +10,6 @@ import SmallFiguresDetails from './SmallFigures/SmallFiguresDetails'
 import MangaA from './Mangas/MangaA'
 import MangasDetails from './Mangas/MangasDetails'
 import MangasOptions from './Mangas/MangasOptions'
-import About from './Data/About'
-import Terms from './Data/Terns'
-import Contact from './Data/Conatct'
 import Footer from './Footer'
 
 import ErrorPage from './ErrorPage'
@@ -25,7 +22,6 @@ import {
   useLocation,
 } from 'react-router-dom'
 import SmallFiguresOptions from './SmallFigures/SmallFiguresOptions'
-import HomePage from './HomePage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -40,7 +36,6 @@ function ScrollToTop() {
 function Main() {
   return (
     <>
-      {/* <HomePage/> */}
       <Collectibles />
       <Keychains />
       <SmallFigures />
@@ -75,18 +70,6 @@ function App() {
           <Route
             path='/DimensionaL/Manga/:id'
             element={<MangasDetails />}
-          />
-          <Route
-            path='/DimensionaL/Data/About'
-            element={<About />}
-          />
-          <Route
-            path='/DimensionaL/Data/Terms-Conditions'
-            element={<Terms />}
-          />
-          <Route
-            path='/DimensionaL/Data/Contact'
-            element={<Contact />}
           />
           <Route
             path='/DimensionaL/Collectibles/Figures'

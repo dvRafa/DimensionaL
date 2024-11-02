@@ -5,7 +5,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='bg-[#f5f5f7]'>
+    <div>
       <App />
     </div>
   </StrictMode>

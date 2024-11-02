@@ -13,7 +13,7 @@ const Characters = [
     page: '194',
     rating: '16+',
     release: 'August 25, 2015',
-    price: '$60',
+    price: '$60.00',
     alt: 'Shingeki No Kyojin',
     id: 'ShingekiNoKyojin',
     tags: ['Horror', 'Science-Fiction'],
@@ -30,7 +30,7 @@ const Characters = [
     version: 'Paper Version',
     page: '216',
     release: 'June 4, 2013',
-    price: '$45',
+    price: '$45.00',
     alt: 'One Piece',
     id: 'One-Piece',
     anime: 'One Piece',
@@ -42,7 +42,7 @@ const Characters = [
     data: 'With the help of Kakashi and Guy, Naruto seems to have found a way around Tobis invincible abilities.',
     page: '192',
     release: 'December 28, 2012',
-    price: '$50',
+    price: '$50.00',
     alt: 'Naruto Shippuden',
     id: 'NarutoShippuden',
     anime: 'Naruto Shippuden',
@@ -54,7 +54,7 @@ const Characters = [
     data: 'Kimetsu no Yaiba: Gaiden is a volume consisting of Giyu Tomiokas Story and Kyojuro Rengokus Story.',
     page: '215',
     release: 'December 4, 2020',
-    price: '$45',
+    price: '$45.00',
     alt: 'Kimetsu No Yaiba',
     id: 'KimetsuNoYaiba',
     anime: 'Kimetsu No Yaiba',
@@ -64,7 +64,7 @@ const Characters = [
 
 export default function MangaA() {
   return (
-    <div className='px-2'>
+    <div className='px-2 pt-10'>
       <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
           Ultimate Collectibles.{' '}
@@ -73,31 +73,19 @@ export default function MangaA() {
           </span>
         </h1>
       </div>
-      <div className='flex md:pl-32 flex-col md:justify-end mx-auto md:ml-auto md:pr-[25px] pt-10 pb-[80px] overflow-x-auto scrollbar-hide scroll-smooth scroll-container'>
-        <div className='flex relative md:gap-x-[20px] gap-x-2 w-[1200px]'>
+      <div className='flex gap-x-[20px] pl-32 pt-[25px] pb-[80px] overflow-x-auto scroll-smooth scroll-container'>
           {Characters.map((character, index) => (
             <Link
+            className='w-full'
               key={index}
-              className='flex'
               to={`/DimensionaL/Manga/${character.id}`}>
               <img
                 alt={character.alt}
                 src={character.mangaImg}
-                className='w-auto h-[500px] md:h-[600px]'
+                className='p-2 bg-slate-100 rounded-2xl shadow-xl hover:shadow-2xl w-full h-[500px] md:h-auto hover:contrast-125 ease-in-out duration-300'
               />
-              <p className='absolute uppercase font-bold bg-black text-white py-[2px] px-2'>
-                {character.type}
-              </p>
             </Link>
           ))}
-        </div>
-        {/* <div className='w-fit mx-auto'>
-          <Link to='/DimensionaL/Collectibles/Figures'>
-            <button className='mt-[32px] text-[16px] px-8 py-6 border border-stone-700/50 tracking-normal capitalize leading-[16px] inter duration-300 ease-linear transition hover:bg-blue-800/90 hover:text-white cursor-pointer md:mb-0 mb-4'>
-              shop collectibles
-            </button>
-          </Link>
-        </div> */}
       </div>
     </div>
   )
