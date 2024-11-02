@@ -38,7 +38,7 @@ export default function Keychains() {
   }
 
   return (
-    <section className='flex flex-col pt-10 px-2'>
+    <section className='flex flex-col pt-10 px-2 md:px-0'>
       <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'
         >

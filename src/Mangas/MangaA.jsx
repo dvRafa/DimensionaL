@@ -64,7 +64,7 @@ const Characters = [
 
 export default function MangaA() {
   return (
-    <div className='px-2 pt-10'>
+    <div className='pr-2 pt-10'>
       <div className='md:pl-32'>
         <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
           Ultimate Collectibles.{' '}
@@ -73,19 +73,24 @@ export default function MangaA() {
           </span>
         </h1>
       </div>
-      <div className='flex gap-x-[20px] pl-32 pt-[25px] pb-[80px] overflow-x-auto scroll-smooth scroll-container'>
+      <div>
+        <div className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2'>
           {Characters.map((character, index) => (
             <Link
-            className='w-full'
               key={index}
               to={`/DimensionaL/Manga/${character.id}`}>
-              <img
-                alt={character.alt}
-                src={character.mangaImg}
-                className='p-2 bg-slate-100 rounded-2xl shadow-xl hover:shadow-2xl w-full h-[500px] md:h-auto hover:contrast-125 ease-in-out duration-300'
-              />
+              <div className='rounded-2xl flex-nowrap bg-white shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
+                <div className='mx-auto overflow-hidden flex justify-center'>
+                  <img
+                    alt={character.alt}
+                    src={character.mangaImg}
+                    className='h-[500px] rounded-2xl w-auto object-cover hover:cursor-pointer'
+                  />
+                </div>
+              </div>
             </Link>
           ))}
+        </div>
       </div>
     </div>
   )

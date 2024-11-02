@@ -46,9 +46,12 @@ export default function Collectibles() {
                 />
               </div>
               <div>
-                <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
-                  {character.anime}
-                </p>
+                <div className='flex'>
+                  <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
+                    {character.anime}
+                  </p>
+                  <p className='tracking-[2px] text-xs poppins-regular leading-[16px] pt-4 px-4'>{character.price}</p>
+                </div>
                 <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
                   {character.name}
                 </h1>
