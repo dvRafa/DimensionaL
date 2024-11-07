@@ -39,16 +39,16 @@ const Shops = [
 export default function Header() {
   return (
     <div>
-      <h1 className='bg-slate-900 text-white text-xs items-center justify-center flex py-3 inter'>
+      <h1 className='px-4 sm:px-0 bg-slate-900 text-white text-xs items-center justify-center flex py-3 inter'>
         All products are sourced directly from Japan & Mangas are written in
         Japanese
       </h1>
-      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-2 md:px-0 md:py-2'>
+      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-2'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center justify-center py-2'>
             <img src={scketchup} width={30} height={30} alt='DimensionaL Logo' />
             <Link to='/DimensionaL/'>
-              <h1 className='text-xl montserrat line-through'>imensionaL</h1>
+              <h1 className='text-md sm:text-xl montserrat'>imensionaL</h1>
             </Link>
             {/* <div className='relative group'> */}
               {/* <button
@@ -85,7 +85,7 @@ export default function Header() {
               </div> */}
             {/* </div> */}
           </div>
-          <div className='flex gap-x-8 h-12'>
+          <div className='flex gap-x-0 sm:gap-x-8 h-12'>
             <div className='flex gap-x-6 items-center'>
               <a
                 href='https://www.instagram.com/Thenotoriousrafa'
@@ -105,15 +105,15 @@ export default function Header() {
                 </svg>
               </a>
             </div>
-            <div className='border-r'></div>
+            <div className='border-r hidden sm:block'></div>
             <div className='flex items-center'>
               <svg
-                className='mr-2'
+                className='mx-1 sm:mr-2 hidden sm:inline-block'
                 xmlns='http://www.w3.org/2000/svg'
                 width='30'
                 height='15'>
                 <rect
-                  fill='#fff'
+                  fill='#f1f3f3'
                   width='30'
                   height='15'
                 />
@@ -126,7 +126,7 @@ export default function Header() {
               </svg>
               <img
                 alt='Panama - PTY flag'
-                className='w-[30px] h-[20px]'
+                className='w-[30px] h-[20px] hidden sm:inline-block'
                 src={Panama}
               />
             </div>

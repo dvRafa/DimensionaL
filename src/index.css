@@ -25,14 +25,6 @@
   font-style: normal;
 }
 
-.yuji-syuku-regular {
-  font-family: "Yuji Syuku";
-  font-weight: 400;
-  font-style: normal;
-
-}
-
-
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -104,7 +96,7 @@
   }
 
   .items-details-keychains {
-    @apply uppercase text-[14px] -tracking-[0.2] leading-[18px] text-left mt-[25px]
+    @apply uppercase text-[15px] sm:text-[14px] -tracking-[0.2] leading-[18px] text-left mt-[25px]
   }
 
   .sub-title {
@@ -128,11 +120,7 @@
     @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center
   }
   .figure-name-keychains {
-    @apply mt-[8px] capitalize text-[16px] tracking-[0.2px] leading-[24px] text-left font-semibold
-  }
-
-  .logo {
-    @apply md:text-[16px] text-[11px] leading-[11px] md:leading-[16px] md:tracking-[2px] yuji-syuku-regular flex items-center gap-x-1
+    @apply mt-[4px] sm:mt-[8px] capitalize text-[17px] sm:text-[16px] tracking-[0.2px] leading-[18px] sm:leading-[24px] text-left font-semibold
   }
 
   .social-medias {

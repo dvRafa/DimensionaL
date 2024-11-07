@@ -38,22 +38,21 @@ export default function Keychains() {
   }
 
   return (
-    <section className='flex flex-col pt-10 px-2 md:px-0'>
-      <div className='md:pl-32'>
-        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'
-        >
+    <section className='flex flex-col pt-10'>
+      <div className='pl-6 md:pl-32'>
+        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
           Japan Originals. <span className='text-[#6e6e73]'>Keychains.</span>
         </h1>
       </div>
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth scroll-container'>
+          className='pl-6 md:pl-32 pt-[24px] pb-[45px] md:pb-[80px] flex overflow-x-auto scroll-smooth scroll-container'>
           {sharedArray.map((character, index) => (
             <Link
               key={index}
               to={`/DimensionaL/Keychain/${character.id}`}>
-              <div className='rounded-2xl w-[315px] flex-nowrap bg-white shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
+              <div className='rounded-2xl w-[310px] md:w-[315px] flex-nowrap bg-white shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
                 {character.images.map((image, ImgIndex) => (
                   <div
                     key={ImgIndex}
@@ -63,7 +62,7 @@ export default function Keychains() {
                       alt={character.alt}
                       src={image}
                       loading='eager'
-                      className='h-[300px] rounded-t-2xl w-auto object-cover hover:cursor-pointer'
+                      className='w-auto h-[250px] md:h-[300px] rounded-t-2xl object-cover'
                     />
                   </div>
                 ))}
@@ -83,7 +82,8 @@ export default function Keychains() {
         {/* Conditionally render the Left Scroll Button */}
         {showLeftButton && (
           <button
-            className='absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
+            aria-label='Left Click Button'
+            className='invisible md:visible absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
             onClick={handleScrollLeft}>
             <svg
               height={42}
@@ -110,7 +110,8 @@ export default function Keychains() {
 
         {/* Right Scroll Button */}
         <button
-          className='absolute right-2 top-[45%] transform -translate-y-1/2 bg-gray-50/50 hover:bg-gray-50/80 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
+          aria-label='Right Click Button'
+          className='invisible md:visible absolute right-2 top-[45%] transform -translate-y-1/2 bg-gray-50/50 hover:bg-gray-50/80 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
           onClick={handleScrollRight}>
           <svg
             height={42}

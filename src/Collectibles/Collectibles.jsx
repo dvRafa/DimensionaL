@@ -19,12 +19,12 @@ export default function Collectibles() {
   }
 
   return (
-    <div className='flex flex-col pt-10 md:px-0 px-2'>
-      <div className='md:pl-32'>
-        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
+    <div className='flex flex-col pt-10'>
+      <div className='pl-6 md:pl-32'>
+        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
           Detailed Collectible Figures.{' '}
           <span className='text-[#6e6e73]'>
-            Strongest Anime Characters Ever!
+            Strongest Anime Characters
           </span>
         </h1>
       </div>
@@ -32,15 +32,15 @@ export default function Collectibles() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth pt-[25px] scroll-container pb-[80px] md:pl-32'>
+          className='flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[80px] pl-6 md:pl-32'>
           {sharedArray.map((character, index) => (
             <Link
               to={`/DimensionaL/Collectible/${character.id}`}
               key={index}
-              className='flex-shrink-0 flex flex-col justify-between p-2 w-[315px] bg-white rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
+              className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] bg-white rounded-2xl shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
               <div className='flex justify-center'>
                 <img
-                  className='md:w-auto md:h-[400px] object-cover'
+                  className='w-auto h-[350px] md:h-[400px] laptop:h-[410px] object-cover'
                   src={character.images[0]}
                   alt={character.alt}
                 />
@@ -52,7 +52,7 @@ export default function Collectibles() {
                   </p>
                   <p className='tracking-[2px] text-xs poppins-regular leading-[16px] pt-4 px-4'>{character.price}</p>
                 </div>
-                <h1 className='text-slate-900 text-left p-4 text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
+                <h1 className='text-slate-900 text-left p-4 text-[24px] laptop:text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
                   {character.name}
                 </h1>
               </div>
@@ -63,7 +63,8 @@ export default function Collectibles() {
         {/* Conditionally render the Left Scroll Button */}
         {showLeftButton && (
           <button
-            className='absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
+          aria-label='Left Click Button'
+            className='invisible md:visible absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
             onClick={handleScrollLeft}>
             <svg
               height={42}
@@ -90,7 +91,8 @@ export default function Collectibles() {
 
         {/* Right Scroll Button */}
         <button
-          className='absolute right-2 top-[45%] transform -translate-y-1/2 hover:bg-gray-50/80 bg-gray-50/50 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
+        aria-label='Right Click Button'
+          className='invisible md:visible absolute right-2 top-[45%] transform -translate-y-1/2 hover:bg-gray-50/80 bg-gray-50/50 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
           onClick={handleScrollRight}>
           <svg
             height={42}

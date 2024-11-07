@@ -65,8 +65,8 @@ const Characters = [
 export default function MangaA() {
   return (
     <div className='pr-2 pt-10'>
-      <div className='md:pl-32'>
-        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
+      <div className='pl-6 md:pl-32'>
+        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
           Ultimate Collectibles.{' '}
           <span className='text-[#6e6e73]'>
             Manga from the Best Animes Ever!
@@ -74,17 +74,17 @@ export default function MangaA() {
         </h1>
       </div>
       <div>
-        <div className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2'>
+        <div className='pl-6 md:pl-32 pt-[25px] pb-[80px] flex overflow-x-auto scroll-container scroll-smooth'>
           {Characters.map((character, index) => (
             <Link
               key={index}
               to={`/DimensionaL/Manga/${character.id}`}>
-              <div className='rounded-2xl flex-nowrap bg-white shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500'>
+              <div className='flex-nowrap w-[310px] md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
                 <div className='mx-auto overflow-hidden flex justify-center'>
                   <img
                     alt={character.alt}
                     src={character.mangaImg}
-                    className='h-[500px] rounded-2xl w-auto object-cover hover:cursor-pointer'
+                    className='h-[450px] laptop:h-[500px] w-[310px] object-cover rounded-2xl'
                   />
                 </div>
               </div>

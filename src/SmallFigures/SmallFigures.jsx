@@ -20,9 +20,9 @@ export default function SmallFigures() {
   }
 
   return (
-    <section className='flex flex-col pt-10 px-2 md:px-0'>
-      <div className='md:pl-32'>
-        <h1 className='md:text-[28px] text-[2rem] md:leading-[32px] leading-[2.5rem] font-semibold tracking-[0.196px] pb-[10px]'>
+    <section className='flex flex-col pt-10'>
+      <div className='pl-6 md:pl-32'>
+        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
           Top Collectibles.{' '}
           <span className='text-[#6e6e73]'>Small-Sized Figures.</span>
         </h1>
@@ -30,25 +30,26 @@ export default function SmallFigures() {
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='md:pl-32 pt-[25px] pb-[80px] flex md:gap-x-[20px] gap-x-2 overflow-x-auto scroll-smooth scroll-container'>
+          className='flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[80px] pl-6 md:pl-32'>
           {newSharedArray.map((character, index) => (
             <Link
               key={index}
               to={`/DimensionaL/SmallFigure/${character.id}`}>
-              <div className='rounded-2xl shadow-xl hover:shadow-2xl hover-scale-101 ease-in-out duration-500 p-7 w-[315px] bg-white'>
+              <div className='rounded-2xl shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 p-7 w-[310px] md:w-[315px] bg-white mr-[20px]'>
                 <div className='pt-[40px] px-[10px] mx-auto overflow-hidden flex justify-center'>
                   <img
                     alt={character.alt}
                     src={character.images[0]}
-                    className='object-cover h-[300px] w-[180px] hover:cursor-pointer'
+                    className='object-cover w-auto h-[300px] md:h-[350px] laptop:h-[400px]'
                   />
                 </div>
                 <div className='flex w-fit flex-col'>
                   <img
+                    alt={character.logoAlt}
                     className='w-fit object-scale-down h-6'
                     src={character.logo}
                   />
-                  <p className='figure-name-keychains'>{character.summary}</p>
+                  <p className='figure-name-keychains mt-1 sm:mt-2'>{character.summary}</p>
                   <p className='items-details-keychains'>{character.price}</p>
                 </div>
                 {/* <div>
@@ -65,7 +66,8 @@ export default function SmallFigures() {
         {/* Conditionally render the Left Scroll Button */}
         {showLeftButton && (
           <button
-            className='absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
+            aria-label='Left Click Button'
+            className='invisible md:visible absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
             onClick={handleScrollLeft}>
             <svg
               height={42}
@@ -92,7 +94,8 @@ export default function SmallFigures() {
 
         {/* Right Scroll Button */}
         <button
-          className='absolute right-2 top-[45%] transform -translate-y-1/2 hover:bg-gray-50/80 bg-gray-50/50 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
+          aria-label='Right Click Button'
+          className='invisible md:visible absolute right-2 top-[45%] transform -translate-y-1/2 hover:bg-gray-50/80 bg-gray-50/50 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
           onClick={handleScrollRight}>
           <svg
             height={42}
