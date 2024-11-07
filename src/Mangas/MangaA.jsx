@@ -84,7 +84,7 @@ export default function MangaA() {
                   <img
                     alt={character.alt}
                     src={character.mangaImg}
-                    className='h-[450px] laptop:h-[500px] w-[310px] object-cover rounded-2xl'
+                    className='h-[450px] laptop:h-[500px] w-[310px] object-cover rounded-sm'
                   />
                 </div>
               </div>

@@ -39,24 +39,29 @@ const Shops = [
 export default function Header() {
   return (
     <div>
-      <h1 className='px-4 sm:px-0 bg-slate-900 text-white text-xs items-center justify-center flex py-3 inter'>
-        All products are sourced directly from Japan & Mangas are written in
-        Japanese
+        <h1 className='px-4 sm:px-0 bg-[#212121] text-[#ececec] text-xs text-center flex py-3 inter'>
+          All products are sourced directly from Japan & All inquiries can be
+          send to Instagram @Thenotoriousrafa
       </h1>
       <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-2'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center justify-center py-2'>
-            <img src={scketchup} width={30} height={30} alt='DimensionaL Logo' />
+            <img
+              src={scketchup}
+              width={30}
+              height={30}
+              alt='DimensionaL Logo'
+            />
             <Link to='/DimensionaL/'>
-              <h1 className='text-md sm:text-xl montserrat'>imensionaL</h1>
+              <h1 className='text-md sm:text-xl montserrat tracking-tighter'>imensionaL</h1>
             </Link>
             {/* <div className='relative group'> */}
-              {/* <button
+            {/* <button
                 disabled
                 className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold text-stone-700/95 line-through'>
                 Shop <br />{' '}
               </button> */}
-              {/* <div className='absolute group-hover:block bg-[#f1f1f1] mt-6 w-[800px] h-[30rem] z-10'>
+            {/* <div className='absolute group-hover:block bg-[#f1f1f1] mt-6 w-[800px] h-[30rem] z-10'>
                 {Shops.map((shop, index) => (
                   <Link
                   key={index}
@@ -68,12 +73,12 @@ export default function Header() {
               </div> */}
             {/* </div> */}
             {/* <div className='relative group'> */}
-              {/* <button
+            {/* <button
                 disabled
                 className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold line-through text-stone-700/95'>
                 Discover <br />
               </button> */}
-              {/* <div className='absolute left-0 hidden group-hover:block bg-white border border-gray-300 z-10'>
+            {/* <div className='absolute left-0 hidden group-hover:block bg-white border border-gray-300 z-10'>
                 {Discovers.map((discover, index) => (
                   <Link
                   key={index}
@@ -133,7 +138,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <div className='border-b shadow-sm'></div>
+      <div className='sm:border-b sm:shadow-sm'></div>
       {/* <div className='border-t h-[2px] borders-background w-full'></div> */}
     </div>
   )
