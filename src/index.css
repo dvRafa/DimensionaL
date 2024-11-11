@@ -55,6 +55,12 @@
   font-style: normal;
 }
 
+.opensans {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .borders-background {
   background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),linear-gradient(127deg, rgba(0, 47, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
   transition: width, 35s;
@@ -62,6 +68,13 @@
 
 .hover-scale-101:hover {
   transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01) scaleY(1.01);
+}
+
+@media (max-width: 768px) {
+  .hover-scale-101 {
+    transform: translate(0,0) rotate(0) skewX(0) skewY(0) scaleX(1.01) scaleY(1.01)
+  }
+  
 }
 
 .manga-images {

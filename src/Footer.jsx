@@ -5,13 +5,14 @@ export default function Footer() {
   return (
     <div className='w-fit mx-auto pb-6'>
       <p className='text-[12.5px] text-tight text-[#0000008f] montserrat mb-10 md:mb-4 px-6 md:px-0 md:max-w-[700px]'>
-      <span className="montserrat-med">~Price Negotiation Policy:</span> We understand that everyone's budget is different, and we strive to
-        make our products accessible to all anime fans. While the prices listed
-        on our website are standard, we are open to respectful and reasonable
-        price negotiations. If you're interested in negotiating a price or
-        making an offer, please feel free to contact us directly through
-        Instagram or Whatsapp. We're happy to discuss your needs and work with
-        you to find a mutually beneficial arrangement.
+        <span className='montserrat-med'>Price Negotiation Policy:</span> We
+        understand that everyone's budget is different, and we strive to make
+        our products accessible to all anime fans. While the prices listed on
+        our website are standard, we are open to respectful and reasonable price
+        negotiations. If you're interested in negotiating a price or making an
+        offer, please feel free to contact us directly through Instagram or
+        Whatsapp. We're happy to discuss your needs and work with you to find a
+        mutually beneficial arrangement.
       </p>
       {/* <div className='border-t h-[2px] borders-background w-full'></div> */}
       {/* <div className='border-t shadow-sm'></div>
@@ -87,10 +88,13 @@ export default function Footer() {
           Created by <span className='font-yakin'>Wapping</span>
         </p>
       </div> */}
-      <h1 className='text-[#0000008f] text-base montserrat tracking-tight text-center'>
+      <h1 className='text-[#0000008f] text-sm montserrat tracking-tight text-center'>
         Service Only Available in{' '}
         <span className='text-indigo-700 underline'>Panama City</span>
       </h1>
+      <h2 className='text-[#0000008f] text-sm montserrat tracking-tight text-center'>
+        2024
+      </h2>
     </div>
   )
 }

@@ -35,7 +35,7 @@ export default function SmallFigures() {
             <Link
               key={index}
               to={`/DimensionaL/SmallFigure/${character.id}`}>
-              <div className='rounded-2xl shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 p-7 w-[310px] md:w-[315px] bg-white mr-[20px]'>
+              <div className='rounded-2xl shadow-xl md:hover:shadow-2xl hover-scale-101 md:ease-in-out md:duration-500 p-7 w-[310px] md:w-[315px] bg-white mr-[20px]'>
                 <div className='pt-[40px] px-[10px] mx-auto overflow-hidden flex justify-center'>
                   <img
                     alt={character.alt}
@@ -43,10 +43,10 @@ export default function SmallFigures() {
                     className='object-cover w-auto h-[300px] md:h-[350px] laptop:h-[400px]'
                   />
                 </div>
-                <div className='flex w-fit flex-col'>
+                <div className='flex flex-col items-start'>
                   <img
                     alt={character.logoAlt}
-                    className='w-fit object-scale-down h-6'
+                    className='object-scale-down h-6'
                     src={character.logo}
                   />
                   <p className='figure-name-keychains mt-1 sm:mt-2'>{character.summary}</p>

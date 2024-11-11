@@ -37,7 +37,7 @@ export default function Collectibles() {
             <Link
               to={`/DimensionaL/Collectible/${character.id}`}
               key={index}
-              className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] bg-white rounded-2xl shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
+              className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] bg-white rounded-2xl shadow-xl md:hover:shadow-2xl hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
               <div className='flex justify-center'>
                 <img
                   className='w-auto h-[350px] md:h-[400px] laptop:h-[410px] object-cover'

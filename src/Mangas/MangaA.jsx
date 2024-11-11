@@ -64,7 +64,7 @@ const Characters = [
 
 export default function MangaA() {
   return (
-    <div className='pr-2 pt-10'>
+    <div className='pt-10'>
       <div className='pl-6 md:pl-32'>
         <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
           Ultimate Collectibles.{' '}
@@ -79,7 +79,7 @@ export default function MangaA() {
             <Link
               key={index}
               to={`/DimensionaL/Manga/${character.id}`}>
-              <div className='flex-nowrap w-[310px] md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
+              <div className='flex-nowrap w-[310px] hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
                 <div className='mx-auto overflow-hidden flex justify-center'>
                   <img
                     alt={character.alt}

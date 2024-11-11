@@ -38,10 +38,10 @@ export default function Keychains() {
   }
 
   return (
-    <section className='flex flex-col pt-10'>
+    <section className='flex flex-col pt-10 bg-[#101010] text-white'>
       <div className='pl-6 md:pl-32'>
-        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
-          Japan Originals. <span className='text-[#6e6e73]'>Keychains.</span>
+        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px] text-white'>
+          Japan Originals. <span className='text-[#41f168]'>Keychains.</span>
         </h1>
       </div>
       <div className='relative'>
@@ -52,7 +52,7 @@ export default function Keychains() {
             <Link
               key={index}
               to={`/DimensionaL/Keychain/${character.id}`}>
-              <div className='rounded-2xl w-[310px] md:w-[315px] flex-nowrap bg-white shadow-xl md:hover:shadow-2xl md:hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
+              <div className='rounded-2xl hover:bg-[#222222] w-[310px] md:w-[315px] flex-nowrap bg-[#101010] hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
                 {character.images.map((image, ImgIndex) => (
                   <div
                     key={ImgIndex}
@@ -66,8 +66,8 @@ export default function Keychains() {
                     />
                   </div>
                 ))}
-                <div className='flex flex-col px-7 pb-7'>
-                  <p className='mt-[58px] font-semibold text-[12px] leading-[16px] tracking-[0.12px] text-indigo-700'>
+                <div className='flex flex-col px-5 pb-7'>
+                  <p className='mt-[18px] font-semibold text-[12px] leading-[16px] tracking-[0.12px] text-[#8f8f8f]'>
                     {character.bio}
                   </p>
                   <p className='figure-name-keychains'>{character.nickname}</p>

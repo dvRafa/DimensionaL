@@ -39,7 +39,7 @@ export default function KeychainsDetails() {
           </div>
           <div className='flex flex-col mt-16 gap-y-4'>
             <a
-              className='text-[16px] text-center rounded-full border py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] duration-200 ease-in-out hover:bg-black/90 transition-colors bg-black text-white'
+              className='text-[16px] text-center rounded-full border py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-black/90 md:transition-colors bg-black text-white'
               href='https://wa.me/50764245895'
               rel='noopener noreferrer'
               target='_blank'
@@ -47,7 +47,7 @@ export default function KeychainsDetails() {
               whatsapp
             </a>
             <a
-              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] duration-200 ease-in-out hover:bg-blue-800/90 transition-colors hover:text-white'
+              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-blue-800/90 md:transition-colors md:hover:text-white'
               href='https://instagram.com/thenotoriousrafa'
               rel='noopener nonrefereer'
               target='_blank'>

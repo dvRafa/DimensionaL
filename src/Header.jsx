@@ -39,9 +39,17 @@ const Shops = [
 export default function Header() {
   return (
     <div>
-        <h1 className='px-4 sm:px-0 bg-[#212121] text-[#ececec] text-xs text-center flex py-3 inter'>
-          All products are sourced directly from Japan & All inquiries can be
-          send to Instagram @Thenotoriousrafa
+      <h1 className='px-4 sm:px-0 bg-[#f0efef] text-black text-sm text-center justify-center flex  opensans leading-[20px] -tracking-[0.28px] py-[14px]'>
+        All products are sourced directly from Japan & All inquiries can be send
+        to Instagram
+        <span className='ml-1 text-indigo-700'>{'> '}</span>
+        <a
+          href='https://www.instagram.com/Thenotoriousrafa'
+          target='_blank'
+          rel='nonrefereer noopener'
+          className='ml-[2px] text-indigo-700 hover:underline'>
+          @thenotoriousrafa
+        </a>
       </h1>
       <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-2'>
         <div className='flex items-center justify-between'>
@@ -53,7 +61,9 @@ export default function Header() {
               alt='DimensionaL Logo'
             />
             <Link to='/DimensionaL/'>
-              <h1 className='text-md sm:text-xl montserrat tracking-tighter'>imensionaL</h1>
+              <h1 className='text-md sm:text-lg montserrat tracking-tighter'>
+                imensionaL
+              </h1>
             </Link>
             {/* <div className='relative group'> */}
             {/* <button
@@ -90,8 +100,8 @@ export default function Header() {
               </div> */}
             {/* </div> */}
           </div>
-          <div className='flex gap-x-0 sm:gap-x-8 h-12'>
-            <div className='flex gap-x-6 items-center'>
+          <div className='flex gap-x-0 sm:gap-x-3 h-12'>
+            <div className='flex items-center'>
               <a
                 href='https://www.instagram.com/Thenotoriousrafa'
                 target='_blank'
@@ -111,30 +121,9 @@ export default function Header() {
               </a>
             </div>
             <div className='border-r hidden sm:block'></div>
-            <div className='flex items-center'>
-              <svg
-                className='mx-1 sm:mr-2 hidden sm:inline-block'
-                xmlns='http://www.w3.org/2000/svg'
-                width='30'
-                height='15'>
-                <rect
-                  fill='#f1f3f3'
-                  width='30'
-                  height='15'
-                />
-                <circle
-                  fill='#bc002d'
-                  cx='15'
-                  cy='7.5'
-                  r='5'
-                />
-              </svg>
-              <img
-                alt='Panama - PTY flag'
-                className='w-[30px] h-[20px] hidden sm:inline-block'
-                src={Panama}
-              />
-            </div>
+            <ul className='flex items-center opensans text-sm'>
+              <li>EN</li>
+            </ul>
           </div>
         </div>
       </header>
