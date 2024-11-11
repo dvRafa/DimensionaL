@@ -62,7 +62,7 @@ export default function Keychains() {
                       alt={character.alt}
                       src={image}
                       loading='eager'
-                      className='w-auto h-[250px] md:h-[300px] rounded-t-2xl object-cover'
+                      className='w-auto h-[400px] md:h-[300px] rounded-t-2xl object-cover'
                     />
                   </div>
                 ))}

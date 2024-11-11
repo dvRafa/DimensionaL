@@ -39,18 +39,20 @@ const Shops = [
 export default function Header() {
   return (
     <div>
-      <h1 className='px-4 sm:px-0 bg-[#f0efef] text-black text-sm text-center justify-center flex  opensans leading-[20px] -tracking-[0.28px] py-[14px]'>
-        All products are sourced directly from Japan & All inquiries can be send
-        to Instagram
-        <span className='ml-1 text-indigo-700'>{'> '}</span>
-        <a
-          href='https://www.instagram.com/Thenotoriousrafa'
-          target='_blank'
-          rel='nonrefereer noopener'
-          className='ml-[2px] text-indigo-700 hover:underline'>
-          @thenotoriousrafa
-        </a>
-      </h1>
+      <div className=''>
+        <h1 className='px-4 sm:px-0 bg-[#f0efef] text-black text-sm text-center justify-center opensans leading-[20px] -tracking-[0.28px] py-[14px]'>
+          All products are sourced directly from Japan & All inquiries can be
+          send to Instagram
+          <span className='ml-1 text-indigo-700'>{'> '}</span>
+          <a
+            href='https://www.instagram.com/Thenotoriousrafa'
+            target='_blank'
+            rel='nonrefereer noopener'
+            className='ml-[2px] text-indigo-700 hover:underline'>
+            @thenotoriousrafa
+          </a>
+        </h1>
+      </div>
       <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-2'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-center justify-center py-2'>
@@ -100,7 +102,7 @@ export default function Header() {
               </div> */}
             {/* </div> */}
           </div>
-          <div className='flex gap-x-0 sm:gap-x-3 h-12'>
+          <div className='flex gap-x-3 h-12'>
             <div className='flex items-center'>
               <a
                 href='https://www.instagram.com/Thenotoriousrafa'
