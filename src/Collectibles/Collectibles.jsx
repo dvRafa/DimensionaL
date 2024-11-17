@@ -34,7 +34,7 @@ export default function Collectibles() {
           {sharedArray.map((character, index) => (
             <Link
               id='hero-images'
-              to={`/DimensionaL/Collectible/${character.id}`}
+              to={`/dimm/Collectible/${character.id}`}
               key={index}
               className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] rounded-2xl border-darkbg border hover-scale-101-collectible md:ease-in-out md:duration-500 mr-[8px] bg-cardbg'>
               <div className='flex justify-center'>

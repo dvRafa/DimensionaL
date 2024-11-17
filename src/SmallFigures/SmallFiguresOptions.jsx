@@ -47,7 +47,7 @@ export default function SmallFiguresOptions() {
             <div
               className='flex flex-col'
               key={index}>
-              <Link to={`/DimensionaL/Keychain/${character.id}`}>
+              <Link to={`/dimm/Keychain/${character.id}`}>
                 <div className='flex flex-col bg-[#f1f1f1] items-center justify-center'>
                   <img
                     src={character.images[0]}
@@ -62,7 +62,7 @@ export default function SmallFiguresOptions() {
                   <p className='mt-2 leading-[24px] text-lg'>
                     {character.price}
                   </p>
-                  <Link to={`/DimensionaL/SmallFigure/${character.id}`}>
+                  <Link to={`/dimm/SmallFigure/${character.id}`}>
                     <button className='mt-2 text-[16px] px-8 py-6 w-full border border-stone-700/50 tracking-normal capitalize leading-[16px] gothic-a1-regular font-normal duration-300 ease-linear transition hover:bg-blue-800/90 hover:text-white cursor-pointer md:mb-0 mb-4 border-blue-950'>
                       Buy Now
                     </button>

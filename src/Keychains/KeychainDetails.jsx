@@ -17,7 +17,7 @@ export default function KeychainsDetails() {
 
   // Define the breadcrumb path
   const breadcrumbPath = [
-    { name: 'Store', link: '/DimensionaL/' },
+    { name: 'Store', link: '/dimm/' },
     { name: 'Keychains', link: '#' }, // Current item, no link
   ]
 

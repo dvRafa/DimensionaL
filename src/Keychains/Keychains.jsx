@@ -38,7 +38,7 @@ export default function Keychains() {
           {sharedArray.map((character, index) => (
             <Link
               key={index}
-              to={`/DimensionaL/Keychain/${character.id}`}>
+              to={`/dimm/Keychain/${character.id}`}>
               <div
                 className='rounded-2xl md:hover:bg-cardlightgray w-[310px] md:w-[315px] flex-nowrap bg-[#10101079] hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'
                 onMouseEnter={() => setHoveredIndex(index)}

@@ -16,7 +16,7 @@ export default function CollectiblesDetails() {
 
   // Define the breadcrumb path
   const breadcrumbPath = [
-    { name: 'Store', link: '/DimensionaL/' },
+    { name: 'Store', link: '/dimm/' },
     { name: 'Collectible Figures', link: '#' }, // Current item, no link
   ]
 

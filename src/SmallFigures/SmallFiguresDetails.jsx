@@ -16,7 +16,7 @@ export default function SmallFiguresDetails() {
 
   // Define the breadcrumb path
   const breadcrumbPath = [
-    { name: 'Store', link: '/DimensionaL/' },
+    { name: 'Store', link: '/dimm/' },
     { name: 'Collectible Figures', link: '#' }, // Current item, no link
   ]
 

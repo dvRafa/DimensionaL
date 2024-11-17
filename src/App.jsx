@@ -52,43 +52,43 @@ function App() {
         <Header />
         <Routes>
           <Route
-            path='/DimensionaL/'
+            path='/dimm/'
             element={<Main />}
           />
           <Route
-            path='/DimensionaL/Collectible/:id'
+            path='/dimm/Collectible/:id'
             element={<CollectiblesDetails />}
           />
           <Route
-            path='/DimensionaL/SmallFigure/:id'
+            path='/dimm/SmallFigure/:id'
             element={<SmallFiguresDetails />}
           />
           <Route
-            path='/DimensionaL/Keychain/:id'
+            path='/dimm/Keychain/:id'
             element={<KeychainsDetails />}
           />
           <Route
-            path='/DimensionaL/Manga/:id'
+            path='/dimm/Manga/:id'
             element={<MangasDetails />}
           />
           <Route
-            path='/DimensionaL/Collectibles/Figures'
+            path='/dimm/Collectibles/Figures'
             element={<CollectiblesOptions />}
           />
           <Route
-            path='/DimensionaL/Mangas/Options'
+            path='/dimm/Mangas/Options'
             element={<MangasOptions />}
           />
           <Route
-            path='/DimensionaL/SmallFigures/Options'
+            path='/dimm/SmallFigures/Options'
             element={<SmallFiguresOptions />}
           />
           <Route
-            path='/DimensionaL/Keychains/Options'
+            path='/dimm/Keychains/Options'
             element={<KeychainsOptions />}
           />
           <Route
-            path='/DimensionaL/*'
+            path='/dimm/*'
             element={<ErrorPage />}
           />
         </Routes>

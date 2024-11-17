@@ -25,9 +25,9 @@ export default function Header() {
               src={scketchupgreen}
               width={30}
               height={30}
-              alt='DimensionaL Logo'
+              alt='dimm Logo'
             />
-            <Link to='/DimensionaL/'>
+            <Link to='/dimm/'>
               <h1 className='exo-2 text-[11.5px] text-blanco sm:text-[13.5px] tracking-[1.5px]'>
                 DIMM
               </h1>

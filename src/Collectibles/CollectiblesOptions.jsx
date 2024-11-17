@@ -48,7 +48,7 @@ export default function CollectiblesOptions() {
             <div
               className='flex flex-col'
               key={index}>
-              <Link to={`/DimensionaL/Collectible/${character.id}`}>
+              <Link to={`/dimm/Collectible/${character.id}`}>
                 <div className='flex flex-col bg-[#f1f1f1] items-center justify-center'>
                   <img
                     src={character.images[0]}

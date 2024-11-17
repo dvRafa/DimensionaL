@@ -49,7 +49,7 @@ export default function KeychainsOptions() {
             <div
               className='flex flex-col'
               key={index}>
-              <Link to={`/DimensionaL/Keychain/${character.id}`}>
+              <Link to={`/dimm/Keychain/${character.id}`}>
                 <div className='flex flex-col bg-[#f1f1f1] items-center justify-center'>
                   <img
                     src={character.images}

@@ -19,7 +19,7 @@ export default function SmallFigures() {
           {newSharedArray.map((character, index) => (
             <Link
               key={index}
-              to={`/DimensionaL/SmallFigure/${character.id}`}>
+              to={`/dimm/SmallFigure/${character.id}`}>
               <div className='group rounded-2xl hover-scale-101-smallFigures md:transition-all md:ease-in-out md:duration-500 p-7 w-[310px] md:w-[315px] bg-cardbg mr-[8px]'>
                 <div className='flex justify-end'>
                   <svg

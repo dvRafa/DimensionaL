@@ -84,7 +84,7 @@ export default function MangaA() {
         <div className='md:flex md:flex-row flex flex-col md:gap-x-2 gap-x-0 gap-y-2 pt-[25px] pb-6 md:pb-[115px]'>
           {Characters.map((character, index) => (
             <Link
-              to={`/DimensionaL/Manga/${character.id}`}
+              to={`/dimm/Manga/${character.id}`}
               key={index}>
               <div className='relative group overflow-hidden flicker-hover'>
                 <img
