@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <div className='flex flex-col items-center justify-center py-6 bg-darkbg'>
-      <div className='md:w-[1200px] md:mb-12 mb-32 pt-12 md:border-darkgray md:border-t rounded-3xl justify-items-center'>
-        <p className='text-[12.5px] text-tight text-lightgray montserrat mb-10 md:mb-4 px-6 md:px-0 md:max-w-[700px] leading-5'>
+      <div className='md:mb-12 mb-32 pt-12 md:border-darkgray md:border-t rounded-3xl justify-items-center w-[300px] sm:w-[700px] md:w-[900px]'>
+        <p className='text-[12.5px] text-tight text-lightgray montserrat mb-10 md:mb-4 px-6 md:px-0 leading-5'>
           <span className='montserrat-med text-blanco'>
             *Price Negotiation Policy:
           </span>{' '}
@@ -14,10 +14,10 @@ export default function Footer() {
           through Instagram or Whatsapp. We're happy to discuss your needs and
           work with you to find a mutually beneficial arrangement.
         </p>
-        <h1 className='flex text-center text-blanco text-[9px] tracking-[1.5px] exo-2 uppercase'>
+        <p className='flex justify-center mx-auto text-blanco text-[9px] tracking-[1.5px] exo-2 uppercase'>
           Service Only Available in{' '}
-          <p className='text-green underline'>Panama City ª2024</p>
-        </h1>
+          <span className='text-green underline'>Panama City ª2024</span>
+        </p>
       </div>
     </div>
   )
