@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
-import CollectiblesArray from './CollectiblesArray'
 import { Link } from 'react-router-dom'
+import CollectiblesArray from './CollectiblesArray'
+import dendenmushi from '/dendenmushi.png'
 
 export default function Collectibles() {
   const [showLeftButton, setShowLeftButton] = useState(false) // Controls the visibility of the left button
@@ -19,51 +20,68 @@ export default function Collectibles() {
   }
 
   return (
-    <div className='flex flex-col pt-10'>
+    <div className='flex flex-col pt-20 bg-darkbg'>
       <div className='pl-6 md:pl-32'>
-        <h1 className='md:text-[28px] text-[24px] md:leading-[32px] leading-[30px] font-semibold tracking-[0.196px] sm:pb-[10px]'>
-          Detailed Collectible Figures.{' '}
-          <span className='text-[#6e6e73]'>
-            Strongest Anime Characters
-          </span>
+        <h1 className='fade-effect md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
+          Detailed Collectible Figures. Strongest Anime Characters
         </h1>
       </div>
       {/* Scrollable container */}
       <div className='relative'>
         <div
           ref={scrollContainerRef}
-          className='flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[80px] pl-6 md:pl-32'>
+          className='flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[115px] pl-6 md:pl-32'>
           {sharedArray.map((character, index) => (
             <Link
+              id='hero-images'
               to={`/DimensionaL/Collectible/${character.id}`}
               key={index}
-              className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] bg-white rounded-2xl shadow-xl md:hover:shadow-2xl hover-scale-101 md:ease-in-out md:duration-500 mr-[20px]'>
+              className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] rounded-2xl border-darkbg border hover-scale-101-collectible md:ease-in-out md:duration-500 mr-[8px] bg-cardbg'>
               <div className='flex justify-center'>
                 <img
-                  className='w-auto h-[350px] md:h-[400px] laptop:h-[410px] object-cover'
+                  className='w-auto pt-6 h-[350px] md:h-[400px] laptop:h-[410px] object-cover'
                   src={character.images[0]}
                   alt={character.alt}
                 />
               </div>
               <div>
                 <div className='flex'>
-                  <p className='px-4 pt-4 tracking-[2px] poppins text-xs font-semibold leading-[16px] uppercase'>
+                  <p className='px-4 pt-4 tracking-[2px] exo-2 text-[11px] font-semibold leading-[16px] uppercase text-lightgray'>
                     {character.anime}
                   </p>
-                  <p className='tracking-[2px] text-xs poppins-regular leading-[16px] pt-4 px-4'>{character.price}</p>
+                  <p className='tracking-[2px] text-blanco text-xs poppins-regular leading-[16px] pt-4 px-4'>
+                    {character.price}
+                  </p>
                 </div>
-                <h1 className='text-slate-900 text-left p-4 text-[24px] laptop:text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
+                <h1 className='text-blanco text-left p-4 text-[24px] laptop:text-[30px] poppins leading-[30px] uppercase max-w-[255px]'>
                   {character.name}
                 </h1>
               </div>
             </Link>
           ))}
         </div>
-
+        <a
+          href='https://www.instagram.com/Thenotoriousrafa'
+          target='_blank'
+          rel='nonrefereer noopener'
+          className='hidden md:flex w-[300px] justify-between left-2 rounded transform -translate-y-1/2 border border-blanco/80 hover:border-blanco hover:bg-blanco pl-6 py-4 top-[90%] fixed z-10 bg-blanco/80 duration-300 ease-in-out transition-colors'>
+          <div className='flex flex-col'>
+            <span className='text-black/50 mb-1 uppercase font-bold text-xs font-mono tracking-wider'>
+              INSTAGRAM:
+            </span>
+            <span className='exo-2 uppercase text-xs text-black'>
+              @thenotoriousrafa
+            </span>
+          </div>
+          <img
+            src={dendenmushi}
+            className='absolute z-10 -top-[38%] left-[70%] w-auto h-28'
+          />
+        </a>
         {/* Conditionally render the Left Scroll Button */}
         {showLeftButton && (
           <button
-          aria-label='Left Click Button'
+            aria-label='Left Click Button'
             className='invisible md:visible absolute left-10 top-[45%] transform -translate-y-1/2 transition-colors duration-300 ease-in-out hover:bg-gray-50/80 bg-gray-50/50 p-1 rounded-full shadow-md'
             onClick={handleScrollLeft}>
             <svg
@@ -91,7 +109,7 @@ export default function Collectibles() {
 
         {/* Right Scroll Button */}
         <button
-        aria-label='Right Click Button'
+          aria-label='Right Click Button'
           className='invisible md:visible absolute right-2 top-[45%] transform -translate-y-1/2 hover:bg-gray-50/80 bg-gray-50/50 transition-colors duration-300 ease-in-out p-1 rounded-full shadow-md backdrop-blur-sm'
           onClick={handleScrollRight}>
           <svg

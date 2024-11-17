@@ -5,7 +5,7 @@ export default {
     screens: {
       sm: '640px',
       // => @media (min-width: 640px) { ... }
-      
+
       md: '768px',
       // => @media (min-width: 768px) { ... }
 
@@ -18,6 +18,15 @@ export default {
     extend: {
       fontFamily: {
         yakin: ['Yakin'],
+      },
+      colors: {
+        green: '#00ffad',
+        lightgray: '#8f8f8f',
+        darkgray: '#353535',
+        darkbg: '#101010',
+        cardbg: '#1f1e1ea1',
+        blanco: '#efefef',
+        cardlightgray: '#222222'
       },
     },
   },

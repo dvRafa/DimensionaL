@@ -1,106 +1,37 @@
 import { Link } from 'react-router-dom'
-
-import Panama from './assets/Panama.png'
-import scketchup from '/sketchup.svg'
-
-const Discovers = [
-  {
-    name: 'Naruto Shippuden',
-    link: `/DimensionaL/Collectibles/NarutoShippuden`,
-  },
-  {
-    name: 'Shingeki No Kyojin',
-    link: `/DimensionaL/Collectibles/ShingekiNoKyojin`,
-  },
-  {
-    name: 'Kimetsu No Yaiba',
-    link: `/DimensionaL/Collectibles/KimetsuNoYaiba`,
-  },
-  {
-    name: 'One Piece',
-    link: `/DimensionaL/Collectibles/OnePiece`,
-  },
-]
-const Shops = [
-  {
-    name: 'Mangas',
-    link: `/DimensionaL/Mangas/Options`,
-  },
-  {
-    name: 'Collectibles Figures',
-    link: `/DimensionaL/Collectibles/Figures`,
-  },
-  {
-    name: 'Keychains',
-    link: `/DimensionaL/Keychains/Options`,
-  },
-]
+import scketchupgreen from '/sketchupgreen.svg'
 
 export default function Header() {
   return (
-    <div>
-      <div className=''>
-        <h1 className='px-4 sm:px-0 bg-[#f0efef] text-black text-sm text-center justify-center opensans leading-[20px] -tracking-[0.28px] py-[14px]'>
+    <div className='bg-darkbg'>
+      <div>
+        <h1 className='px-4 sm:px-0 bg-cardbg text-lightgray text-[11.5px] md:text-[12.5px] text-center justify-center opensans leading-[16px] md:leading-[20px] tracking-[0.1px] py-[10px] md:py-[14px]'>
           All products are sourced directly from Japan & All inquiries can be
           send to Instagram
-          <span className='ml-1 text-indigo-700'>{'> '}</span>
+          <span className='ml-1 text-white'>{'> '}</span>
           <a
             href='https://www.instagram.com/Thenotoriousrafa'
             target='_blank'
             rel='nonrefereer noopener'
-            className='ml-[2px] text-indigo-700 hover:underline'>
+            className='ml-[2px] text-blanco hover:text-green hover:underline'>
             @thenotoriousrafa
           </a>
         </h1>
       </div>
-      <header className='flex flex-col max-w-[720px] md:max-w-[1200px] mx-auto px-4 md:px-0 py-2'>
+      <header className='flex flex-col max-w-none md:max-w-[1200px] mx-auto px-4 md:px-6 py-2 md:border-b rounded-3xl md:border-darkgray pb-6'>
         <div className='flex items-center justify-between'>
-          <div className='flex flex-row items-center justify-center py-2'>
+          <div className='flex flex-row items-end justify-center py-2'>
             <img
-              src={scketchup}
+              src={scketchupgreen}
               width={30}
               height={30}
               alt='DimensionaL Logo'
             />
             <Link to='/DimensionaL/'>
-              <h1 className='text-md sm:text-lg montserrat tracking-tighter'>
-                imensionaL
+              <h1 className='exo-2 text-[11.5px] text-blanco sm:text-[13.5px] tracking-[1.5px]'>
+                DIMM
               </h1>
             </Link>
-            {/* <div className='relative group'> */}
-            {/* <button
-                disabled
-                className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold text-stone-700/95 line-through'>
-                Shop <br />{' '}
-              </button> */}
-            {/* <div className='absolute group-hover:block bg-[#f1f1f1] mt-6 w-[800px] h-[30rem] z-10'>
-                {Shops.map((shop, index) => (
-                  <Link
-                  key={index}
-                    to={`${shop.link}`}
-                    className='block border-b-2 border-black p-4 cursor-pointer hover:bg-gray-100'>
-                    {shop.name}
-                  </Link>
-                ))}
-              </div> */}
-            {/* </div> */}
-            {/* <div className='relative group'> */}
-            {/* <button
-                disabled
-                className='cursor-not-allowed uppercase text-[12px] tracking-[1.32px] gothic-a1-regular font-semibold line-through text-stone-700/95'>
-                Discover <br />
-              </button> */}
-            {/* <div className='absolute left-0 hidden group-hover:block bg-white border border-gray-300 z-10'>
-                {Discovers.map((discover, index) => (
-                  <Link
-                  key={index}
-                    to={`${discover.link}`}
-                    className='block px-4 py-2 cursor-pointer hover:bg-gray-100'>
-                    {discover.name}
-                  </Link>
-                ))}
-              </div> */}
-            {/* </div> */}
           </div>
           <div className='flex gap-x-3 h-12'>
             <div className='flex items-center'>
@@ -108,7 +39,7 @@ export default function Header() {
                 href='https://www.instagram.com/Thenotoriousrafa'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:text-[#386601] ease-in-out duration-300 transition-colors'>
+                className='hover:text-blanco bg-blanco border rounded-full border-blanco hover:border-blanco hover:ring-4 hover:ring-blanco hover:bg-black p-2'>
                 <svg
                   width='18'
                   height='18'
@@ -123,14 +54,31 @@ export default function Header() {
               </a>
             </div>
             <div className='border-r hidden sm:block'></div>
-            <ul className='flex items-center opensans text-sm'>
-              <li>EN</li>
-            </ul>
+            <div className='flex text-blanco hover:cursor-pointer items-center exo-2 text-[12px] sm:text-[16px] gap-x-1 group'>
+              <span>EN</span>
+              <svg
+                className='w-[10px] group-hover:translate-y-[1.5px] ease-in-out duration-200 transition-transform'
+                viewBox='0 0 1024 1024'
+                version='1.1'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='#'>
+                <g
+                  id='SVGRepo_bgCarrier'
+                  stroke-width='0'></g>
+                <g
+                  id='SVGRepo_tracerCarrier'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></g>
+                <g id='SVGRepo_iconCarrier'>
+                  <path
+                    d='M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z'
+                    fill='#fff'></path>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </header>
-      <div className='sm:border-b sm:shadow-sm'></div>
-      {/* <div className='border-t h-[2px] borders-background w-full'></div> */}
     </div>
   )
 }

@@ -35,12 +35,12 @@ function ScrollToTop() {
 
 function Main() {
   return (
-    <>
+    <div>
       <Collectibles />
       <Keychains />
       <SmallFigures />
       <MangaA />
-    </>
+    </div>
   )
 }
 
