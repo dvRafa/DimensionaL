@@ -49,7 +49,7 @@ export default function SmallFigures() {
                   <img
                     alt={character.alt}
                     src={character.images[0]}
-                    className='object-cover w-auto h-[300px] md:h-[350px] laptop:h-[400px] brightness-125'
+                    className='object-cover w-auto h-[500px] md:h-[350px] laptop:h-[400px] brightness-125'
                   />
                 </div>
                 <div className='flex flex-col items-start'>

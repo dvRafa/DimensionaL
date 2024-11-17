@@ -68,7 +68,7 @@ export default function Keychains() {
             </Link>
           ))}
         </div>
-        <div className='flex gap-x-[4px] mt-3 justify-center'>
+        <div className='md:flex hidden gap-x-[4px] mt-3 justify-center'>
           {sharedArray.map((_, index) => (
             <div
               key={index}

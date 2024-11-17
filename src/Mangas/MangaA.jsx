@@ -81,7 +81,7 @@ export default function MangaA() {
         </h1>
       </div>
       <div className='relative px-2 justify-items-center'>
-        <div className='flex gap-x-2 pt-[25px] pb-[115px]'>
+        <div className='md:flex md:flex-row flex flex-col md:gap-x-2 gap-x-0 gap-y-2 pt-[25px] pb-6 md:pb-[115px]'>
           {Characters.map((character, index) => (
             <Link
               to={`/DimensionaL/Manga/${character.id}`}
@@ -90,9 +90,9 @@ export default function MangaA() {
                 <img
                   alt={character.alt}
                   src={character.mangaImg}
-                  className='h-[450px] group-hover:opacity-100 laptop:h-screen object-cover group-hover:scale-105 duration-500 transition-all ease-in-out hover:brightness-110 md:grayscale-0 opacity-100 md:opacity-60 group-hover:grayscale-0 group-hover:opacity-500 translate-y-0 md:group-hover:translate-y-[-20px] max-w-none overflow-hidden w-full'
+                  className='md:h-[450px] h-[200px] group-hover:opacity-100 laptop:h-screen object-cover group-hover:scale-105 duration-500 transition-all ease-in-out hover:brightness-110 md:grayscale-0 opacity-100 md:opacity-60 group-hover:grayscale-0 group-hover:opacity-500 translate-y-0 md:group-hover:translate-y-[-20px] max-w-none overflow-hidden md:w-full w-screen'
                 />
-                <span className='absolute left-0 w-full bg-black translate-y-full group-hover:translate-y-0 py-4 px-3 transition-transform flex flex-row duration-500 md:group-hover:translate-y-[0px] text-blanco ease-out bottom-0 uppercase text-2xl md:text-[2.5vw] md:translate-y-[100%] font-bold'>
+                <span className='absolute left-0 w-fit md:w-full bg-black md:translate-y-full group-hover:translate-y-0 py-4 px-3 transition-transform flex flex-row duration-500 md:group-hover:translate-y-[0px] text-blanco ease-out bottom-0 uppercase text-2xl md:text-[2.5vw] font-bold'>
                   {character.short}
                   <span className='exo-2 text-green text-xs ml-2'>
                     {character.condition}
@@ -102,7 +102,7 @@ export default function MangaA() {
             </Link>
           ))}
         </div>
-        <span className='left-6 bg-red-700 hover:bg-red-600 px-2 py-[0.5px] poppins top-[5%] absolute text-blanco cursor-pointer'>
+        <span className='left-3 md:left-6 bg-red-700 hover:bg-red-600 px-2 py-[0.5px] poppins top-[6%] md:top-[5%] absolute text-blanco cursor-pointer'>
           MANGA
         </span>
       </div>

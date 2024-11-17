@@ -20,8 +20,8 @@ export default function Collectibles() {
   }
 
   return (
-    <div className='flex flex-col pt-20 bg-darkbg'>
-      <div className='pl-6 md:pl-32'>
+    <div className='flex flex-col md:pt-20 pt-10 bg-darkbg'>
+      <div className='pl-6 md:pl-32 pr-[6px] md:pr-0'>
         <h1 className='fade-effect md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
           Detailed Collectible Figures. Strongest Anime Characters
         </h1>
@@ -39,7 +39,7 @@ export default function Collectibles() {
               className='flex-shrink-0 flex flex-col justify-between w-[310px] md:w-[315px] rounded-2xl border-darkbg border hover-scale-101-collectible md:ease-in-out md:duration-500 mr-[8px] bg-cardbg'>
               <div className='flex justify-center'>
                 <img
-                  className='w-auto pt-6 h-[350px] md:h-[400px] laptop:h-[410px] object-cover'
+                  className='w-auto pt-6 h-[500px] md:h-[400px] laptop:h-[410px] object-cover'
                   src={character.images[0]}
                   alt={character.alt}
                 />
@@ -64,18 +64,18 @@ export default function Collectibles() {
           href='https://www.instagram.com/Thenotoriousrafa'
           target='_blank'
           rel='nonrefereer noopener'
-          className='hidden md:flex w-[300px] justify-between left-2 rounded transform -translate-y-1/2 border border-blanco/80 hover:border-blanco hover:bg-blanco pl-6 py-4 top-[90%] fixed z-10 bg-blanco/80 duration-300 ease-in-out transition-colors'>
+          className='md:flex w-[230px] md:w-[300px] justify-between left-2 rounded transform -translate-y-1/2 border border-blanco/80 hover:border-blanco hover:bg-blanco pl-6 py-4 top-[90%] fixed z-10 bg-blanco/80 duration-300 ease-in-out transition-colors'>
           <div className='flex flex-col'>
-            <span className='text-black/50 mb-1 uppercase font-bold text-xs font-mono tracking-wider'>
+            <span className='text-black/50 mb-1 uppercase font-bold text-[10px] md:text-xs font-mono tracking-wider'>
               INSTAGRAM:
             </span>
-            <span className='exo-2 uppercase text-xs text-black'>
+            <span className='exo-2 uppercase text-[10px] md:text-xs text-black'>
               @thenotoriousrafa
             </span>
           </div>
           <img
             src={dendenmushi}
-            className='absolute z-10 -top-[38%] left-[70%] w-auto h-28'
+            className='absolute z-10 md:-top-[38%] top-[5%] md:left-[70%] left-[75%] w-auto md:h-28 h-16'
           />
         </a>
         {/* Conditionally render the Left Scroll Button */}
