@@ -74,9 +74,7 @@ export default function MangaA() {
   return (
     <div className='pt-10 bg-darkbg'>
       <div className='px-2 max-w-[800px] md:text-nowrap'>
-        <h1
-          id='animation-title'
-          className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
+        <h1 className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
           Ultimate Collectibles. Manga from the Best Animes Ever!
         </h1>
       </div>

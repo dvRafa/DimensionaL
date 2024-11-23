@@ -1,9 +1,16 @@
 :root {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   background-color: #101010;
 }
 
 /* Fonts */
+@font-face {
+  font-family: 'Yakin';
+  src: url(./Fonts/Yakin.ttf);
+}
+
 .gothic-a1-light {
   font-family: 'Gothic A1';
   font-weight: 300;
@@ -59,43 +66,18 @@
   font-style: normal;
 }
 
-@keyframes fade-effect {
-  from {
-    opacity: 0; 
-  } to {
-    opacity: 1;
-  }
-}
-
-.fade-effect {
-  animation: fade-effect linear 1s;
-}
-
-.borders-background {
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    linear-gradient(127deg, rgba(0, 47, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  transition: width, 35s;
-}
-
-.hover-scale-101:hover {
-  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01)
-    scaleY(1.01);
-}
-
+/*Border & Scale SmallFigures*/
 .hover-scale-101-smallFigures {
   border: 1px solid #101010;
 }
 
 .hover-scale-101-smallFigures:hover {
-  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01) scaleY(1.01);
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01)
+    scaleY(1.01);
   border: 1px solid #353535;
 }
 
+/*Card transition for collectible component*/
 @keyframes hero-images {
   from {
     opacity: 0;
@@ -129,202 +111,19 @@
 }
 
 .hover-scale-101-collectible:hover {
-  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01) scaleY(1.01);
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01)
+    scaleY(1.01);
   border-left: 1px solid #353535;
   border-right: 1px solid #353535;
   border-top: 1px solid #353535;
   border-bottom: 1px solid #00ffad;
 }
 
-@media (max-width: 768px) {
-  .hover-scale-101 {
-    transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.01)
-      scaleY(1.01);
-  }
-}
-
-#collectible-beg {
-  animation: collectible-beg linear 1s;
-}
-
-@keyframes collectible-beg {
-  from {
-    transform: translateX(50%);
-  }
-  to {
-    transform: translateX(0);
-  }  
-}
-
-.tracking-in-expand {
-  animation: tracking-in-expand 0.4s linear both;
-}
-
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.2em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.vibrate:hover {
-  animation: vibrate 1.5s linear both;
-}
-
-@keyframes vibrate {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-
-.manga-images {
-  width: 0;
-  flex-grow: 1;
-  object-fit: cover;
-  transition: 1s ease;
-  border: 2px solid black;
-}
-
-.scroll-container {
-  overflow-x: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 .scroll-container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-@keyframes hover-movement {
-  from {
-    transform: scale(25%);
-    overflow-x: visible;
-  }
-  to {
-    transform: scale(100%);
-  }
-}
-
-.component-scale {
-  animation: hover-movement linear both;
-  animation-timeline: view();
-  animation-range: entry -50% cover 25%;
-}
-
-#animation-hero-title {
-  transform: translateY(25%);
-  transition: 5s all;
-  transition-delay: 5s;
-}
-
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes show-phrase {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#animation {
-  view-timeline-name: --title;
-  view-timeline-axis: block;
-
-  animation-timeline: --title;
-  animation-name: show;
-
-  animation-range: entry 15% cover 50%;
-  animation-fill-mode: both;
-}
-
-.manga-section {
-  animation: manga-section 0.9s linear both;
-}
-
-@keyframes manga-section {
-  0% {
-    transform: skew(0deg 0deg);
-  }
-
-  30% {
-    transform: skew(15deg 15deg);
-  }
-
-  40% {
-    transform: skew(-15deg, -15deg);
-  }
-
-  50% {
-    transform: skew(15deg, 15deg);
-  }
-
-  65% {
-    transform: skew(-5deg, -5deg);
-  }
-
-  75% {
-    transform: skew(5deg, 5deg);
-  }
-
-  100% {
-    transform: skew(0deg 0deg);
-  }
-}
-@keyframes manga-section-2 {
-  from {
-    transform: rotateY(25deg);
-  }
-  to {
-    transform: rotate(0);
-  }
-}
-@keyframes manga-section-3 {
-  from {
-    transform: rotate() translateX(30%);
-  }
-  to {
-    transform: rotate(0) translateX(0);
-  }
-}
-@keyframes manga-section-4 {
-  from {
-    transform: rotate(deg) translateX();
-  }
-  to {
-    transform: rotate(0) translateX(0);
-  }
-}
-
+/*Manga component hover over books*/
 .flicker-hover:hover {
   animation: flicker-hover 1000ms infinite linear both;
 }
@@ -359,30 +158,7 @@
   }
 }
 
-.tracking-in-contact {
-  animation: tracking-in-contact linear both;
-  animation-timeline: view();
-  animation-range: entry 15% cover 50%;
-}
-
-@keyframes tracking-in-contact{0%{letter-spacing:.3em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
-
-@keyframes hero-title {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-#hero-title-animation {
-  animation: hero-title linear both 2s;
-}
-
 /* Images in the First Section */
-
 @keyframes hero-images {
   from {
     opacity: 0;
@@ -415,36 +191,43 @@
   animation-delay: 800ms; /* Delay the fourth image by 1500ms */
 }
 
-@keyframes show-smallfigures {
+/*Cards scroll animation*/
+@keyframes efecto {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-#animation-smallfigures {
-  animation: show-smallfigures linear both;
-  animation-timeline: view();
-
-  animation-range: entry 15% cover 35%;
-}
-
-#animation-title {
-  view-timeline-name: --phrase;
+#card {
+  view-timeline-name: --card;
   view-timeline-axis: block;
 
-  animation-timeline: --phrase;
-  animation-name: show-phrase;
+  animation-timeline: --card;
+  animation-name: efecto;
 
-  animation-range: entry 75% cover 80%;
+  animation-range: entry 15% contain 25%;
   animation-fill-mode: both;
+
 }
 
-@font-face {
-  font-family: 'Yakin';
-  src: url(./Fonts/Yakin.ttf);
+@keyframes animacion {
+  from {
+    opacity: 0;
+    scale: 80%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.openeffect {
+  animation: animacion 300ms linear both;
 }
 
 @layer components {
@@ -488,22 +271,22 @@
   }
 
   .custom-item-details {
-    @apply mt-[10px] uppercase text-[12px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal border-b pb-1;
+    @apply mt-[10px] uppercase text-[11px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal border-b pb-1 text-blanco;
   }
 
   .custom-title {
-    @apply text-[64px] tracking-normal leading-[76.8px] mt-4 gothic-a1-regular;
+    @apply text-[60px] tracking-normal leading-[76.8px] mt-4 poppins-regular text-blanco text-nowrap;
   }
   .custom-title-manga {
-    @apply text-[36px] tracking-normal leading-[46.8px] mt-4 gothic-a1-regular;
+    @apply text-[36px] tracking-normal leading-[46.8px] mt-4 poppins-regular text-blanco;
   }
 
   .custom-description {
-    @apply mb-[2px] uppercase text-[11px] tracking-[1.32px] leading-[14px] gothic-a1-regular font-normal text-stone-700/50;
+    @apply mb-[2px] uppercase text-[11px] tracking-[1.32px] leading-[14px] gothic-a1-regular font-normal text-lightgray;
   }
 
   .custom-anime {
-    @apply text-[20px] tracking-normal leading-[28.8px] gothic-a1-light;
+    @apply text-[16px] tracking-wide leading-[28.8px] gothic-a1-light text-blanco;
   }
 }
 

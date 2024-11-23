@@ -2,8 +2,10 @@ import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import CollectiblesArray from './CollectiblesArray'
 import dendenmushi from '/dendenmushi.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function Collectibles() {
+
   const [showLeftButton, setShowLeftButton] = useState(false) // Controls the visibility of the left button
   const scrollContainerRef = useRef(null)
   const sharedArray = CollectiblesArray()
@@ -22,7 +24,7 @@ export default function Collectibles() {
   return (
     <div className='flex flex-col md:pt-20 pt-10 bg-darkbg'>
       <div className='pl-6 md:pl-32 pr-[6px] md:pr-0'>
-        <h1 className='fade-effect md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
+        <h1 className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
           Detailed Collectible Figures. Strongest Anime Characters
         </h1>
       </div>

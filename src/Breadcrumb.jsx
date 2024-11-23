@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-export default function Breadcrumb  ({ path })  {
+export default function Breadcrumb({ path }) {
   return (
-    <nav className='px-[22px]'>
+    <nav className='px-[22px] text-blanco'>
       <ul className='flex space-x-2'>
         {path.map((item, index) => (
           <li key={index}>

@@ -34,13 +34,14 @@ function ScrollToTop() {
 }
 
 function Main() {
+
   return (
-    <div>
+    <main>
       <Collectibles />
       <Keychains />
       <SmallFigures />
       <MangaA />
-    </div>
+    </main>
   )
 }
 

@@ -18,7 +18,7 @@ export default function Header() {
           </a>
         </h1>
       </div>
-      <header className='flex flex-col max-w-none md:max-w-[1200px] mx-auto px-4 md:px-6 py-2 md:border-b rounded-3xl md:border-darkgray pb-6'>
+      <header className='flex flex-col max-w-none md:max-w-[1200px] mx-auto px-4 md:px-6 py-2'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-end justify-center py-2'>
             <img
@@ -53,7 +53,7 @@ export default function Header() {
                 </svg>
               </a>
             </div>
-            <div className='border-r hidden sm:block'></div>
+            <div className='border-r border-[#1f1e1e] hidden sm:block'></div>
             <div className='flex text-blanco hover:cursor-pointer items-center exo-2 text-[12px] sm:text-[16px] gap-x-1 group'>
               <span>EN</span>
               <svg

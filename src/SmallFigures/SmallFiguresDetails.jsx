@@ -46,7 +46,7 @@ export default function SmallFiguresDetails() {
               whatsapp
             </a>
             <a
-              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-blue-800/90 md:transition-colors md:hover:text-white'
+              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-green md:transition-colors md:hover:text-black text-white'
               href='https://instagram.com/thenotoriousrafa'
               rel='noopener nonrefereer'
               target='_blank'>
@@ -67,7 +67,7 @@ export default function SmallFiguresDetails() {
                 alt={`${character.alt} thumbnail ${index + 1}`}
                 src={image}
                 className={`w-auto h-24 object-cover hover-scale-101 cursor-pointer ${
-                  mainImageIndex === index ? 'border-2 border-blue-800/90' : ''
+                  mainImageIndex === index ? 'border-2 border-green' : ''
                 }`} // Highlight the selected thumbnail
                 onClick={() => handleThumbnailClick(index)} // Update main image on click
               />

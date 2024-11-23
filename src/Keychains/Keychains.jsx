@@ -24,15 +24,13 @@ export default function Keychains() {
   return (
     <section className='flex flex-col pt-10 bg-darkbg text-blanco'>
       <div className='pl-6 md:pl-32'>
-        <h1
-          id='animation-title'
-          className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
+        <h1 className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
           Japan Originals. Keychains.
         </h1>
       </div>
       <div className='relative md:pb-[115px] pb-[45px]'>
         <div
-          id='animation'
+          id='card'
           ref={scrollContainerRef}
           className='pl-6 pb-4 md:pl-32 pt-[32px] sm:pt-[28px] flex overflow-x-auto scroll-smooth scroll-container'>
           {sharedArray.map((character, index) => (

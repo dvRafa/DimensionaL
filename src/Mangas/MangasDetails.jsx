@@ -120,7 +120,7 @@ export default function MangasDetails() {
               whatsapp
             </a>
             <a
-              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-blue-800/90 md:transition-colors md:hover:text-white'
+              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-green md:transition-colors md:hover:text-black text-white'
               href='https://instagram.com/thenotoriousrafa'
               rel='noopener nonrefereer'
               target='_blank'>
@@ -141,7 +141,7 @@ export default function MangasDetails() {
                 alt={`${character.alt} thumbnail ${index + 1}`}
                 src={image}
                 className={`w-24 h-24 object-cover cursor-pointer hover:opacity-75 ${
-                  mainImageIndex === index ? 'border-2 border-blue-800/90' : ''
+                  mainImageIndex === index ? 'border-2 border-green' : ''
                 }`} // Highlight the selected thumbnail
                 onClick={() => handleThumbnailClick(index)} // Update main image on click
               />
@@ -151,43 +151,43 @@ export default function MangasDetails() {
       </div>
       <div className='md:flex flex-col mt-10 gap-x-14'>
         <div>
-          <h3 className='leading-[60px] text-[40px] font-bold'>
+          <h3 className='leading-[60px] text-[40px] font-bold text-blanco'>
             Volume <br /> Info
           </h3>
         </div>
-        <div className='grid grid-cols-2 w-full border-2 border-black'>
-          <div className='flex flex-col border-r-2 border-black'>
-            <div className='border-b-2 border-black'>
-              <p className='font-semibold text-[18px] leading-[32px] p-4'>
+        <div className='grid grid-cols-2 w-full border-2 border-cardlightgray'>
+          <div className='flex flex-col border-r-2 border-cardlightgray'>
+            <div className='border-b-2 border-cardlightgray'>
+              <p className='font-semibold text-[18px] leading-[32px] p-4 text-lightgray'>
                 Rating:{' '}
-                <span className='text-stone-700/75 font-normal'>
+                <span className='text-blanco font-normal'>
                   {character.rating}
                 </span>
               </p>
             </div>
             <div className='flex flex-col'>
-              <p className='font-semibold text-[18px] leading-[32px] pt-4 px-4'>
+              <p className='font-semibold text-[18px] leading-[32px] pt-4 px-4 text-lightgray'>
                 Print Release:{' '}
-                <span className='text-stone-700/75 font-normal'>
+                <span className='text-blanco font-normal'>
                   {character.release}
                 </span>
               </p>
-              <p className='font-semibold leading-[32px] text-[18px] px-4 pb-4'>
+              <p className='font-semibold leading-[32px] text-[18px] px-4 pb-4 text-lightgray'>
                 Print Format:{' '}
-                <span className='text-stone-700/75 font-normal'>Paperback</span>
+                <span className='text-blanco font-normal'>Paperback</span>
               </p>
             </div>
           </div>
           <div className='flex flex-col'>
-            <p className='font-semibold border-b-2 border-black leading-[32px] text-[18px] p-4'>
+            <p className='font-semibold border-b-2 border-cardlightgray leading-[32px] text-[18px] p-4 text-lightgray'>
               Pages:{' '}
-              <span className='text-stone-700/75 font-normal'>
+              <span className='text-blanco font-normal'>
                 {character.page}
               </span>
             </p>
-            <p className='font-semibold leading-[32px] text-[18px] p-2'>
+            <p className='font-semibold leading-[32px] text-[18px] p-2 text-lightgray'>
               Author:{' '}
-              <span className='text-stone-700/75 font-normal'>
+              <span className='text-blanco font-normal'>
                 {character.author}
               </span>
             </p>

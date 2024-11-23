@@ -9,13 +9,12 @@ export default function SmallFigures() {
     <section className='flex flex-col pt-10 bg-darkbg text-blanco'>
       <div className='pl-6 md:pl-18'>
         <h1
-          id='animation-title'
           className='md:text-[28px] exo-2 text-[20px] md:leading-[32px] leading-[30px] tracking-[0.196px] sm:pb-[10px] bg-gradient-to-r from-[#b1dbc2] via-blanco to-[#eff7f2] inline-block text-transparent bg-clip-text'>
           Top Collectibles. Small-Sized Figures.
         </h1>
       </div>
       <div className='relative'>
-        <div className='component-scale flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[115px] pl-6 md:pl-18'>
+        <div id='card' className='flex overflow-x-auto scroll-smooth pt-[24px] scroll-container pb-[45px] md:pb-[115px] pl-6 md:pl-18'>
           {newSharedArray.map((character, index) => (
             <Link
               key={index}
