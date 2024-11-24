@@ -263,7 +263,7 @@
     @apply mt-2 capitalize text-[18px] tracking-[0.2px] leading-[16px] gothic-a1-regular font-normal text-center;
   }
   .figure-name-keychains {
-    @apply mt-[15px] sm:mt-[8px] capitalize text-[17px] sm:text-[16px] tracking-[0.2px] leading-[18px] sm:leading-[24px] text-left font-semibold;
+    @apply mt-[15px] sm:mt-[8px] capitalize text-[17px] sm:text-[16px] tracking-[0.2px] leading-[24px] sm:leading-[24px] text-left font-semibold;
   }
 
   .social-medias {
@@ -275,7 +275,7 @@
   }
 
   .custom-title {
-    @apply text-[60px] tracking-normal leading-[76.8px] mt-4 poppins-regular text-blanco text-nowrap;
+    @apply text-[54px] tracking-normal leading-[58px] mt-4 poppins-regular text-blanco text-wrap md:text-nowrap;
   }
   .custom-title-manga {
     @apply text-[36px] tracking-normal leading-[46.8px] mt-4 poppins-regular text-blanco;

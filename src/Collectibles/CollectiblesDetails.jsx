@@ -21,9 +21,9 @@ export default function CollectiblesDetails() {
   ]
 
   return (
-    <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
+    <div className='md:max-w-[1000px] sm:max-w-[390px] mx-auto mb-24 mt-4'>
       <Breadcrumb path={breadcrumbPath} />
-      <div className='md:flex flex-row'>
+      <div className='flex flex-col-reverse'>
         <div className='md:w-[400px] p-4'>
           <h1 className='custom-title'>{character.name}</h1>
           <div className='flex flex-row md:gap-x-8 gap-x-4'>
@@ -54,7 +54,7 @@ export default function CollectiblesDetails() {
             </a>
           </div>
         </div>
-        <div className='mx-auto'>
+        <div className='flex flex-col mx-auto mt-6'>
           <img
             alt={character.alt}
             src={character.images[mainImageIndex]}
