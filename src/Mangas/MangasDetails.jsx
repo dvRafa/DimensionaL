@@ -1,6 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState } from 'react'
 
+import HeaderDetails from '../HeaderDetails'
+import SocialMedia from '../SocialMedia'
+import FooterDetails from '../FooterDetails'
+
 import ShingekiNoKyojin from '../assets/MangasImg/ShingekiNoKyojin.webp'
 import OnePiece from '../assets/MangasImg/OnePiece.webp'
 import KimetsuNoYaiba from '../assets/MangasImg/KimetsuNoYaiba.webp'
@@ -34,6 +38,8 @@ const Characters = [
     author: 'Hajime Isayama',
     anime: 'Shingeki No Kyojin',
     type: 'Manga',
+    version: 'Paper Version',
+    condition: 'new'
   },
   {
     images: [OPFront, OPBack, OPPages],
@@ -49,6 +55,8 @@ const Characters = [
     id: 'One-Piece',
     anime: 'One Piece',
     type: 'Manga',
+    tags: ['Pirates', 'Adventure', 'Epic Journey'],
+    condition: 'new'
   },
   {
     images: [NarutoFront, NarutoBack, NarutoPages],
@@ -61,6 +69,11 @@ const Characters = [
     id: 'NarutoShippuden',
     anime: 'Naruto Shippuden',
     type: 'Manga',
+    tags: ['Ninjas', 'Rivalry', 'Emotional'],
+    version: 'Paper Version',
+    author: 'Masashi Kishimoto',
+    rating: '16+',
+    condition: 'new'
   },
   {
     images: [Kimetsu, KimetsuBack, KimetsuPages],
@@ -73,6 +86,11 @@ const Characters = [
     id: 'KimetsuNoYaiba',
     anime: 'Kimetsu No Yaiba',
     type: 'Manga',
+    tags: ['Dark Fantasy', 'Brotherhood', 'Supernatural'],
+    author: 'Koyoharu Gotouge',
+    version: 'Paper Version',
+    rating: '16+',
+    condition: 'new'
   },
 ]
 
@@ -85,6 +103,7 @@ export default function MangasDetails() {
   }
 
   const [mainImageIndex, setMainImageIndex] = useState(0)
+  const [isCardExpanded, setIsCardExpanded] = useState(false)
 
   const handleThumbnailClick = (index) => {
     setMainImageIndex(index)
@@ -96,69 +115,95 @@ export default function MangasDetails() {
   ]
 
   return (
-    <div className='md:max-w-[1000px] max-w-[320px] mx-auto my-24'>
-      <Breadcrumb path={breadcrumbPath} />
+    <div className='md:max-w-full max-w-[320px] mx-auto relative bg-[#0d0f0e]'>
+      <HeaderDetails />
       <div className='flex md:flex-row flex-col'>
-        <div className='md:w-[400px] w-ful p-4'>
-          <h1 className='custom-title-manga'>{character.name}</h1>
-          <div className='flex flex-row md:gap-x-8 gap-x-4'>
-            <p className='custom-item-details'>rare</p>
-            <p className='custom-item-details'>{character.price} USD</p>
-            <p className='custom-item-details'>in-stock</p>
-          </div>
-          <div className='flex flex-col mt-[24px]'>
-            <h1 className='custom-description'>Description</h1>
-            <p className='custom-anime'>{character.data}</p>
-          </div>
-          <div className='flex flex-col mt-16 gap-y-4'>
-            <a
-              className='text-[16px] text-center rounded-full border py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] duration-200 ease-in-out hover:bg-black/90 transition-colors bg-black text-white'
-              href='https://wa.me/50764245895'
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='Whatsapp Number'>
-              whatsapp
-            </a>
-            <a
-              className='text-[16px] text-center border rounded-full py-3 border-stone-700/50 border-opacity-50 px-8 lowercase leading-[12px] tracking-[1.5px] gothic-a1-light md:text-[16px] md:leading-[16px] md:tracking-[3px] md:duration-200 md:ease-in-out md:hover:bg-green md:transition-colors md:hover:text-black text-white'
-              href='https://instagram.com/thenotoriousrafa'
-              rel='noopener nonrefereer'
-              target='_blank'>
-              instagram
-            </a>
+        <div className='flex flex-row-reverse mx-auto'>
+          {isCardExpanded && (
+            <div
+              className='fixed openeffect inset-0 backdrop-blur-3xl z-40 flex items-center justify-center'
+              onClick={() => setIsCardExpanded(false)}>
+              {isCardExpanded ? (
+                <svg
+                  onClick={() => setIsCardExpanded(false)}
+                  className='w-10 h-10 transform absolute bottom-[85%] left-[80%] hover:opacity-100 transition-all ease-in-out opacity-50 cursor-pointer'
+                  fill='#ffffff'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                  stroke='#ffffff'>
+                  <g
+                    id='SVGRepo_bgCarrier'
+                    strokeWidth='0'></g>
+                  <g
+                    id='SVGRepo_tracerCarrier'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'></g>
+                  <g id='SVGRepo_iconCarrier'>
+                    <path d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.707,12.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414L10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12Z'></path>
+                  </g>
+                </svg>
+              ) : (
+                'hidden'
+              )}
+              <img
+                alt={character.alt}
+                src={character.images[mainImageIndex]} // Accessing the first image in the array
+                className='w-auto md:h-[570px] h-[300px] mb-6 md:mb-0'
+              />
+            </div>
+          )}
+          <div className='z-10 relative'>
+            <button onClick={() => setIsCardExpanded(true)}>
+              <img
+                alt={character.alt}
+                src={character.images[mainImageIndex]}
+                className='w-auto mx-auto object-cover md:h-[500px] h-[400px] mb-6 md:mb-0 rounded-lg cursor-zoom-in'
+              />
+            </button>
           </div>
         </div>
-        <div className='mx-auto flex flex-col'>
-          <img
-            alt={character.alt}
-            src={character.images[mainImageIndex]} // Accessing the first image in the array
-            className='w-auto md:h-[570px] h-[300px] mb-6 md:mb-0'
-          />
-          <div className='flex items-center justify-center mt-4 space-x-2'>
-            {character.images.map((image, index) => (
-              <img
-                key={index}
-                alt={`${character.alt} thumbnail ${index + 1}`}
-                src={image}
-                className={`w-24 h-24 object-cover cursor-pointer hover:opacity-75 ${
-                  mainImageIndex === index ? 'border-2 border-green' : ''
-                }`} // Highlight the selected thumbnail
-                onClick={() => handleThumbnailClick(index)} // Update main image on click
-              />
-            ))}
+        <div className='flex flex-col md:flex md:flex-col gap-y-1 justify-center items-end mr-10'>
+          {character.images.map((image, index) => (
+            <img
+              key={index}
+              alt={`${character.alt} thumbnail ${index + 1}`}
+              src={image}
+              className={`w-8 md:w-12 aspect-square h-[40px] md:h-[70px] object-scale-down cursor-pointer p-1 hover:scale-105 hover:brightness-105 duration-200 transition-all ease-in-out overflow-hidden ${
+                mainImageIndex === index
+                  ? 'border border-darkgray'
+                  : 'border border-[#0d0f0e]'
+              }`} // Highlight the selected thumbnail
+              onClick={() => handleThumbnailClick(index)} // Update main image on click
+            />
+          ))}
+        </div>
+        <div className='flex flex-row md:gap-x-8 gap-x-4'>
+          <div className='md:w-[400px] p-4'>
+            <Breadcrumb path={breadcrumbPath} />
+            <h1 className='custom-title-manga'>{character.name}</h1>
+            <div className='flex flex-row md:gap-x-8 gap-x-4'>
+              <p className='custom-item-details'>rare</p>
+              <p className='custom-item-details'>{character.price} USD</p>
+              <p className='custom-item-details'>in-stock</p>
+            </div>
+            <div className='flex flex-col mt-[24px]'>
+              <h1 className='custom-description'>Description</h1>
+              <p className='custom-anime-manga'>{character.data}</p>
+            </div>
+            <SocialMedia />
           </div>
         </div>
       </div>
-      <div className='md:flex flex-col mt-10 gap-x-14'>
+      <div className='md:flex flex-col mt-10 gap-x-14 mb-4 mx-4'>
         <div>
-          <h3 className='leading-[60px] text-[40px] font-bold text-blanco'>
+          <h3 className='poppins leading-[60px] text-[40px] text-blanco'>
             Volume <br /> Info
           </h3>
         </div>
-        <div className='grid grid-cols-2 w-full border-2 border-cardlightgray'>
-          <div className='flex flex-col border-r-2 border-cardlightgray'>
-            <div className='border-b-2 border-cardlightgray'>
-              <p className='font-semibold text-[18px] leading-[32px] p-4 text-lightgray'>
+        <div className='grid grid-cols-2 border-2 border-cardbg w-[1000px]'>
+          <div className='flex flex-col border-r-2 border-cardbg'>
+            <div className='border-b-2 border-cardbg'>
+              <p className='font-semibold text-[16px] leading-[32px] p-4 text-lightgray'>
                 Rating:{' '}
                 <span className='text-blanco font-normal'>
                   {character.rating}
@@ -166,34 +211,45 @@ export default function MangasDetails() {
               </p>
             </div>
             <div className='flex flex-col'>
-              <p className='font-semibold text-[18px] leading-[32px] pt-4 px-4 text-lightgray'>
+              <p className='font-semibold text-[16px] leading-[32px] p-4 text-lightgray'>
                 Print Release:{' '}
                 <span className='text-blanco font-normal'>
                   {character.release}
                 </span>
               </p>
-              <p className='font-semibold leading-[32px] text-[18px] px-4 pb-4 text-lightgray'>
+              <p className='font-semibold leading-[32px] text-[16px] px-4 pb-4 text-lightgray'>
                 Print Format:{' '}
                 <span className='text-blanco font-normal'>Paperback</span>
+              </p>
+              <p className='font-semibold text-[16px] leading-[32px] px-4 pb-4 text-lightgray'>
+                Condition:{' '}
+                <span className='text-blanco capitalize font-normal'>
+                  {character.condition}
+                </span>
               </p>
             </div>
           </div>
           <div className='flex flex-col'>
-            <p className='font-semibold border-b-2 border-cardlightgray leading-[32px] text-[18px] p-4 text-lightgray'>
+            <p className='font-semibold border-b-2 border-cardbg leading-[32px] text-[16px] p-4 text-lightgray'>
               Pages:{' '}
-              <span className='text-blanco font-normal'>
-                {character.page}
-              </span>
+              <span className='text-blanco font-normal'>{character.page}</span>
             </p>
-            <p className='font-semibold leading-[32px] text-[18px] p-2 text-lightgray'>
+            <p className='font-semibold leading-[32px] text-[16px] p-4 text-lightgray'>
               Author:{' '}
               <span className='text-blanco font-normal'>
                 {character.author}
               </span>
             </p>
+            <p className='font-semibold leading-[32px] text-[16px] px-4 pb-4 text-lightgray'>
+              Tags:{' '}
+              <span className='text-blanco font-normal'>
+                {character.tags.join(' / ')} 
+              </span>
+            </p>
           </div>
         </div>
       </div>
+      <FooterDetails />
     </div>
   )
 }

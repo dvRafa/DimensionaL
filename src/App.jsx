@@ -37,10 +37,12 @@ function Main() {
 
   return (
     <main>
+      <Header />
       <Collectibles />
       <Keychains />
       <SmallFigures />
       <MangaA />
+      <Footer />
     </main>
   )
 }
@@ -50,7 +52,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <main>
-        <Header />
+        
         <Routes>
           <Route
             path='/dimm/'
@@ -93,7 +95,6 @@ function App() {
             element={<ErrorPage />}
           />
         </Routes>
-        <Footer />
       </main>
     </Router>
   )

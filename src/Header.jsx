@@ -21,14 +21,14 @@ export default function Header() {
       <header className='flex flex-col max-w-none md:max-w-full mx-auto px-4 md:px-6 py-2 md:border-b rounded md:border-[#1f1e1e]'>
         <div className='flex items-center justify-between'>
           <div className='flex flex-row items-end justify-center py-2'>
-            <img
+            {/* <img
               src={scketchupgreen}
               width={30}
               height={30}
               alt='dimm Logo'
-            />
+            /> */}
             <Link to='/dimm/'>
-              <h1 className='exo-2 text-[11.5px] text-blanco sm:text-[13.5px] tracking-[1.5px]'>
+              <h1 className='poppins text-[11.5px] text-blanco sm:text-[18px] tracking-[4px]'>
                 DIMM
               </h1>
             </Link>

@@ -217,17 +217,15 @@
 @keyframes animacion {
   from {
     opacity: 0;
-    scale: 80%;
   }
 
   to {
     opacity: 1;
-    scale: 100%;
   }
 }
 
 .openeffect {
-  animation: animacion 300ms linear both;
+  animation: animacion 300ms ease-in;
 }
 
 @layer components {
@@ -271,22 +269,25 @@
   }
 
   .custom-item-details {
-    @apply mt-[10px] uppercase text-[11px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal border-b pb-1 text-blanco;
+    @apply mt-[10px] uppercase text-[11px] tracking-[1.32px] leading-[16px] gothic-a1-regular font-normal border-b border-darkgray pb-1 text-blanco;
   }
 
   .custom-title {
-    @apply text-[54px] tracking-normal leading-[58px] mt-4 poppins-regular text-blanco text-wrap md:text-nowrap;
+    @apply text-[30px] uppercase tracking-normal leading-[30px] poppins text-blanco text-wrap md:text-nowrap;
   }
   .custom-title-manga {
-    @apply text-[36px] tracking-normal leading-[46.8px] mt-4 poppins-regular text-blanco;
+    @apply text-[36px] tracking-normal leading-[46.8px] mb-10 poppins text-blanco;
   }
 
   .custom-description {
-    @apply mb-[2px] uppercase text-[11px] tracking-[1.32px] leading-[14px] gothic-a1-regular font-normal text-lightgray;
+    @apply mb-[2px] uppercase text-[10px] tracking-[1.32px] leading-[14px] gothic-a1-regular font-normal text-lightgray;
   }
 
   .custom-anime {
     @apply text-[16px] tracking-wide leading-[28.8px] gothic-a1-light text-blanco;
+  }
+  .custom-anime-manga {
+    @apply text-[12.5px] tracking-wide leading-[24px] gothic-a1-light text-blanco;
   }
 }
 
