@@ -118,7 +118,7 @@ export default function MangasDetails() {
     <div className='md:max-w-full max-w-[385px] mx-auto relative bg-[#0d0f0e]'>
       <HeaderDetails />
       <div className='flex md:flex-row flex-col pt-4 md:pt-0'>
-        <div className='flex flex-row-reverse md:mx-auto mx-1'>
+        <div className='flex flex-row-reverse mx-auto'>
           {isCardExpanded && (
             <div
               className='fixed openeffect inset-0 backdrop-blur-3xl z-40 flex items-center justify-center'
@@ -126,7 +126,7 @@ export default function MangasDetails() {
               {isCardExpanded ? (
                 <svg
                   onClick={() => setIsCardExpanded(false)}
-                  className='w-10 h-10 transform absolute bottom-[85%] left-[80%] hover:opacity-100 transition-all ease-in-out opacity-50 cursor-pointer'
+                  className='md:w-10 w-8 md:h-10 h-8 transform absolute bottom-[85%] left-[80%] hover:opacity-100 transition-all ease-in-out opacity-50 cursor-pointer'
                   fill='#ffffff'
                   viewBox='0 0 24 24'
                   xmlns='http://www.w3.org/2000/svg'
@@ -157,7 +157,7 @@ export default function MangasDetails() {
               <img
                 alt={character.alt}
                 src={character.images[mainImageIndex]}
-                className='w-auto mx-auto object-cover md:h-[500px] h-[400px] mb-6 md:mb-0 rounded-lg cursor-zoom-in'
+                className='w-auto mx-auto object-cover md:h-[500px] h-[550px] mb-6 md:mb-0 rounded-lg cursor-zoom-in'
               />
             </button>
           </div>
@@ -201,7 +201,7 @@ export default function MangasDetails() {
           </h3>
         </div>
         <div className='grid md:grid-cols-2 border-2 border-cardbg md:w-[1000px]'>
-          <div className='flex flex-col border-r-2 border-cardbg'>
+          <div className='flex flex-col md:border-r-2 border-r-0 border-cardbg'>
             <div className='border-b-2 border-cardbg'>
               <p className='font-semibold text-[16px] leading-[32px] p-4 text-lightgray'>
                 Rating:{' '}

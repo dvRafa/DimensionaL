@@ -22,9 +22,9 @@ export default function KeychainsDetails() {
   ]
 
   return (
-    <div className='md:max-w-full max-w-[320px] mx-auto relative bg-[#0d0f0e]'>
+    <div className='md:max-w-full max-w-[385px] mx-auto relative bg-[#0d0f0e]'>
       <HeaderDetails />
-      <div className='flex md:flex-row flex-col'>
+      <div className='flex md:flex-row flex-col pt-4 md:pt-0'>
         <div className='mx-auto pl-2'>
           {isCardExpanded && (
             <div
@@ -34,7 +34,7 @@ export default function KeychainsDetails() {
               {isCardExpanded ? (
                 <svg
                   onClick={() => setIsCardExpanded(false)}
-                  className='w-10 h-10 transform absolute bottom-[85%] left-[80%] hover:opacity-100 transition-all ease-in-out opacity-50 cursor-pointer'
+                  className='w-8 md:w-10 h-8 md:h-10 transform absolute bottom-[85%] left-[80%] hover:opacity-100 transition-all ease-in-out opacity-50 cursor-pointer'
                   fill='#ffffff'
                   viewBox='0 0 24 24'
                   xmlns='http://www.w3.org/2000/svg'
@@ -71,7 +71,7 @@ export default function KeychainsDetails() {
           </div>
         </div>
         <div className='flex flex-row md:gap-x-8 gap-x-4'>
-          <div className='md:w-[520px] p-4'>
+          <div className='md:w-[520px] md:p-4 p-3'>
             <Breadcrumb path={breadcrumbPath} />
             <div className='flex flex-col mb-10'>
               <h1 className='custom-title'>{character.name}</h1>
