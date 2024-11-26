@@ -115,10 +115,10 @@ export default function MangasDetails() {
   ]
 
   return (
-    <div className='md:max-w-full max-w-[320px] mx-auto relative bg-[#0d0f0e]'>
+    <div className='md:max-w-full max-w-[385px] mx-auto relative bg-[#0d0f0e]'>
       <HeaderDetails />
-      <div className='flex md:flex-row flex-col'>
-        <div className='flex flex-row-reverse mx-auto'>
+      <div className='flex md:flex-row flex-col pt-4 md:pt-0'>
+        <div className='flex flex-row-reverse md:mx-auto mx-1'>
           {isCardExpanded && (
             <div
               className='fixed openeffect inset-0 backdrop-blur-3xl z-40 flex items-center justify-center'
@@ -162,7 +162,7 @@ export default function MangasDetails() {
             </button>
           </div>
         </div>
-        <div className='flex flex-col md:flex md:flex-col gap-y-1 justify-center items-end mr-10'>
+        <div className='flex flex-row md:flex md:flex-col gap-y-1 justify-center items-end mr-10'>
           {character.images.map((image, index) => (
             <img
               key={index}
@@ -178,7 +178,7 @@ export default function MangasDetails() {
           ))}
         </div>
         <div className='flex flex-row md:gap-x-8 gap-x-4'>
-          <div className='md:w-[400px] p-4'>
+          <div className='md:w-[400px] md:p-4 p-3'>
             <Breadcrumb path={breadcrumbPath} />
             <h1 className='custom-title-manga'>{character.name}</h1>
             <div className='flex flex-row md:gap-x-8 gap-x-4'>
@@ -194,13 +194,13 @@ export default function MangasDetails() {
           </div>
         </div>
       </div>
-      <div className='md:flex flex-col mt-10 gap-x-14 mb-4 mx-4'>
+      <div className='md:flex flex-col mt-10 gap-x-14 mb-4 md:mx-4 mx-3'>
         <div>
           <h3 className='poppins leading-[60px] text-[40px] text-blanco'>
             Volume <br /> Info
           </h3>
         </div>
-        <div className='grid grid-cols-2 border-2 border-cardbg w-[1000px]'>
+        <div className='grid md:grid-cols-2 border-2 border-cardbg md:w-[1000px]'>
           <div className='flex flex-col border-r-2 border-cardbg'>
             <div className='border-b-2 border-cardbg'>
               <p className='font-semibold text-[16px] leading-[32px] p-4 text-lightgray'>
@@ -230,7 +230,7 @@ export default function MangasDetails() {
             </div>
           </div>
           <div className='flex flex-col'>
-            <p className='font-semibold border-b-2 border-cardbg leading-[32px] text-[16px] p-4 text-lightgray'>
+            <p className='font-semibold border-b-2 border-cardbg leading-[32px] text-[16px] pb-4 md:py-4 px-4 text-lightgray'>
               Pages:{' '}
               <span className='text-blanco font-normal'>{character.page}</span>
             </p>

@@ -1,6 +1,6 @@
 export default function FooterDetails() {
   return (
-    <footer className='p-4 mt-4 md:w-[1000px]'>
+    <footer className='md:p-4 p-3 mt-4 md:w-[1000px]'>
       <p className='text-[12.5px] w-auto text-tight text-lightgray montserrat leading-5'>
         <span className='montserrat-med text-blanco'>
           *Price Negotiation Policy: &nbsp;
